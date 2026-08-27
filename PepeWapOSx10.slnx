@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PepeWapOSx10.App/PepeWapOSx10.App.csproj" />
+    <Project Path="src/PepeWapOSx10.Calendario/PepeWapOSx10.Calendario.csproj" />
+    <Project Path="src/PepeWapOSx10.Datos/PepeWapOSx10.Datos.csproj" />
+    <Project Path="src/PepeWapOSx10.Dominio/PepeWapOSx10.Dominio.csproj" />
+    <Project Path="src/PepeWapOSx10.Shell.Iconos/PepeWapOSx10.Shell.Iconos.csproj" />
+    <Project Path="src/PepeWapOSx10.Shell.Taskbar/PepeWapOSx10.Shell.Taskbar.csproj" />
+    <Project Path="src/PepeWapOSx10.Shell.Widgets/PepeWapOSx10.Shell.Widgets.csproj" />
+    <Project Path="src/PepeWapOSx10.SmokeTest/PepeWapOSx10.SmokeTest.csproj" />
+  </Folder>
+</Solution>

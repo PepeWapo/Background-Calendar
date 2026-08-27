@@ -1,0 +1,108 @@
+<Window x:Class="PepeWapOSx10.Shell.Widgets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PepeWapOSx10.Shell.Widgets"
+        mc:Ignorable="d"
+        Title="Agenda Dinámica"
+        Width="1364" Height="812"
+        Background="Transparent"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Topmost="True"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="PanelBackground" Color="#61202430"/>
+        <SolidColorBrush x:Key="PanelBorder" Color="#14E6E8EC"/>
+        <SolidColorBrush x:Key="TextPrimary" Color="#EDEFF2"/>
+        <SolidColorBrush x:Key="TextMuted" Color="#8B93A1"/>
+        <SolidColorBrush x:Key="TextFaint" Color="#6B7280"/>
+        <SolidColorBrush x:Key="AccentFijo" Color="#E8A64D"/>
+        <SolidColorBrush x:Key="AccentFlexible" Color="#55C2D6"/>
+        <SolidColorBrush x:Key="AccentLibre" Color="#5B6472"/>
+        <SolidColorBrush x:Key="BlockBackground" Color="#09EDEFF2"/>
+        <SolidColorBrush x:Key="GridLine" Color="#0BE6E8EC"/>
+
+        <Style x:Key="PanelStyle" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource PanelBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PanelBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20" Background="Transparent" MouseLeftButtonDown="Root_MouseLeftButtonDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="225"/>
+            <ColumnDefinition Width="22"/>
+            <ColumnDefinition Width="793"/>
+            <ColumnDefinition Width="22"/>
+            <ColumnDefinition Width="262"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ===================== PANEL CALENDARIO ===================== -->
+        <Border Grid.Column="0" Style="{StaticResource PanelStyle}" Height="331" VerticalAlignment="Bottom" Padding="20,24">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <TextBlock x:Name="CalendarMonthText" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="CalendarYearText" FontSize="11.5" FontWeight="SemiBold" Foreground="{StaticResource TextMuted}" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Bottom" Margin="0,16,0,0">
+                    <Border BorderBrush="{StaticResource PanelBorder}" BorderThickness="0,1,0,0" Padding="0,16,0,0">
+                        <StackPanel>
+                            <TextBlock x:Name="CalendarTodayText" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}"/>
+                            <TextBlock x:Name="CalendarSummaryText" FontSize="11" Foreground="{StaticResource TextMuted}" Margin="0,3,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <Grid x:Name="CalendarDaysGrid"/>
+            </DockPanel>
+        </Border>
+
+        <!-- ===================== PANEL AGENDA ===================== -->
+        <Border Grid.Column="2" Style="{StaticResource PanelStyle}" Padding="30,24">
+            <DockPanel>
+                <Grid DockPanel.Dock="Top" Margin="0,0,0,16">
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock Text="Agenda de hoy" FontFamily="Segoe UI Light" FontSize="22" Foreground="{StaticResource TextPrimary}"/>
+                        <TextBlock x:Name="AgendaSubtitleText" FontSize="12.5" Foreground="{StaticResource TextMuted}" Margin="0,2,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,18,0">
+                            <Ellipse Width="8" Height="8" Fill="{StaticResource AccentFijo}" VerticalAlignment="Center"/>
+                            <TextBlock Text="Fijo" FontSize="11" Foreground="{StaticResource TextMuted}" Margin="6,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,18,0">
+                            <Ellipse Width="8" Height="8" Fill="{StaticResource AccentFlexible}" VerticalAlignment="Center"/>
+                            <TextBlock Text="Flexible" FontSize="11" Foreground="{StaticResource TextMuted}" Margin="6,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="8" Height="8" Fill="{StaticResource AccentLibre}" VerticalAlignment="Center"/>
+                            <TextBlock Text="Libre" FontSize="11" Foreground="{StaticResource TextMuted}" Margin="6,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="660">
+                    <Canvas x:Name="AgendaCanvas" Width="733"/>
+                </ScrollViewer>
+            </DockPanel>
+        </Border>
+
+        <!-- ===================== PANEL GUIA (TareaGuia) ===================== -->
+        <Border Grid.Column="4" Style="{StaticResource PanelStyle}" MaxHeight="772" VerticalAlignment="Top" Padding="20,24">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Margin="0,0,0,18">
+                    <TextBlock Text="Guía" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}"/>
+                    <TextBlock x:Name="GuiaSummaryText" FontSize="11.5" Foreground="{StaticResource TextMuted}" Margin="0,2,0,0"/>
+                </StackPanel>
+                <StackPanel x:Name="GuiaPanel"/>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "TaskbarStyle.dc.html",
+      "x": 0,
+      "y": 1020,
+      "w": 1440,
+      "h": 220,
+      "title": "Referencia: estilo taskbar (Fase 4)"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-main",
+      "x": 1480,
+      "y": 300,
+      "w": 220,
+      "text": "Widget principal (Fase 2)\n\nCalendario | Agenda del día | Guía de tareas"
+    },
+    {
+      "id": "note-taskbar",
+      "x": 1480,
+      "y": 1080,
+      "w": 220,
+      "text": "Solo referencia de estilo para la taskbar (Fase 4), no es el foco ahora"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
