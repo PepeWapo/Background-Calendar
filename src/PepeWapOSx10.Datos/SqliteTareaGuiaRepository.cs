@@ -1,3 +1,4 @@
+using Microsoft.Data.Sqlite;
 using PepeWapOSx10.Dominio.Interfaces;
 using PepeWapOSx10.Dominio.Modelos;
 
@@ -9,22 +10,54 @@ public sealed class SqliteTareaGuiaRepository(AgendaDbContext contexto) : ITarea
     {
         using var conexion = contexto.AbrirConexion();
         using var comando = conexion.CreateCommand();
-        comando.CommandText = "SELECT id, title, categoria, hecha_hoy, ultima_vez FROM tareas_guia;";
+        comando.CommandText =
+            "SELECT id, title, categoria, ultima_vez, repeticion FROM tareas_guia ORDER BY categoria, title;";
 
+        var hoy = DateOnly.FromDateTime(DateTime.Today);
         var tareas = new List<TareaGuia>();
         using var lector = comando.ExecuteReader();
         while (lector.Read())
         {
+            var ultimaVez = lector.IsDBNull(3) ? (DateOnly?)null : DateOnly.Parse(lector.GetString(3));
+            var repeticion = LeerRepeticion(lector.IsDBNull(4) ? null : lector.GetString(4));
+
             tareas.Add(new TareaGuia(
                 Id: lector.GetString(0),
                 Title: lector.GetString(1),
                 Categoria: lector.GetString(2),
-                HechaHoy: lector.GetInt32(3) != 0,
-                UltimaVez: lector.IsDBNull(4) ? null : DateOnly.Parse(lector.GetString(4))));
+                Hecha: SigueHecha(ultimaVez, repeticion, hoy),
+                UltimaVez: ultimaVez,
+                Repeticion: repeticion));
         }
 
         return Task.FromResult<IReadOnlyList<TareaGuia>>(tareas);
     }
+
+    /// <summary>
+    /// Decide si una tarea sigue contando como hecha en el período vigente.
+    /// </summary>
+    /// <remarks>
+    /// No hay ningún reset programado ni tarea de medianoche: el estado se
+    /// deriva de <c>ultima_vez</c> cada vez que se lee, así que una tarea
+    /// semanal/mensual vuelve sola a pendiente en cuanto cambia el período.
+    /// </remarks>
+    public static bool SigueHecha(DateOnly? ultimaVez, Repeticion repeticion, DateOnly hoy)
+    {
+        if (ultimaVez is not { } fecha)
+            return false;
+
+        return repeticion switch
+        {
+            Repeticion.Semanal => InicioDeSemana(fecha) == InicioDeSemana(hoy),
+            Repeticion.Mensual => fecha.Year == hoy.Year && fecha.Month == hoy.Month,
+            _ => true,
+        };
+    }
+
+    private static DateOnly InicioDeSemana(DateOnly fecha) => fecha.AddDays(-((int)fecha.DayOfWeek + 6) % 7);
+
+    private static Repeticion LeerRepeticion(string? valor) =>
+        Enum.TryParse<Repeticion>(valor, ignoreCase: true, out var repeticion) ? repeticion : Repeticion.Unica;
 
     public Task MarcarHechaAsync(string id, DateOnly fecha)
     {
@@ -37,5 +70,56 @@ public sealed class SqliteTareaGuiaRepository(AgendaDbContext contexto) : ITarea
         comando.ExecuteNonQuery();
 
         return Task.CompletedTask;
+    }
+
+    public Task DesmarcarAsync(string id)
+    {
+        using var conexion = contexto.AbrirConexion();
+        using var comando = conexion.CreateCommand();
+        comando.CommandText = "UPDATE tareas_guia SET hecha_hoy = 0, ultima_vez = NULL WHERE id = $id;";
+        comando.Parameters.AddWithValue("$id", id);
+        comando.ExecuteNonQuery();
+
+        return Task.CompletedTask;
+    }
+
+    public Task CrearAsync(TareaGuia tarea)
+    {
+        using var conexion = contexto.AbrirConexion();
+        using var comando = conexion.CreateCommand();
+        comando.CommandText =
+            """
+            INSERT INTO tareas_guia (id, title, categoria, hecha_hoy, ultima_vez, repeticion)
+            VALUES ($id, $title, $categoria, 0, NULL, $repeticion);
+            """;
+        AgregarDatos(comando, tarea);
+        comando.Parameters.AddWithValue("$id", tarea.Id);
+        comando.ExecuteNonQuery();
+
+        return Task.CompletedTask;
+    }
+
+    public Task ActualizarAsync(TareaGuia tarea)
+    {
+        using var conexion = contexto.AbrirConexion();
+        using var comando = conexion.CreateCommand();
+        comando.CommandText =
+            """
+            UPDATE tareas_guia
+            SET title = $title, categoria = $categoria, repeticion = $repeticion
+            WHERE id = $id;
+            """;
+        AgregarDatos(comando, tarea);
+        comando.Parameters.AddWithValue("$id", tarea.Id);
+        comando.ExecuteNonQuery();
+
+        return Task.CompletedTask;
+    }
+
+    private static void AgregarDatos(SqliteCommand comando, TareaGuia tarea)
+    {
+        comando.Parameters.AddWithValue("$title", tarea.Title);
+        comando.Parameters.AddWithValue("$categoria", tarea.Categoria);
+        comando.Parameters.AddWithValue("$repeticion", tarea.Repeticion.ToString());
     }
 }

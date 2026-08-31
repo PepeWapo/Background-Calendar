@@ -18,18 +18,21 @@ public sealed class GoogleCalendarSource : ICalendarSource
         _icsUrl = icsUrl ?? CargarIcsUrlDesdeConfig();
     }
 
-    public async Task<IReadOnlyList<FixedEvent>> ObtenerFijosDelDiaAsync(DateOnly fecha)
+    public Task<IReadOnlyList<FixedEvent>> ObtenerFijosDelDiaAsync(DateOnly fecha) =>
+        ObtenerFijosDelRangoAsync(fecha, fecha);
+
+    public async Task<IReadOnlyList<FixedEvent>> ObtenerFijosDelRangoAsync(DateOnly desde, DateOnly hasta)
     {
         var contenido = await Http.GetStringAsync(_icsUrl);
         var calendario = Calendar.Load(contenido) ?? throw new InvalidOperationException("No se pudo parsear el ICS.");
 
-        var inicioDia = fecha.ToDateTime(TimeOnly.MinValue);
-        var finDia = inicioDia.AddDays(1);
+        var inicioRango = desde.ToDateTime(TimeOnly.MinValue);
+        var finRango = hasta.ToDateTime(TimeOnly.MinValue).AddDays(1);
 
         // Se arranca la búsqueda un par de días antes para no perder eventos
         // multi-día (ej. Tattoo terminando de madrugada) que empezaron antes
         // de la fecha pedida pero siguen vigentes ese día.
-        var inicioBusqueda = new CalDateTime(inicioDia.AddDays(-2));
+        var inicioBusqueda = new CalDateTime(inicioRango.AddDays(-2));
         var options = new EvaluationOptions();
 
         var eventos = new List<FixedEvent>();
@@ -42,14 +45,14 @@ public sealed class GoogleCalendarSource : ICalendarSource
                     continue;
 
                 var inicio = inicioCal.Value;
-                if (inicio >= finDia)
+                if (inicio >= finRango)
                     break;
 
                 if (ocurrencia.Period.EffectiveEndTime is not { } finCal)
                     continue;
 
                 var fin = finCal.Value;
-                if (fin <= inicioDia)
+                if (fin <= inicioRango)
                     continue;
 
                 eventos.Add(new FixedEvent(componente.Summary ?? "(sin título)", inicio, fin));

@@ -1,69 +1,209 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using PepeWapOSx10.Calendario;
 using PepeWapOSx10.Datos;
-using PepeWapOSx10.Dominio;
 using PepeWapOSx10.Dominio.Modelos;
 
 namespace PepeWapOSx10.Shell.Widgets;
 
 public partial class MainWindow : Window
 {
-    private const double AgendaOffsetX = 58;
-    private const double AgendaAxisX = 46;
-    private const double PixelsPerMinute = 0.72;
+    private enum Vista { Dia, Semana, Mes }
+
+    private Vista _vista = Vista.Dia;
+    private DateOnly _semanaInicio = InicioDeSemana(DateOnly.FromDateTime(DateTime.Today));
+    private DateOnly _mesActual = new(DateTime.Today.Year, DateTime.Today.Month, 1);
+    private DateOnly? _diaResaltado;
+    private DateOnly? _semanaResaltadaInicio;
 
     public MainWindow()
     {
         InitializeComponent();
     }
 
-    private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => DragMove();
+    private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        // DragMove() lanza InvalidOperationException si el botón primario ya
+        // no está apretado cuando llega acá (puede pasar si otro handler
+        // demoró el despacho del evento).
+        if (e.ButtonState == MouseButtonState.Pressed)
+            DragMove();
+    }
+
+    /// <summary>
+    /// Marca un elemento como interactivo frente al arrastre de la ventana.
+    /// </summary>
+    /// <remarks>
+    /// El <c>Grid</c> raíz maneja <c>MouseLeftButtonDown</c> para permitir
+    /// arrastrar el widget desde cualquier zona vacía. <see cref="Window.DragMove"/>
+    /// entra en un loop modal de movimiento que captura el mouse y consume el
+    /// <c>MouseLeftButtonUp</c> siguiente, por lo que los handlers de click de
+    /// las celdas (que viven en el evento de <em>up</em>) nunca se ejecutaban.
+    /// Marcar el <em>down</em> como manejado evita que llegue a la raíz.
+    ///
+    /// Se engancha al evento burbujeante y no al <c>Preview</c>: el de vista
+    /// previa tunelea desde la raíz hacia abajo, así que un contenedor le
+    /// robaría el mouse-down a los botones que tenga adentro (el ✎ de la guía)
+    /// y nunca dispararían su <c>Click</c>. Burbujeando, los controles que ya
+    /// manejan el down —botones— lo consumen primero, y este handler solo actúa
+    /// cuando el click cayó en el fondo del contenedor.
+    /// </remarks>
+    private static void HabilitarClick(FrameworkElement elemento) =>
+        elemento.MouseLeftButtonDown += (_, e) => e.Handled = true;
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    private static extern uint GetDoubleClickTime();
+
+    private string? _ultimoClickClave;
+    private DateTime _ultimoClickInstante = DateTime.MinValue;
+
+    /// <summary>
+    /// Detecta el doble click por cuenta propia, sin usar
+    /// <see cref="MouseButtonEventArgs.ClickCount"/>.
+    /// </summary>
+    /// <remarks>
+    /// El primer click resalta, y resaltar vuelve a construir las celdas de la
+    /// vista. WPF no le asigna <c>ClickCount = 2</c> a un click que cae sobre un
+    /// elemento distinto del anterior, así que el segundo click de un doble
+    /// click siempre llegaba como <c>ClickCount = 1</c> y nunca navegaba.
+    /// </remarks>
+    /// <param name="clave">Identidad lógica de lo clickeado (la celda, no el control).</param>
+    private bool EsDobleClick(string clave)
+    {
+        var ahora = DateTime.UtcNow;
+        var esDoble = _ultimoClickClave == clave
+                      && (ahora - _ultimoClickInstante).TotalMilliseconds <= GetDoubleClickTime();
+
+        // Un doble click cierra la secuencia: el tercer click vuelve a contar como simple.
+        _ultimoClickClave = esDoble ? null : clave;
+        _ultimoClickInstante = esDoble ? DateTime.MinValue : ahora;
+        return esDoble;
+    }
 
     private async void Window_Loaded(object sender, RoutedEventArgs e)
     {
         BuildCalendar(DateTime.Today);
-        await CargarAgendaAsync();
+        await CargarGuiaAsync();
+        await CargarDiaAsync(DateOnly.FromDateTime(DateTime.Today));
     }
 
-    private async Task CargarAgendaAsync()
+    // ===================== navegación entre vistas =====================
+
+    private void TabVista_Click(object sender, RoutedEventArgs e)
     {
-        try
+        if (sender is not ToggleButton { Tag: string tag })
+            return;
+
+        var nueva = tag switch
         {
-            var contexto = new AgendaDbContext();
-            contexto.Inicializar();
+            "Semana" => Vista.Semana,
+            "Mes" => Vista.Mes,
+            _ => Vista.Dia,
+        };
 
-            var repoTareas = new SqliteFlexibleTaskRepository(contexto);
-            var repoGuia = new SqliteTareaGuiaRepository(contexto);
-            var fuente = new GoogleCalendarSource();
+        _ = CambiarVistaAsync(nueva);
+    }
 
-            var fecha = DateOnly.FromDateTime(DateTime.Today);
-            var fijos = await fuente.ObtenerFijosDelDiaAsync(fecha);
-            var tareas = await repoTareas.ObtenerTodasAsync();
-            var yaAgendadas = await repoTareas.ObtenerYaAgendadasAsync();
+    private void NavPrev_Click(object sender, RoutedEventArgs e)
+    {
+        _diaResaltado = null;
+        _semanaResaltadaInicio = null;
 
-            var (inicioDia, finDia) = Scheduler.InferirVentanaDia(fijos, fecha);
-            var agenda = Scheduler.ArmarAgenda(fijos, tareas, fecha, yaAgendadas);
-
-            foreach (var bloque in agenda.Where(b => b.Kind == BlockKind.Flexible))
-                await repoTareas.MarcarAgendadaAsync(bloque.TaskId!, fecha);
-
-            RenderAgenda(agenda, inicioDia, finDia, fecha);
-
-            var guia = await repoGuia.ObtenerTodasAsync();
-            RenderGuia(guia, repoGuia, fecha);
+        if (_vista == Vista.Semana)
+        {
+            _semanaInicio = _semanaInicio.AddDays(-7);
+            _ = CargarSemanaAsync(_semanaInicio);
         }
-        catch (Exception ex)
+        else if (_vista == Vista.Mes)
         {
-            AgendaSubtitleText.Text = $"No se pudo cargar la agenda: {ex.Message}";
+            _mesActual = _mesActual.AddMonths(-1);
+            _ = CargarMesAsync(_mesActual);
         }
     }
 
-    // ===================== CALENDARIO =====================
+    private void NavNext_Click(object sender, RoutedEventArgs e)
+    {
+        _diaResaltado = null;
+        _semanaResaltadaInicio = null;
+
+        if (_vista == Vista.Semana)
+        {
+            _semanaInicio = _semanaInicio.AddDays(7);
+            _ = CargarSemanaAsync(_semanaInicio);
+        }
+        else if (_vista == Vista.Mes)
+        {
+            _mesActual = _mesActual.AddMonths(1);
+            _ = CargarMesAsync(_mesActual);
+        }
+    }
+
+    private void NavHoy_Click(object sender, RoutedEventArgs e)
+    {
+        _diaResaltado = null;
+        _semanaResaltadaInicio = null;
+
+        if (_vista == Vista.Semana)
+        {
+            _semanaInicio = InicioDeSemana(DateOnly.FromDateTime(DateTime.Today));
+            _ = CargarSemanaAsync(_semanaInicio);
+        }
+        else if (_vista == Vista.Mes)
+        {
+            _mesActual = new DateOnly(DateTime.Today.Year, DateTime.Today.Month, 1);
+            _ = CargarMesAsync(_mesActual);
+        }
+    }
+
+    private async Task CambiarVistaAsync(Vista vista, DateOnly? fechaDia = null, DateOnly? semanaInicio = null)
+    {
+        _vista = vista;
+        _diaResaltado = null;
+        _semanaResaltadaInicio = null;
+        ActualizarUiDeVista(vista);
+
+        switch (vista)
+        {
+            case Vista.Dia:
+                await CargarDiaAsync(fechaDia ?? DateOnly.FromDateTime(DateTime.Today));
+                break;
+            case Vista.Semana:
+                if (semanaInicio is { } s)
+                    _semanaInicio = s;
+                await CargarSemanaAsync(_semanaInicio);
+                break;
+            case Vista.Mes:
+                await CargarMesAsync(_mesActual);
+                break;
+        }
+    }
+
+    private void ActualizarUiDeVista(Vista vista)
+    {
+        TabDia.IsChecked = vista == Vista.Dia;
+        TabSemana.IsChecked = vista == Vista.Semana;
+        TabMes.IsChecked = vista == Vista.Mes;
+
+        DiaScroll.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
+        SemanaPanel.Visibility = vista == Vista.Semana ? Visibility.Visible : Visibility.Collapsed;
+        MesPanel.Visibility = vista == Vista.Mes ? Visibility.Visible : Visibility.Collapsed;
+
+        AgendaNavRow.Visibility = vista == Vista.Dia ? Visibility.Collapsed : Visibility.Visible;
+        NavHintText.Text = vista switch
+        {
+            Vista.Semana => "click resalta el día · doble click abre su vista Día",
+            Vista.Mes => "click resalta día/semana · doble click navega",
+            _ => string.Empty,
+        };
+    }
+
+    private static DateOnly InicioDeSemana(DateOnly fecha) => fecha.AddDays(-((int)fecha.DayOfWeek + 6) % 7);
+
+    // ===================== CALENDARIO (mini panel izquierdo) =====================
 
     private void BuildCalendar(DateTime hoy)
     {
@@ -150,222 +290,72 @@ public partial class MainWindow : Window
         CalendarTodayText.Text = $"{char.ToUpper(nombreDia[0]) + nombreDia[1..]} {hoy.Day}";
     }
 
-    // ===================== AGENDA =====================
-
-    private void RenderAgenda(IReadOnlyList<ScheduledBlock> bloques, DateTime inicioDia, DateTime finDia, DateOnly fecha)
-    {
-        AgendaCanvas.Children.Clear();
-
-        var cultura = new CultureInfo("es-AR");
-        var nombreDia = cultura.DateTimeFormat.GetDayName(fecha.DayOfWeek);
-        AgendaSubtitleText.Text =
-            $"{char.ToUpper(nombreDia[0]) + nombreDia[1..]} {fecha.Day} de {cultura.DateTimeFormat.GetMonthName(fecha.Month)} · {inicioDia:HH:mm} – {finDia:HH:mm}";
-
-        var libres = bloques.Count(b => b.Kind == BlockKind.Libre);
-        CalendarSummaryText.Text = $"{bloques.Count} bloques hoy · {libres} libres";
-
-        var totalMinutos = Math.Max((finDia - inicioDia).TotalMinutes, 1);
-        AgendaCanvas.Height = totalMinutos * PixelsPerMinute;
-        var anchoBloque = AgendaCanvas.Width - AgendaOffsetX;
-
-        var divisor = new Rectangle { Width = 1, Height = AgendaCanvas.Height, Fill = (Brush)FindResource("PanelBorder") };
-        Canvas.SetLeft(divisor, AgendaAxisX);
-        Canvas.SetTop(divisor, 0);
-        AgendaCanvas.Children.Add(divisor);
-
-        var cursorHora = new DateTime(inicioDia.Year, inicioDia.Month, inicioDia.Day, inicioDia.Hour, 0, 0);
-        if (cursorHora <= inicioDia)
-            cursorHora = cursorHora.AddHours(1);
-
-        while (cursorHora < finDia)
-        {
-            var top = (cursorHora - inicioDia).TotalMinutes * PixelsPerMinute;
-            AddHourLabel(cursorHora.ToString("HH"), top);
-            AddGridLine(AgendaOffsetX, anchoBloque, top);
-            cursorHora = cursorHora.AddHours(1);
-        }
-
-        foreach (var bloque in bloques)
-        {
-            var top = (bloque.Start - inicioDia).TotalMinutes * PixelsPerMinute;
-            var alto = Math.Max((bloque.End - bloque.Start).TotalMinutes * PixelsPerMinute, 4);
-            AddBlock(bloque, top, alto, anchoBloque);
-        }
-
-        var ahora = DateTime.Now;
-        if (fecha == DateOnly.FromDateTime(DateTime.Today) && ahora >= inicioDia && ahora <= finDia)
-        {
-            var top = (ahora - inicioDia).TotalMinutes * PixelsPerMinute;
-            AddAhoraIndicator(top, anchoBloque, ahora);
-        }
-    }
-
-    private void AddHourLabel(string texto, double top)
-    {
-        var etiqueta = new TextBlock
-        {
-            Text = texto,
-            FontSize = 10.5,
-            Foreground = (Brush)FindResource("TextFaint"),
-            Width = 40,
-            TextAlignment = TextAlignment.Right,
-        };
-        Canvas.SetLeft(etiqueta, 0);
-        Canvas.SetTop(etiqueta, top - 6);
-        AgendaCanvas.Children.Add(etiqueta);
-    }
-
-    private void AddGridLine(double left, double ancho, double top)
-    {
-        var linea = new Rectangle { Width = ancho, Height = 1, Fill = (Brush)FindResource("GridLine") };
-        Canvas.SetLeft(linea, left);
-        Canvas.SetTop(linea, top);
-        AgendaCanvas.Children.Add(linea);
-    }
-
-    private void AddBlock(ScheduledBlock bloque, double top, double alto, double ancho)
-    {
-        var esLibre = bloque.Kind == BlockKind.Libre;
-        var compacto = alto < 40;
-
-        var contenedor = new Grid { Width = ancho, Height = alto };
-
-        var fondo = new Rectangle
-        {
-            Width = ancho,
-            Height = alto,
-            RadiusX = compacto ? 10 : 14,
-            RadiusY = compacto ? 10 : 14,
-            Fill = esLibre ? Brushes.Transparent : (Brush)FindResource("BlockBackground"),
-            Stroke = esLibre ? new SolidColorBrush(Color.FromArgb(0x1A, 0xED, 0xEF, 0xF2)) : (Brush)FindResource("PanelBorder"),
-            StrokeThickness = 1,
-        };
-        if (esLibre)
-            fondo.StrokeDashArray = [3, 3];
-        contenedor.Children.Add(fondo);
-
-        var dotBrush = bloque.Kind switch
-        {
-            BlockKind.Fixed => (Brush)FindResource("AccentFijo"),
-            BlockKind.Flexible => (Brush)FindResource("AccentFlexible"),
-            _ => (Brush)FindResource("AccentLibre"),
-        };
-
-        var contenido = new Grid { Margin = new Thickness(16, 0, 16, 0) };
-
-        if (compacto)
-        {
-            contenido.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-            contenido.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-            contenido.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            contenido.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-
-            var dot = new Ellipse { Width = 6, Height = 6, Fill = dotBrush, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(0, 0, 8, 0) };
-            Grid.SetColumn(dot, 0);
-
-            var titulo = new TextBlock
-            {
-                Text = bloque.Title,
-                FontSize = 11.5,
-                FontWeight = esLibre ? FontWeights.Normal : FontWeights.SemiBold,
-                FontStyle = esLibre ? FontStyles.Italic : FontStyles.Normal,
-                Foreground = esLibre ? (Brush)FindResource("TextFaint") : (Brush)FindResource("TextPrimary"),
-                VerticalAlignment = VerticalAlignment.Center,
-            };
-            Grid.SetColumn(titulo, 1);
-
-            var hora = new TextBlock
-            {
-                Text = $"{bloque.Start:HH:mm}–{bloque.End:HH:mm}",
-                FontSize = 10.5,
-                Foreground = (Brush)FindResource("TextMuted"),
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Right,
-            };
-            Grid.SetColumn(hora, 3);
-
-            contenido.Children.Add(dot);
-            contenido.Children.Add(titulo);
-            contenido.Children.Add(hora);
-        }
-        else
-        {
-            var pila = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
-
-            var filaTitulo = new StackPanel { Orientation = Orientation.Horizontal };
-            filaTitulo.Children.Add(new Ellipse { Width = 7, Height = 7, Fill = dotBrush, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(0, 0, 10, 0) });
-            filaTitulo.Children.Add(new TextBlock
-            {
-                Text = bloque.Title,
-                FontSize = alto > 150 ? 15 : 13.5,
-                FontWeight = FontWeights.SemiBold,
-                Foreground = (Brush)FindResource("TextPrimary"),
-            });
-
-            var duracion = bloque.End - bloque.Start;
-            var textoDuracion = duracion.Hours > 0 ? $"{duracion.Hours}h {duracion.Minutes}m" : $"{duracion.Minutes}m";
-
-            var subtitulo = new TextBlock
-            {
-                Text = esLibre
-                    ? $"Libre · {textoDuracion} sin asignar"
-                    : $"{bloque.Start:HH:mm} – {bloque.End:HH:mm}",
-                FontSize = 11.5,
-                FontStyle = esLibre ? FontStyles.Italic : FontStyles.Normal,
-                Foreground = esLibre ? (Brush)FindResource("TextFaint") : (Brush)FindResource("TextMuted"),
-                Margin = new Thickness(esLibre ? 0 : 17, 4, 0, 0),
-            };
-
-            pila.Children.Add(filaTitulo);
-            pila.Children.Add(subtitulo);
-            contenido.Children.Add(pila);
-        }
-
-        contenedor.Children.Add(contenido);
-
-        Canvas.SetLeft(contenedor, AgendaOffsetX);
-        Canvas.SetTop(contenedor, top);
-        AgendaCanvas.Children.Add(contenedor);
-    }
-
-    private void AddAhoraIndicator(double top, double ancho, DateTime ahora)
-    {
-        var linea = new Rectangle { Width = ancho, Height = 1.5, Fill = (Brush)FindResource("AccentFlexible") };
-        Canvas.SetLeft(linea, AgendaAxisX);
-        Canvas.SetTop(linea, top);
-        AgendaCanvas.Children.Add(linea);
-
-        var punto = new Ellipse { Width = 11, Height = 11, Fill = (Brush)FindResource("AccentFlexible") };
-        Canvas.SetLeft(punto, AgendaAxisX - 5.5);
-        Canvas.SetTop(punto, top - 5.5);
-        AgendaCanvas.Children.Add(punto);
-
-        var etiqueta = new Border
-        {
-            Background = new SolidColorBrush(Color.FromArgb(0xD9, 0x14, 0x18, 0x22)),
-            CornerRadius = new CornerRadius(6),
-            Padding = new Thickness(7, 2, 7, 2),
-            Child = new TextBlock
-            {
-                Text = $"AHORA · {ahora:HH:mm}",
-                FontSize = 10.5,
-                FontWeight = FontWeights.Bold,
-                Foreground = (Brush)FindResource("AccentFlexible"),
-            },
-        };
-        Canvas.SetLeft(etiqueta, AgendaOffsetX + 8);
-        Canvas.SetTop(etiqueta, top - 10);
-        AgendaCanvas.Children.Add(etiqueta);
-    }
-
     // ===================== GUIA (TareaGuia) =====================
+    // La guía siempre refleja "hoy" real, independientemente de qué fecha
+    // esté mirando la vista Día/Semana/Mes — por eso se carga una sola vez
+    // en Window_Loaded y no depende de la fecha navegada.
 
-    private void RenderGuia(IReadOnlyList<TareaGuia> tareas, SqliteTareaGuiaRepository repo, DateOnly fecha)
+    private SqliteTareaGuiaRepository? _repoGuia;
+    private IReadOnlyList<TareaGuia> _tareasGuia = [];
+
+    private async Task CargarGuiaAsync()
+    {
+        try
+        {
+            var contexto = new AgendaDbContext();
+            contexto.Inicializar();
+            _repoGuia = new SqliteTareaGuiaRepository(contexto);
+            await RefrescarGuiaAsync();
+        }
+        catch (Exception ex)
+        {
+            // El panel de guía no es crítico para la agenda, pero fallar en
+            // silencio escondía problemas de esquema/migración.
+            GuiaSummaryText.Text = $"No se pudo cargar la guía: {ex.Message}";
+        }
+    }
+
+    private async Task RefrescarGuiaAsync()
+    {
+        if (_repoGuia is null)
+            return;
+
+        _tareasGuia = await _repoGuia.ObtenerTodasAsync();
+        RenderGuia(_tareasGuia);
+    }
+
+    private async void GuiaAgregar_Click(object sender, RoutedEventArgs e)
+    {
+        if (_repoGuia is null)
+            return;
+
+        var nueva = PedirTarea(tarea: null);
+        if (nueva is null)
+            return;
+
+        await _repoGuia.CrearAsync(nueva);
+        await RefrescarGuiaAsync();
+    }
+
+    /// <summary>Abre el diálogo de alta/edición y devuelve la tarea, o <c>null</c> si se canceló.</summary>
+    private TareaGuia? PedirTarea(TareaGuia? tarea)
+    {
+        var dialogo = new EditarTareaGuiaWindow(tarea, _tareasGuia.Select(t => t.Categoria))
+        {
+            Owner = this,
+        };
+
+        return dialogo.ShowDialog() == true ? dialogo.Resultado : null;
+    }
+
+    private void RenderGuia(IReadOnlyList<TareaGuia> tareas)
     {
         GuiaPanel.Children.Clear();
 
-        var pendientes = tareas.Count(t => !t.HechaHoy);
-        GuiaSummaryText.Text = $"{pendientes} de {tareas.Count} pendientes";
+        var pendientes = tareas.Count(t => !t.Hecha);
+        GuiaSummaryText.Text = tareas.Count == 0
+            ? "sin tareas · usá + para agregar"
+            : $"{pendientes} de {tareas.Count} pendientes";
 
         foreach (var grupo in tareas.GroupBy(t => t.Categoria))
         {
@@ -380,33 +370,34 @@ public partial class MainWindow : Window
             GuiaPanel.Children.Add(encabezado);
 
             foreach (var tarea in grupo)
-                GuiaPanel.Children.Add(CrearFilaTarea(tarea, repo, fecha));
+                GuiaPanel.Children.Add(CrearFilaTarea(tarea));
         }
     }
 
-    private FrameworkElement CrearFilaTarea(TareaGuia tarea, SqliteTareaGuiaRepository repo, DateOnly fecha)
+    private FrameworkElement CrearFilaTarea(TareaGuia tarea)
     {
         var fila = new Grid
         {
             Margin = new Thickness(0, 0, 0, 10),
-            Cursor = tarea.HechaHoy ? Cursors.Arrow : Cursors.Hand,
+            Cursor = Cursors.Hand,
             Background = Brushes.Transparent,
         };
         fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
         fila.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
 
         var casilla = new Border
         {
             Width = 18,
             Height = 18,
             CornerRadius = new CornerRadius(5),
-            BorderBrush = tarea.HechaHoy ? (Brush)FindResource("AccentFlexible") : (Brush)FindResource("TextFaint"),
+            BorderBrush = tarea.Hecha ? (Brush)FindResource("AccentFlexible") : (Brush)FindResource("TextFaint"),
             BorderThickness = new Thickness(1.6),
-            Background = tarea.HechaHoy ? (Brush)FindResource("AccentFlexible") : Brushes.Transparent,
+            Background = tarea.Hecha ? (Brush)FindResource("AccentFlexible") : Brushes.Transparent,
             VerticalAlignment = VerticalAlignment.Top,
             Margin = new Thickness(0, 1, 11, 0),
         };
-        if (tarea.HechaHoy)
+        if (tarea.Hecha)
         {
             casilla.Child = new Path
             {
@@ -424,32 +415,88 @@ public partial class MainWindow : Window
         {
             Text = tarea.Title,
             FontSize = 13,
-            Foreground = tarea.HechaHoy ? (Brush)FindResource("TextMuted") : (Brush)FindResource("TextPrimary"),
-            TextDecorations = tarea.HechaHoy ? TextDecorations.Strikethrough : null,
+            Foreground = tarea.Hecha ? (Brush)FindResource("TextMuted") : (Brush)FindResource("TextPrimary"),
+            TextDecorations = tarea.Hecha ? TextDecorations.Strikethrough : null,
+            TextWrapping = TextWrapping.Wrap,
         });
         textos.Children.Add(new TextBlock
         {
-            Text = tarea.HechaHoy ? "hecha hoy" : DescribirUltimaVez(tarea.UltimaVez),
+            Text = DescribirEstado(tarea),
             FontSize = 10.5,
             Foreground = (Brush)FindResource("TextFaint"),
             Margin = new Thickness(0, 2, 0, 0),
         });
         Grid.SetColumn(textos, 1);
 
+        var editar = new Button
+        {
+            Content = "✎",
+            Style = (Style)FindResource("NavArrowButtonStyle"),
+            Width = 22,
+            Height = 22,
+            FontSize = 12,
+            VerticalAlignment = VerticalAlignment.Top,
+            ToolTip = "Editar tarea",
+        };
+        editar.Click += async (_, _) => await EditarTareaAsync(tarea);
+        Grid.SetColumn(editar, 2);
+
         fila.Children.Add(casilla);
         fila.Children.Add(textos);
+        fila.Children.Add(editar);
 
-        if (!tarea.HechaHoy)
-        {
-            fila.MouseLeftButtonUp += async (_, _) =>
-            {
-                await repo.MarcarHechaAsync(tarea.Id, fecha);
-                var actualizadas = await repo.ObtenerTodasAsync();
-                RenderGuia(actualizadas, repo, fecha);
-            };
-        }
+        HabilitarClick(fila);
+        fila.MouseLeftButtonUp += async (_, _) => await AlternarTareaAsync(tarea);
 
         return fila;
+    }
+
+    private async Task AlternarTareaAsync(TareaGuia tarea)
+    {
+        if (_repoGuia is null)
+            return;
+
+        if (tarea.Hecha)
+            await _repoGuia.DesmarcarAsync(tarea.Id);
+        else
+            await _repoGuia.MarcarHechaAsync(tarea.Id, DateOnly.FromDateTime(DateTime.Today));
+
+        await RefrescarGuiaAsync();
+    }
+
+    private async Task EditarTareaAsync(TareaGuia tarea)
+    {
+        if (_repoGuia is null)
+            return;
+
+        var editada = PedirTarea(tarea);
+        if (editada is null)
+            return;
+
+        await _repoGuia.ActualizarAsync(editada);
+        await RefrescarGuiaAsync();
+    }
+
+    private static string DescribirEstado(TareaGuia tarea)
+    {
+        var cadencia = tarea.Repeticion switch
+        {
+            Repeticion.Semanal => "semanal",
+            Repeticion.Mensual => "mensual",
+            _ => "una vez",
+        };
+
+        if (!tarea.Hecha)
+            return $"{cadencia} · {DescribirUltimaVez(tarea.UltimaVez)}";
+
+        var vigencia = tarea.Repeticion switch
+        {
+            Repeticion.Semanal => "hecha esta semana",
+            Repeticion.Mensual => "hecha este mes",
+            _ => "hecha",
+        };
+
+        return $"{cadencia} · {vigencia}";
     }
 
     private static string DescribirUltimaVez(DateOnly? ultimaVez)
