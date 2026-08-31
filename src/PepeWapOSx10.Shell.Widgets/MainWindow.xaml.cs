@@ -20,9 +20,23 @@ public partial class MainWindow : Window
     private DateOnly? _diaResaltado;
     private DateOnly? _semanaResaltadaInicio;
 
+    private IconRailWindow? _rielIzquierdo;
+    private IconRailWindow? _rielDerecho;
+
     public MainWindow()
     {
         InitializeComponent();
+
+        // Alto y posición calculados en vez de fijos en el XAML: deja el
+        // mismo margen superior que los rieles de iconos (misma línea de
+        // arranque arriba) y reserva espacio libre abajo para la futura
+        // taskbar del widget.
+        var area = SystemParameters.WorkArea;
+        Height = area.Height - EspacioEscritorio.MargenSuperior - EspacioEscritorio.MargenInferiorReservado;
+        Top = area.Top + EspacioEscritorio.MargenSuperior;
+        Left = area.Left + (area.Width - Width) / 2;
+
+        SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
     }
 
     private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -88,11 +102,60 @@ public partial class MainWindow : Window
     {
         AnclarAlEscritorio();
         IniciarReanclajePeriodico();
+        await AbrirRielesDeIconosAsync();
 
         BuildCalendar(DateTime.Today);
         ActualizarUiDeVista(Vista.Dia);
         await CargarGuiaAsync();
         await CargarDiaAsync(DateOnly.FromDateTime(DateTime.Today));
+    }
+
+    private void Window_Closed(object sender, EventArgs e)
+    {
+        _rielIzquierdo?.Close();
+        _rielDerecho?.Close();
+    }
+
+    private async Task AbrirRielesDeIconosAsync()
+    {
+        var iconos = new List<IconRailItem>
+        {
+            new("📅", "Agenda"),
+            new("🗂️", "Proyectos"),
+            new("📁", "Documentos"),
+            new("🗒️", "Notas"),
+            new("📦", "Descargas"),
+            new("🎨", "Diseño"),
+            new("🎵", "Música"),
+            new("🎬", "Video"),
+            new("📷", "Fotos"),
+            new("🧩", "Utilidades"),
+            new("🗃️", "Backups"),
+            new("🧮", "Calculadora"),
+            new("🌐", "Chrome"),
+            new("💻", "Terminal"),
+            new("🧪", "Sandbox"),
+            new("⚙️", "Configuración"),
+        };
+
+        var mitad = iconos.Count / 2;
+        _rielIzquierdo = new IconRailWindow(LadoEscritorio.Izquierda, iconos.Take(mitad).ToList());
+        _rielIzquierdo.Show();
+        await Task.Delay(400);
+
+        _rielDerecho = new IconRailWindow(LadoEscritorio.Derecha, iconos.Skip(mitad).ToList());
+        _rielDerecho.Show();
+        await Task.Delay(400);
+
+        // Anclar varias ventanas al escritorio seguidas hace que DWM pierda
+        // la reconexión de composición de la última (ver
+        // AnclajeEscritorio.Anclar) — una pasada final de refresco sobre
+        // todas, separadas en el tiempo, deja a todas pintando.
+        AnclajeEscritorio.ForzarRepintado(this);
+        await Task.Delay(300);
+        AnclajeEscritorio.ForzarRepintado(_rielIzquierdo);
+        await Task.Delay(300);
+        AnclajeEscritorio.ForzarRepintado(_rielDerecho);
     }
 
     // ===================== navegación entre vistas =====================

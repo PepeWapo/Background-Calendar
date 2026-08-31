@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:PepeWapOSx10.Shell.Widgets"
         mc:Ignorable="d"
         Title="Agenda Dinámica"
-        Width="1364" Height="812"
+        Width="1364"
         Background="Transparent"
         WindowStyle="None"
         AllowsTransparency="True"
         ResizeMode="NoResize"
         ShowInTaskbar="False"
-        WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
+        WindowStartupLocation="Manual"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed">
 
     <Window.Resources>
         <SolidColorBrush x:Key="PanelBackground" Color="#61202430"/>
