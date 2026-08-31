@@ -47,7 +47,7 @@ public partial class MainWindow
         }
         catch (Exception ex)
         {
-            AgendaSubtitleText.Text = $"No se pudo cargar la agenda: {ex.Message}";
+            DiaFooterText.Text = $"No se pudo cargar la agenda: {ex.Message}";
         }
     }
 
@@ -148,7 +148,7 @@ public partial class MainWindow
         }
         catch (Exception ex)
         {
-            AgendaSubtitleText.Text = $"No se pudo cargar el día contiguo: {ex.Message}";
+            DiaFooterText.Text = $"No se pudo cargar el día contiguo: {ex.Message}";
         }
         finally
         {
@@ -159,14 +159,26 @@ public partial class MainWindow
     private void DiaScroll_ScrollChanged(object sender, ScrollChangedEventArgs e) =>
         ActualizarSubtituloDia();
 
-    /// <summary>El subtítulo sigue al día que ocupa el tope de lo visible.</summary>
+    /// <summary>El header/footer siguen al día que ocupa el tope de lo visible.</summary>
     private void ActualizarSubtituloDia()
     {
         if (_vista != Vista.Dia || _diasCargados.Count == 0)
             return;
 
         var indice = Math.Clamp((int)(DiaScroll.VerticalOffset / AlturaDia), 0, _diasCargados.Count - 1);
-        AgendaSubtitleText.Text = DescribirFecha(_diasCargados[indice].Fecha);
+        var dia = _diasCargados[indice];
+
+        var cultura = new CultureInfo("es-AR");
+        var nombreDia = cultura.DateTimeFormat.GetDayName(dia.Fecha.DayOfWeek);
+        var nombreMes = cultura.DateTimeFormat.GetMonthName(dia.Fecha.Month);
+
+        DiaHeaderDiaText.Text = $"{char.ToUpper(nombreDia[0]) + nombreDia[1..]} {dia.Fecha.Day}";
+        DiaHeaderMesText.Text = char.ToUpper(nombreMes[0]) + nombreMes[1..];
+        DiaHeaderAnioText.Text = dia.Fecha.Year.ToString();
+
+        var ocupados = dia.Bloques.Count(b => b.Kind != BlockKind.Libre);
+        var libres = dia.Bloques.Count(b => b.Kind == BlockKind.Libre);
+        DiaFooterText.Text = $"{ocupados} bloques ocupados · {libres} libres";
     }
 
     private static string DescribirFecha(DateOnly fecha)

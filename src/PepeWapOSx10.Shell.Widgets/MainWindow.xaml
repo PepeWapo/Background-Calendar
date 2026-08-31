@@ -10,7 +10,6 @@
         Background="Transparent"
         WindowStyle="None"
         AllowsTransparency="True"
-        Topmost="True"
         ResizeMode="NoResize"
         ShowInTaskbar="False"
         WindowStartupLocation="CenterScreen"
@@ -42,13 +41,13 @@
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="{StaticResource TextMuted}"/>
-            <Setter Property="Padding" Value="16,6"/>
+            <Setter Property="Padding" Value="20,9"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border x:Name="Bg" CornerRadius="7" Background="Transparent">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border x:Name="Bg" CornerRadius="8" Background="Transparent">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
@@ -95,13 +94,13 @@
             <Setter Property="FontSize" Value="11"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="{StaticResource AccentFlexible}"/>
-            <Setter Property="Padding" Value="12,5"/>
+            <Setter Property="Padding" Value="20,5"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border CornerRadius="7" BorderThickness="1" BorderBrush="#59559ADE" Background="Transparent">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -125,14 +124,6 @@
                     <TextBlock x:Name="CalendarMonthText" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}" HorizontalAlignment="Center"/>
                     <TextBlock x:Name="CalendarYearText" FontSize="11.5" FontWeight="SemiBold" Foreground="{StaticResource TextMuted}" HorizontalAlignment="Center"/>
                 </StackPanel>
-                <StackPanel DockPanel.Dock="Bottom" Margin="0,16,0,0">
-                    <Border BorderBrush="{StaticResource PanelBorder}" BorderThickness="0,1,0,0" Padding="0,16,0,0">
-                        <StackPanel>
-                            <TextBlock x:Name="CalendarTodayText" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}"/>
-                            <TextBlock x:Name="CalendarSummaryText" FontSize="11" Foreground="{StaticResource TextMuted}" Margin="0,3,0,0"/>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
                 <Grid x:Name="CalendarDaysGrid"/>
             </DockPanel>
         </Border>
@@ -141,9 +132,14 @@
         <Border Grid.Column="2" Style="{StaticResource PanelStyle}" Padding="30,24">
             <DockPanel>
                 <Grid DockPanel.Dock="Top" Margin="0,0,0,14">
-                    <StackPanel HorizontalAlignment="Left">
+                    <StackPanel x:Name="AgendaHeaderGenerico" HorizontalAlignment="Left">
                         <TextBlock Text="Agenda" FontFamily="Segoe UI Light" FontSize="22" Foreground="{StaticResource TextPrimary}"/>
                         <TextBlock x:Name="AgendaSubtitleText" FontSize="12.5" Foreground="{StaticResource TextMuted}" Margin="0,2,0,0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="DiaHeaderStack" HorizontalAlignment="Left" Visibility="Collapsed">
+                        <TextBlock x:Name="DiaHeaderDiaText" FontFamily="Segoe UI Light" FontSize="22" Foreground="{StaticResource TextPrimary}"/>
+                        <TextBlock x:Name="DiaHeaderMesText" FontSize="15" Foreground="{StaticResource TextMuted}" Margin="0,1,0,0"/>
+                        <TextBlock x:Name="DiaHeaderAnioText" FontSize="11.5" FontWeight="SemiBold" Foreground="{StaticResource TextFaint}" Margin="0,1,0,0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                         <StackPanel Orientation="Horizontal" Margin="0,0,18,0">
@@ -161,29 +157,26 @@
                     </StackPanel>
                 </Grid>
 
-                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Background="#14000000" Margin="0,0,0,14"
-                            HorizontalAlignment="Left">
-                    <StackPanel.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </StackPanel.Resources>
-                    <Border CornerRadius="10" Background="#14000000" Padding="3">
-                        <StackPanel Orientation="Horizontal">
-                            <ToggleButton x:Name="TabDia" Content="Día" Style="{StaticResource ViewTabButtonStyle}" Margin="2,0" IsChecked="True" Click="TabVista_Click" Tag="Dia"/>
-                            <ToggleButton x:Name="TabSemana" Content="Semana" Style="{StaticResource ViewTabButtonStyle}" Margin="2,0" Click="TabVista_Click" Tag="Semana"/>
-                            <ToggleButton x:Name="TabMes" Content="Mes" Style="{StaticResource ViewTabButtonStyle}" Margin="2,0" Click="TabVista_Click" Tag="Mes"/>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
+                <Border DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="0,0,0,14"
+                        CornerRadius="12" Background="#2E000000" Padding="6">
+                    <StackPanel Orientation="Horizontal">
+                        <ToggleButton x:Name="TabDia" Content="Día" Style="{StaticResource ViewTabButtonStyle}" Margin="3,0" IsChecked="True" Click="TabVista_Click" Tag="Dia"/>
+                        <ToggleButton x:Name="TabSemana" Content="Semana" Style="{StaticResource ViewTabButtonStyle}" Margin="3,0" Click="TabVista_Click" Tag="Semana"/>
+                        <ToggleButton x:Name="TabMes" Content="Mes" Style="{StaticResource ViewTabButtonStyle}" Margin="3,0" Click="TabVista_Click" Tag="Mes"/>
+                    </StackPanel>
+                </Border>
 
                 <Grid x:Name="AgendaNavRow" DockPanel.Dock="Top" Margin="0,0,0,14" Visibility="Collapsed">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="&#8249;" Style="{StaticResource NavArrowButtonStyle}" Click="NavPrev_Click"/>
-                        <TextBlock x:Name="NavLabelText" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}"
-                                   VerticalAlignment="Center" Margin="10,0" MinWidth="190"/>
-                        <Button Content="&#8250;" Style="{StaticResource NavArrowButtonStyle}" Click="NavNext_Click"/>
-                        <Button Content="HOY" Style="{StaticResource NavTodayButtonStyle}" Click="NavHoy_Click" Margin="14,0,0,0"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border CornerRadius="10" Background="#2E000000" Padding="4">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="&#8249;" Style="{StaticResource NavArrowButtonStyle}" Click="NavPrev_Click"/>
+                                <TextBlock x:Name="NavLabelText" FontSize="13" FontWeight="SemiBold" Foreground="{StaticResource TextPrimary}"
+                                           VerticalAlignment="Center" Margin="8,0"/>
+                                <Button Content="&#8250;" Style="{StaticResource NavArrowButtonStyle}" Click="NavNext_Click"/>
+                            </StackPanel>
+                        </Border>
+                        <Button Content="HOY" Style="{StaticResource NavTodayButtonStyle}" Click="NavHoy_Click" Margin="10,0,0,0"/>
                     </StackPanel>
                     <TextBlock x:Name="NavHintText" FontSize="10.5" FontStyle="Italic" Foreground="{StaticResource TextFaint}"
                                HorizontalAlignment="Right" VerticalAlignment="Center"/>
@@ -191,10 +184,13 @@
 
                 <Grid>
                     <!-- Vista Día -->
-                    <ScrollViewer x:Name="DiaScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="660"
-                                  PreviewMouseWheel="DiaScroll_PreviewMouseWheel" ScrollChanged="DiaScroll_ScrollChanged">
-                        <Canvas x:Name="AgendaCanvas" Width="733"/>
-                    </ScrollViewer>
+                    <DockPanel x:Name="DiaPanel">
+                        <TextBlock x:Name="DiaFooterText" DockPanel.Dock="Bottom" FontSize="11.5" Foreground="{StaticResource TextMuted}" Margin="4,10,0,0"/>
+                        <ScrollViewer x:Name="DiaScroll" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled"
+                                      PreviewMouseWheel="DiaScroll_PreviewMouseWheel" ScrollChanged="DiaScroll_ScrollChanged">
+                            <Canvas x:Name="AgendaCanvas" Width="733"/>
+                        </ScrollViewer>
+                    </DockPanel>
 
                     <!-- Vista Semana -->
                     <DockPanel x:Name="SemanaPanel" Visibility="Collapsed">
@@ -207,7 +203,7 @@
                     <!-- Vista Mes -->
                     <DockPanel x:Name="MesPanel" Visibility="Collapsed">
                         <Grid x:Name="MesHeadGrid" DockPanel.Dock="Top" Margin="0,0,0,8"/>
-                        <Grid x:Name="MesRowsGrid" Height="620"/>
+                        <Grid x:Name="MesRowsGrid"/>
                     </DockPanel>
                 </Grid>
             </DockPanel>
@@ -218,7 +214,7 @@
             <DockPanel>
                 <Grid DockPanel.Dock="Top" Margin="0,0,0,18">
                     <StackPanel HorizontalAlignment="Left">
-                        <TextBlock Text="Guía" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}"/>
+                        <TextBlock Text="Tareas" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}"/>
                         <TextBlock x:Name="GuiaSummaryText" FontSize="11.5" Foreground="{StaticResource TextMuted}" Margin="0,2,0,0"
                                    TextWrapping="Wrap"/>
                     </StackPanel>

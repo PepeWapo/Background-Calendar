@@ -86,7 +86,11 @@ public partial class MainWindow : Window
 
     private async void Window_Loaded(object sender, RoutedEventArgs e)
     {
+        AnclarAlEscritorio();
+        IniciarReanclajePeriodico();
+
         BuildCalendar(DateTime.Today);
+        ActualizarUiDeVista(Vista.Dia);
         await CargarGuiaAsync();
         await CargarDiaAsync(DateOnly.FromDateTime(DateTime.Today));
     }
@@ -188,9 +192,12 @@ public partial class MainWindow : Window
         TabSemana.IsChecked = vista == Vista.Semana;
         TabMes.IsChecked = vista == Vista.Mes;
 
-        DiaScroll.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
+        DiaPanel.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
         SemanaPanel.Visibility = vista == Vista.Semana ? Visibility.Visible : Visibility.Collapsed;
         MesPanel.Visibility = vista == Vista.Mes ? Visibility.Visible : Visibility.Collapsed;
+
+        AgendaHeaderGenerico.Visibility = vista == Vista.Dia ? Visibility.Collapsed : Visibility.Visible;
+        DiaHeaderStack.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
 
         AgendaNavRow.Visibility = vista == Vista.Dia ? Visibility.Collapsed : Visibility.Visible;
         NavHintText.Text = vista switch
@@ -253,41 +260,31 @@ public partial class MainWindow : Window
             var columna = indice % 7;
             var esHoy = dia == hoy.Day;
 
-            FrameworkElement celda = esHoy
-                ? new Border
-                {
-                    Width = 26,
-                    Height = 26,
-                    CornerRadius = new CornerRadius(13),
-                    Background = (Brush)FindResource("AccentFlexible"),
-                    Child = new TextBlock
-                    {
-                        Text = dia.ToString(),
-                        FontSize = 12,
-                        FontWeight = FontWeights.Bold,
-                        Foreground = Brushes.Black,
-                        HorizontalAlignment = HorizontalAlignment.Center,
-                        VerticalAlignment = VerticalAlignment.Center,
-                    },
-                }
-                : new TextBlock
+            // Mismo Border 26x26 para todas las celdas (solo cambia color):
+            // si el día "hoy" era un Border y el resto TextBlocks sueltos,
+            // el círculo quedaba un par de píxeles desalineado respecto a
+            // los números planos de al lado.
+            var celda = new Border
+            {
+                Width = 26,
+                Height = 26,
+                CornerRadius = new CornerRadius(13),
+                Background = esHoy ? (Brush)FindResource("AccentFlexible") : Brushes.Transparent,
+                Child = new TextBlock
                 {
                     Text = dia.ToString(),
                     FontSize = 12,
-                    Foreground = (Brush)FindResource("TextPrimary"),
-                    Width = 26,
-                    Height = 26,
-                    TextAlignment = TextAlignment.Center,
+                    FontWeight = esHoy ? FontWeights.Bold : FontWeights.Normal,
+                    Foreground = esHoy ? Brushes.Black : (Brush)FindResource("TextPrimary"),
+                    HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                };
+                },
+            };
 
             Grid.SetRow(celda, fila + 1);
             Grid.SetColumn(celda, columna);
             CalendarDaysGrid.Children.Add(celda);
         }
-
-        var nombreDia = cultura.DateTimeFormat.GetDayName(hoy.DayOfWeek);
-        CalendarTodayText.Text = $"{char.ToUpper(nombreDia[0]) + nombreDia[1..]} {hoy.Day}";
     }
 
     // ===================== GUIA (TareaGuia) =====================
@@ -385,6 +382,7 @@ public partial class MainWindow : Window
         fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
         fila.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
         fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
 
         var casilla = new Border
         {
@@ -441,9 +439,24 @@ public partial class MainWindow : Window
         editar.Click += async (_, _) => await EditarTareaAsync(tarea);
         Grid.SetColumn(editar, 2);
 
+        var eliminar = new Button
+        {
+            Content = "✕",
+            Style = (Style)FindResource("NavArrowButtonStyle"),
+            Width = 22,
+            Height = 22,
+            FontSize = 11,
+            VerticalAlignment = VerticalAlignment.Top,
+            Margin = new Thickness(2, 0, 0, 0),
+            ToolTip = "Eliminar tarea",
+        };
+        eliminar.Click += async (_, _) => await EliminarTareaAsync(tarea);
+        Grid.SetColumn(eliminar, 3);
+
         fila.Children.Add(casilla);
         fila.Children.Add(textos);
         fila.Children.Add(editar);
+        fila.Children.Add(eliminar);
 
         HabilitarClick(fila);
         fila.MouseLeftButtonUp += async (_, _) => await AlternarTareaAsync(tarea);
@@ -474,6 +487,26 @@ public partial class MainWindow : Window
             return;
 
         await _repoGuia.ActualizarAsync(editada);
+        await RefrescarGuiaAsync();
+    }
+
+    private async Task EliminarTareaAsync(TareaGuia tarea)
+    {
+        if (_repoGuia is null)
+            return;
+
+        var confirmar = MessageBox.Show(
+            this,
+            $"¿Eliminar \"{tarea.Title}\" de la guía? Esto borra también su historial.",
+            "Eliminar tarea",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Warning,
+            MessageBoxResult.No);
+
+        if (confirmar != MessageBoxResult.Yes)
+            return;
+
+        await _repoGuia.EliminarAsync(tarea.Id);
         await RefrescarGuiaAsync();
     }
 
