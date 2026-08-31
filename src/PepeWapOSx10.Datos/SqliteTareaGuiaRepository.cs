@@ -116,6 +116,17 @@ public sealed class SqliteTareaGuiaRepository(AgendaDbContext contexto) : ITarea
         return Task.CompletedTask;
     }
 
+    public Task EliminarAsync(string id)
+    {
+        using var conexion = contexto.AbrirConexion();
+        using var comando = conexion.CreateCommand();
+        comando.CommandText = "DELETE FROM tareas_guia WHERE id = $id;";
+        comando.Parameters.AddWithValue("$id", id);
+        comando.ExecuteNonQuery();
+
+        return Task.CompletedTask;
+    }
+
     private static void AgregarDatos(SqliteCommand comando, TareaGuia tarea)
     {
         comando.Parameters.AddWithValue("$title", tarea.Title);

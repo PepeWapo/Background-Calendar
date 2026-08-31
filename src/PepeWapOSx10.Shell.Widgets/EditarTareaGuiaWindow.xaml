@@ -17,6 +17,7 @@
         <SolidColorBrush x:Key="DlgText" Color="#EDEFF2"/>
         <SolidColorBrush x:Key="DlgMuted" Color="#8B93A1"/>
         <SolidColorBrush x:Key="DlgAccent" Color="#55C2D6"/>
+        <SolidColorBrush x:Key="DlgInputBackground" Color="#14000000"/>
 
         <Style TargetType="TextBlock" x:Key="Etiqueta">
             <Setter Property="FontSize" Value="10.5"/>
@@ -28,16 +29,155 @@
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="13"/>
             <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
-            <Setter Property="Background" Value="#14000000"/>
+            <Setter Property="Background" Value="{StaticResource DlgInputBackground}"/>
             <Setter Property="BorderBrush" Value="{StaticResource DlgBorder}"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="Padding" Value="10,8"/>
             <Setter Property="CaretBrush" Value="{StaticResource DlgText}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DlgComboToggleStyle" TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Background="Transparent"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Padding" Value="10,7"/>
+            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="Bg" Background="Transparent" CornerRadius="6" Padding="{TemplateBinding Padding}" Margin="3,1">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="Bg" Property="Background" Value="#2455C2D6"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bg" Property="Background" Value="#3855C2D6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <Style TargetType="ComboBox">
             <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
+            <Setter Property="Background" Value="{StaticResource DlgInputBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DlgBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton x:Name="Toggle" Style="{StaticResource DlgComboToggleStyle}"
+                                          IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                                          Focusable="False" ClickMode="Press"/>
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="8" IsHitTestVisible="False">
+                                <Grid Margin="{TemplateBinding Padding}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ContentPresenter x:Name="ContentSite" Content="{TemplateBinding SelectionBoxItem}"
+                                                      IsHitTestVisible="False" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                      Visibility="Collapsed"/>
+                                    <TextBox x:Name="PART_EditableTextBox" Background="Transparent" BorderThickness="0" Padding="0"
+                                             Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}"
+                                             CaretBrush="{StaticResource DlgText}"
+                                             Focusable="True" VerticalAlignment="Center" Visibility="Collapsed"/>
+                                    <TextBlock Grid.Column="1" Text="&#9662;" FontSize="9" Foreground="{StaticResource DlgMuted}"
+                                               VerticalAlignment="Center" Margin="6,0,0,0" IsHitTestVisible="False"/>
+                                </Grid>
+                            </Border>
+                            <Popup x:Name="Popup" Placement="Bottom" AllowsTransparency="True"
+                                   IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                                   Width="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"
+                                   Focusable="False" PopupAnimation="Fade">
+                                <Border Background="{StaticResource DlgBackground}" BorderBrush="{StaticResource DlgBorder}"
+                                        BorderThickness="1" CornerRadius="8" Padding="3" Margin="0,4,0,0">
+                                    <ScrollViewer MaxHeight="200" SnapsToDevicePixels="True">
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEditable" Value="True">
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable" Value="False">
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DlgSecondaryButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
+            <Setter Property="FontSize" Value="12.5"/>
+            <Setter Property="Padding" Value="16,8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bg" CornerRadius="8" Background="{StaticResource DlgInputBackground}"
+                                BorderBrush="{StaticResource DlgBorder}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bg" Property="Background" Value="#22000000"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DlgPrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="12.5"/>
+            <Setter Property="Padding" Value="18,8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="{StaticResource DlgAccent}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bg" CornerRadius="8" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bg" Property="Opacity" Value="0.85"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 
@@ -61,11 +201,10 @@
                        TextWrapping="Wrap" Visibility="Collapsed"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                <Button Content="Cancelar" Click="Cancelar_Click" IsCancel="True"
-                        Padding="14,6" Margin="0,0,8,0" Cursor="Hand"/>
-                <Button Content="Guardar" Click="Guardar_Click" IsDefault="True"
-                        Padding="18,6" Cursor="Hand" Foreground="Black"
-                        Background="{StaticResource DlgAccent}"/>
+                <Button Content="Cancelar" Style="{StaticResource DlgSecondaryButtonStyle}"
+                        Click="Cancelar_Click" IsCancel="True" Margin="0,0,8,0"/>
+                <Button Content="Guardar" Style="{StaticResource DlgPrimaryButtonStyle}"
+                        Click="Guardar_Click" IsDefault="True"/>
             </StackPanel>
         </StackPanel>
     </Border>

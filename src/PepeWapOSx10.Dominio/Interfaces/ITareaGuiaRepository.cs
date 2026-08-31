@@ -15,4 +15,6 @@ public interface ITareaGuiaRepository
 
     /// <summary>Actualiza título, categoría y repetición. No toca el historial.</summary>
     Task ActualizarAsync(TareaGuia tarea);
+
+    Task EliminarAsync(string id);
 }
