@@ -102,7 +102,7 @@ public partial class MainWindow : Window
     {
         AnclarAlEscritorio();
         IniciarReanclajePeriodico();
-        await AbrirRielesDeIconosAsync();
+        AbrirRielesDeIconos();
 
         BuildCalendar(DateTime.Today);
         ActualizarUiDeVista(Vista.Dia);
@@ -116,7 +116,7 @@ public partial class MainWindow : Window
         _rielDerecho?.Close();
     }
 
-    private async Task AbrirRielesDeIconosAsync()
+    private void AbrirRielesDeIconos()
     {
         var iconos = new List<IconRailItem>
         {
@@ -140,22 +140,9 @@ public partial class MainWindow : Window
 
         var mitad = iconos.Count / 2;
         _rielIzquierdo = new IconRailWindow(LadoEscritorio.Izquierda, iconos.Take(mitad).ToList());
-        _rielIzquierdo.Show();
-        await Task.Delay(400);
-
         _rielDerecho = new IconRailWindow(LadoEscritorio.Derecha, iconos.Skip(mitad).ToList());
+        _rielIzquierdo.Show();
         _rielDerecho.Show();
-        await Task.Delay(400);
-
-        // Anclar varias ventanas al escritorio seguidas hace que DWM pierda
-        // la reconexión de composición de la última (ver
-        // AnclajeEscritorio.Anclar) — una pasada final de refresco sobre
-        // todas, separadas en el tiempo, deja a todas pintando.
-        AnclajeEscritorio.ForzarRepintado(this);
-        await Task.Delay(300);
-        AnclajeEscritorio.ForzarRepintado(_rielIzquierdo);
-        await Task.Delay(300);
-        AnclajeEscritorio.ForzarRepintado(_rielDerecho);
     }
 
     // ===================== navegación entre vistas =====================
