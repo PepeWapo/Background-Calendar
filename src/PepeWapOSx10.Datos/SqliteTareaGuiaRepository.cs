@@ -1,4 +1,5 @@
 using Microsoft.Data.Sqlite;
+using PepeWapOSx10.Dominio;
 using PepeWapOSx10.Dominio.Interfaces;
 using PepeWapOSx10.Dominio.Modelos;
 
@@ -48,13 +49,11 @@ public sealed class SqliteTareaGuiaRepository(AgendaDbContext contexto) : ITarea
 
         return repeticion switch
         {
-            Repeticion.Semanal => InicioDeSemana(fecha) == InicioDeSemana(hoy),
+            Repeticion.Semanal => SemanaIso.Inicio(fecha) == SemanaIso.Inicio(hoy),
             Repeticion.Mensual => fecha.Year == hoy.Year && fecha.Month == hoy.Month,
             _ => true,
         };
     }
-
-    private static DateOnly InicioDeSemana(DateOnly fecha) => fecha.AddDays(-((int)fecha.DayOfWeek + 6) % 7);
 
     private static Repeticion LeerRepeticion(string? valor) =>
         Enum.TryParse<Repeticion>(valor, ignoreCase: true, out var repeticion) ? repeticion : Repeticion.Unica;

@@ -12,28 +12,21 @@
         WindowStartupLocation="CenterOwner">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="DlgBackground" Color="#F21B1F2A"/>
-        <SolidColorBrush x:Key="DlgBorder" Color="#26E6E8EC"/>
-        <SolidColorBrush x:Key="DlgText" Color="#EDEFF2"/>
-        <SolidColorBrush x:Key="DlgMuted" Color="#8B93A1"/>
-        <SolidColorBrush x:Key="DlgAccent" Color="#55C2D6"/>
-        <SolidColorBrush x:Key="DlgInputBackground" Color="#14000000"/>
-
         <Style TargetType="TextBlock" x:Key="Etiqueta">
             <Setter Property="FontSize" Value="10.5"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="{StaticResource DlgMuted}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextMuted}"/>
             <Setter Property="Margin" Value="0,14,0,5"/>
         </Style>
 
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
-            <Setter Property="Background" Value="{StaticResource DlgInputBackground}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource DlgBorder}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Background" Value="{StaticResource InputBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DialogBorder}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="10,8"/>
-            <Setter Property="CaretBrush" Value="{StaticResource DlgText}"/>
+            <Setter Property="CaretBrush" Value="{StaticResource TextPrimary}"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
@@ -58,7 +51,7 @@
 
         <Style TargetType="ComboBoxItem">
             <Setter Property="Padding" Value="10,7"/>
-            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ComboBoxItem">
@@ -80,9 +73,9 @@
 
         <Style TargetType="ComboBox">
             <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
-            <Setter Property="Background" Value="{StaticResource DlgInputBackground}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource DlgBorder}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Background" Value="{StaticResource InputBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource DialogBorder}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="10,8"/>
             <Setter Property="Template">
@@ -104,9 +97,9 @@
                                                       Visibility="Collapsed"/>
                                     <TextBox x:Name="PART_EditableTextBox" Background="Transparent" BorderThickness="0" Padding="0"
                                              Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}"
-                                             CaretBrush="{StaticResource DlgText}"
+                                             CaretBrush="{StaticResource TextPrimary}"
                                              Focusable="True" VerticalAlignment="Center" Visibility="Collapsed"/>
-                                    <TextBlock Grid.Column="1" Text="&#9662;" FontSize="9" Foreground="{StaticResource DlgMuted}"
+                                    <TextBlock Grid.Column="1" Text="&#9662;" FontSize="9" Foreground="{StaticResource TextMuted}"
                                                VerticalAlignment="Center" Margin="6,0,0,0" IsHitTestVisible="False"/>
                                 </Grid>
                             </Border>
@@ -114,7 +107,7 @@
                                    IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
                                    Width="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"
                                    Focusable="False" PopupAnimation="Fade">
-                                <Border Background="{StaticResource DlgBackground}" BorderBrush="{StaticResource DlgBorder}"
+                                <Border Background="{StaticResource DialogBackground}" BorderBrush="{StaticResource DialogBorder}"
                                         BorderThickness="1" CornerRadius="8" Padding="3" Margin="0,4,0,0">
                                     <ScrollViewer MaxHeight="200" SnapsToDevicePixels="True">
                                         <ItemsPresenter/>
@@ -136,15 +129,15 @@
         </Style>
 
         <Style x:Key="DlgSecondaryButtonStyle" TargetType="Button">
-            <Setter Property="Foreground" Value="{StaticResource DlgText}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
             <Setter Property="FontSize" Value="12.5"/>
             <Setter Property="Padding" Value="16,8"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border x:Name="Bg" CornerRadius="8" Background="{StaticResource DlgInputBackground}"
-                                BorderBrush="{StaticResource DlgBorder}" BorderThickness="1">
+                        <Border x:Name="Bg" CornerRadius="8" Background="{StaticResource InputBackground}"
+                                BorderBrush="{StaticResource DialogBorder}" BorderThickness="1">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -163,7 +156,7 @@
             <Setter Property="FontSize" Value="12.5"/>
             <Setter Property="Padding" Value="18,8"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Background" Value="{StaticResource DlgAccent}"/>
+            <Setter Property="Background" Value="{StaticResource AccentFlexible}"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -181,12 +174,12 @@
         </Style>
     </Window.Resources>
 
-    <Border Background="{StaticResource DlgBackground}" BorderBrush="{StaticResource DlgBorder}"
+    <Border Background="{StaticResource DialogBackground}" BorderBrush="{StaticResource DialogBorder}"
             BorderThickness="1" CornerRadius="16" Padding="22,18,22,18"
             MouseLeftButtonDown="Raiz_MouseLeftButtonDown">
         <StackPanel>
             <TextBlock x:Name="TituloDialogo" FontFamily="Segoe UI Light" FontSize="18"
-                       Foreground="{StaticResource DlgText}"/>
+                       Foreground="{StaticResource TextPrimary}"/>
 
             <TextBlock Text="TÍTULO" Style="{StaticResource Etiqueta}"/>
             <TextBox x:Name="TituloBox" MaxLength="80"/>

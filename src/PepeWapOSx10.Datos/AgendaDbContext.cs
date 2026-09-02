@@ -8,8 +8,49 @@ public sealed class AgendaDbContext
 
     public AgendaDbContext(string? rutaBaseDeDatos = null)
     {
-        rutaBaseDeDatos ??= Path.Combine(AppContext.BaseDirectory, "agenda.db");
+        rutaBaseDeDatos ??= RutaPorDefecto();
         _connectionString = $"Data Source={rutaBaseDeDatos}";
+    }
+
+    /// <summary>
+    /// La base vive en los datos de aplicación del usuario, no junto al
+    /// ejecutable.
+    /// </summary>
+    /// <remarks>
+    /// Antes era <c>AppContext.BaseDirectory/agenda.db</c>, o sea dentro de
+    /// <c>bin/</c>: cualquier build limpio (o un simple borrado de <c>bin</c>)
+    /// se llevaba puestas las tareas de la guía y su historial, y una build de
+    /// Debug y una de Release veían bases distintas. En
+    /// <c>%LOCALAPPDATA%\PepeWapOSx10</c> —la misma carpeta donde ya viven los
+    /// accesos directos de los rieles— sobrevive a los builds y la comparten
+    /// todas las configuraciones.
+    ///
+    /// Si encuentra una base en la ubicación vieja la muda, para no dejar atrás
+    /// el historial de quien ya venía usando la app.
+    /// </remarks>
+    private static string RutaPorDefecto()
+    {
+        var carpeta = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PepeWapOSx10");
+        Directory.CreateDirectory(carpeta);
+
+        var ruta = Path.Combine(carpeta, "agenda.db");
+        var anterior = Path.Combine(AppContext.BaseDirectory, "agenda.db");
+
+        if (!File.Exists(ruta) && File.Exists(anterior))
+        {
+            try
+            {
+                File.Move(anterior, ruta);
+            }
+            catch (IOException)
+            {
+                // si está en uso por otra instancia, se arranca con una base
+                // nueva; la próxima vez se vuelve a intentar la mudanza.
+            }
+        }
+
+        return ruta;
     }
 
     public SqliteConnection AbrirConexion()

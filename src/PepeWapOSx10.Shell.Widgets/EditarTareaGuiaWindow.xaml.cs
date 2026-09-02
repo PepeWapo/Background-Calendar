@@ -42,11 +42,7 @@ public partial class EditarTareaGuiaWindow : Window
         Loaded += (_, _) => TituloBox.Focus();
     }
 
-    private void Raiz_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-    {
-        if (e.ButtonState == MouseButtonState.Pressed)
-            DragMove();
-    }
+    private void Raiz_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.ArrastrarVentana(e);
 
     private void Guardar_Click(object sender, RoutedEventArgs e)
     {

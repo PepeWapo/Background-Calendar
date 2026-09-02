@@ -25,8 +25,17 @@ Todo el stack es **C# / .NET 10**.
   entrenamiento, pagos, etc.) con alta, edición y repetición configurable
   (única / semanal / mensual) — el estado de "hecha" se deriva de la última
   vez que se marcó y la repetición, sin necesidad de ningún reset manual.
-- **Contenedores de iconos** y **mejoras de taskbar**: todavía sin empezar
-  (proyectos scaffoldeados, sin lógica).
+- **Contenedores de iconos** (rieles): dos ventanas ancladas a los bordes
+  laterales del escritorio con los accesos directos reales del usuario —
+  migrados desde el escritorio de Windows a una carpeta propia, con su
+  ícono real, ejecutables con doble click y reordenables con drag-and-drop
+  entre rieles (el orden se persiste).
+- **Wallpaper animado**: loops de video a pantalla completa detrás de todo
+  (LibVLC, así que no depende de los códecs de Windows), rotando cada 10
+  minutos con un fundido a negro. Click-through total: no le roba ningún
+  click ni al escritorio ni al resto del widget.
+- **Mejoras de taskbar**: todavía sin empezar (proyecto scaffoldeado, sin
+  lógica). El widget ya reserva el margen inferior para cuando exista.
 - **Escritura a Google Calendar**: pendiente — hoy la lectura es de solo
   lectura vía ICS; migrar a la Calendar API con OAuth para poder editar
   eventos desde el widget está planeado pero no implementado.
@@ -38,7 +47,15 @@ src/
   PepeWapOSx10.Dominio/         Modelos y Scheduler — sin dependencias de UI/infra
   PepeWapOSx10.Datos/           Persistencia SQLite (tareas flexibles, guía)
   PepeWapOSx10.Calendario/      Lectura de Google Calendar (ICS)
-  PepeWapOSx10.Shell.Widgets/   Widget de escritorio WPF (agenda + guía)
+  PepeWapOSx10.Shell.Widgets/   Widget de escritorio WPF
+    Agenda/                       Servicio de agenda + vistas Día/Semana/Mes,
+                                  mini-calendario y panel de guía
+    Escritorio/                   Anclaje al fondo del z-order y orquestación
+                                  de las ventanas de escritorio
+    Rieles/                       Contenedores de iconos laterales
+    Wallpaper/                    Wallpaper animado (LibVLC)
+    Ui/                           Paleta, formato en español, gestos de mouse
+                                  y primitivas de dibujo compartidas
   PepeWapOSx10.Shell.Iconos/    Contenedores de iconos de escritorio (sin implementar)
   PepeWapOSx10.Shell.Taskbar/   Mejoras de taskbar (sin implementar)
   PepeWapOSx10.App/             Orquestador de bandeja del sistema (sin implementar)
@@ -70,6 +87,18 @@ El widget necesita la URL del ICS privado de tu Google Calendar. Creá
 ```powershell
 dotnet build src/PepeWapOSx10.Shell.Widgets/PepeWapOSx10.Shell.Widgets.csproj
 dotnet run --project src/PepeWapOSx10.Shell.Widgets
+```
+
+Los datos del usuario (la base SQLite con la guía y su historial, y los
+accesos directos migrados de los rieles) viven en
+`%LOCALAPPDATA%\PepeWapOSx10`, fuera de `bin/`, para que un build limpio no
+se los lleve puestos.
+
+Para dejarlo corriendo al iniciar sesión, se publica a una carpeta estable y
+se apunta ahí el acceso directo de la carpeta Inicio:
+
+```powershell
+dotnet publish src/PepeWapOSx10.Shell.Widgets -c Release -o "$env:LOCALAPPDATA\PepeWapOSx10pp"
 ```
 
 Para probar el motor de agenda solo, sin UI:

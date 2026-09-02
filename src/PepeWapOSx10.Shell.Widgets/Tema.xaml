@@ -1,0 +1,123 @@
+<!--
+    Paleta y estilos compartidos por todas las ventanas del widget.
+
+    Vive en un único diccionario mergeado en App.xaml en vez de repetido en
+    cada Window.Resources: antes los mismos colores estaban declarados tres
+    veces (agenda, rieles y el diálogo de tareas, este último con los mismos
+    valores bajo claves "Dlg*" propias), así que cualquier ajuste de color
+    había que hacerlo en tres lugares y era fácil que quedaran desfasados.
+    El código C# los lee por clave desde acá (ver Paleta.cs).
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ===================== colores ===================== -->
+    <SolidColorBrush x:Key="PanelBackground" Color="#A1202430"/>
+    <SolidColorBrush x:Key="PanelBorder" Color="#14E6E8EC"/>
+    <SolidColorBrush x:Key="TextPrimary" Color="#EDEFF2"/>
+    <SolidColorBrush x:Key="TextMuted" Color="#8B93A1"/>
+    <SolidColorBrush x:Key="TextFaint" Color="#6B7280"/>
+    <SolidColorBrush x:Key="AccentFijo" Color="#E8A64D"/>
+    <SolidColorBrush x:Key="AccentFlexible" Color="#55C2D6"/>
+    <SolidColorBrush x:Key="AccentLibre" Color="#5B6472"/>
+    <SolidColorBrush x:Key="BlockBackground" Color="#09EDEFF2"/>
+    <SolidColorBrush x:Key="GridLine" Color="#0BE6E8EC"/>
+    <SolidColorBrush x:Key="TabActiveBackground" Color="#2455C2D6"/>
+    <SolidColorBrush x:Key="SelectedTint" Color="#0FEDEFF2"/>
+    <SolidColorBrush x:Key="NavHoverBackground" Color="#0FEDEFF2"/>
+    <SolidColorBrush x:Key="EtiquetaFlotante" Color="#D9141822"/>
+
+    <!-- rieles de iconos -->
+    <SolidColorBrush x:Key="RailBackground" Color="#891B1F2A"/>
+    <SolidColorBrush x:Key="RailBorder" Color="#26E6E8EC"/>
+    <SolidColorBrush x:Key="SlotIdle" Color="#0AFFFFFF"/>
+    <SolidColorBrush x:Key="SlotHoverBackground" Color="#5955C2D6"/>
+    <SolidColorBrush x:Key="SlotHoverBorder" Color="#8C55C2D6"/>
+    <SolidColorBrush x:Key="SlotSelectedBackground" Color="#8055C2D6"/>
+    <SolidColorBrush x:Key="SlotSelectedBorder" Color="#E655C2D6"/>
+
+    <!-- diálogos: el fondo es el mismo tono que los paneles pero casi opaco,
+         porque un diálogo modal encima del escritorio tiene que leerse solo -->
+    <SolidColorBrush x:Key="DialogBackground" Color="#F21B1F2A"/>
+    <SolidColorBrush x:Key="DialogBorder" Color="#26E6E8EC"/>
+    <SolidColorBrush x:Key="InputBackground" Color="#14000000"/>
+
+    <!-- ===================== estilos ===================== -->
+    <Style x:Key="PanelStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource PanelBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PanelBorder}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="20"/>
+    </Style>
+
+    <Style x:Key="ViewTabButtonStyle" TargetType="ToggleButton">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="{StaticResource TextMuted}"/>
+        <Setter Property="Padding" Value="20,9"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="Bg" CornerRadius="8" Background="Transparent">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Bg" Property="Background" Value="{StaticResource TabActiveBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="IsChecked" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NavArrowButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="26"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource TextMuted}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bg" CornerRadius="8" Background="Transparent">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bg" Property="Background" Value="{StaticResource NavHoverBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NavTodayButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource AccentFlexible}"/>
+        <Setter Property="Padding" Value="20,5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="7" BorderThickness="1" BorderBrush="#59559ADE" Background="Transparent">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

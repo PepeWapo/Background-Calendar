@@ -1,28 +1,34 @@
-using System.Globalization;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using PepeWapOSx10.Datos;
-using PepeWapOSx10.Dominio.Modelos;
 
 namespace PepeWapOSx10.Shell.Widgets;
 
+/// <summary>
+/// El widget de agenda: el panel central con las tres vistas, el
+/// mini-calendario a la izquierda y la guía de tareas a la derecha.
+/// </summary>
+/// <remarks>
+/// Esta clase arma las piezas y reparte la navegación entre ellas; el trabajo
+/// lo hacen <see cref="VistaDia"/>, <see cref="VistaSemana"/>,
+/// <see cref="VistaMes"/>, <see cref="MiniCalendario"/> y
+/// <see cref="PanelGuia"/>, sobre los datos que les da
+/// <see cref="IAgendaService"/>. Las otras ventanas de escritorio (wallpaper y
+/// rieles) las administra <see cref="EscritorioShell"/>.
+/// </remarks>
 public partial class MainWindow : Window
 {
     private enum Vista { Dia, Semana, Mes }
 
     private Vista _vista = Vista.Dia;
-    private DateOnly _semanaInicio = InicioDeSemana(DateOnly.FromDateTime(DateTime.Today));
-    private DateOnly _mesActual = new(DateTime.Today.Year, DateTime.Today.Month, 1);
-    private DateOnly? _diaResaltado;
-    private DateOnly? _semanaResaltadaInicio;
 
-    private IconRailWindow? _rielIzquierdo;
-    private IconRailWindow? _rielDerecho;
-    private VideoWallpaperWindow? _wallpaper;
+    private EscritorioShell? _escritorio;
+    private MiniCalendario? _miniCalendario;
+    private PanelGuia? _guia;
+    private VistaDia? _dia;
+    private VistaSemana? _semana;
+    private VistaMes? _mes;
 
     public MainWindow()
     {
@@ -40,192 +46,132 @@ public partial class MainWindow : Window
         SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
     }
 
-    private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-    {
-        // DragMove() lanza InvalidOperationException si el botón primario ya
-        // no está apretado cuando llega acá (puede pasar si otro handler
-        // demoró el despacho del evento).
-        if (e.ButtonState == MouseButtonState.Pressed)
-            DragMove();
-    }
-
-    /// <summary>
-    /// Marca un elemento como interactivo frente al arrastre de la ventana.
-    /// </summary>
-    /// <remarks>
-    /// El <c>Grid</c> raíz maneja <c>MouseLeftButtonDown</c> para permitir
-    /// arrastrar el widget desde cualquier zona vacía. <see cref="Window.DragMove"/>
-    /// entra en un loop modal de movimiento que captura el mouse y consume el
-    /// <c>MouseLeftButtonUp</c> siguiente, por lo que los handlers de click de
-    /// las celdas (que viven en el evento de <em>up</em>) nunca se ejecutaban.
-    /// Marcar el <em>down</em> como manejado evita que llegue a la raíz.
-    ///
-    /// Se engancha al evento burbujeante y no al <c>Preview</c>: el de vista
-    /// previa tunelea desde la raíz hacia abajo, así que un contenedor le
-    /// robaría el mouse-down a los botones que tenga adentro (el ✎ de la guía)
-    /// y nunca dispararían su <c>Click</c>. Burbujeando, los controles que ya
-    /// manejan el down —botones— lo consumen primero, y este handler solo actúa
-    /// cuando el click cayó en el fondo del contenedor.
-    /// </remarks>
-    private static void HabilitarClick(FrameworkElement elemento) =>
-        elemento.MouseLeftButtonDown += (_, e) => e.Handled = true;
-
-    [System.Runtime.InteropServices.DllImport("user32.dll")]
-    private static extern uint GetDoubleClickTime();
-
-    private string? _ultimoClickClave;
-    private DateTime _ultimoClickInstante = DateTime.MinValue;
-
-    /// <summary>
-    /// Detecta el doble click por cuenta propia, sin usar
-    /// <see cref="MouseButtonEventArgs.ClickCount"/>.
-    /// </summary>
-    /// <remarks>
-    /// El primer click resalta, y resaltar vuelve a construir las celdas de la
-    /// vista. WPF no le asigna <c>ClickCount = 2</c> a un click que cae sobre un
-    /// elemento distinto del anterior, así que el segundo click de un doble
-    /// click siempre llegaba como <c>ClickCount = 1</c> y nunca navegaba.
-    /// </remarks>
-    /// <param name="clave">Identidad lógica de lo clickeado (la celda, no el control).</param>
-    private bool EsDobleClick(string clave)
-    {
-        var ahora = DateTime.UtcNow;
-        var esDoble = _ultimoClickClave == clave
-                      && (ahora - _ultimoClickInstante).TotalMilliseconds <= GetDoubleClickTime();
-
-        // Un doble click cierra la secuencia: el tercer click vuelve a contar como simple.
-        _ultimoClickClave = esDoble ? null : clave;
-        _ultimoClickInstante = esDoble ? DateTime.MinValue : ahora;
-        return esDoble;
-    }
-
     private async void Window_Loaded(object sender, RoutedEventArgs e)
     {
-        AbrirWallpaperAnimado();
-        AbrirRielesDeIconos();
-        AnclarTodoElEscritorio();
+        _escritorio = new EscritorioShell(this);
 
-        BuildCalendar(DateTime.Today);
+        if (!ArmarPaneles())
+            return;
+
         ActualizarUiDeVista(Vista.Dia);
-        await CargarGuiaAsync();
-        await CargarDiaAsync(DateOnly.FromDateTime(DateTime.Today));
+        await _guia!.RefrescarAsync();
+        await _dia!.MostrarAsync(DateOnly.FromDateTime(DateTime.Today));
     }
 
-    private void Window_Closed(object sender, EventArgs e)
-    {
-        _rielIzquierdo?.Close();
-        _rielDerecho?.Close();
-        _wallpaper?.Close();
-    }
+    private void Window_Closed(object sender, EventArgs e) => _escritorio?.Dispose();
 
-    private void AbrirWallpaperAnimado()
-    {
-        _wallpaper = VideoWallpaperWindow.CrearSiHayVideos();
-        _wallpaper?.Show();
-    }
+    private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.ArrastrarVentana(e);
 
-    private void AbrirRielesDeIconos()
+    /// <summary>
+    /// Cablea los paneles contra la base de datos y el calendario.
+    /// </summary>
+    /// <returns>
+    /// <c>false</c> si no se pudo abrir la base — sin ella no hay ni agenda ni
+    /// guía que mostrar, así que el widget se queda con el mensaje de error a
+    /// la vista en vez de caerse.
+    /// </returns>
+    private bool ArmarPaneles()
     {
-        var rieles = RielIconos.MigrarYCargar();
+        IAgendaService agenda;
+        AgendaDbContext contexto;
 
-        _rielIzquierdo = new IconRailWindow(LadoEscritorio.Izquierda, rieles.Izquierda);
-        _rielDerecho = new IconRailWindow(LadoEscritorio.Derecha, rieles.Derecha);
-        _rielIzquierdo.ConectarConElOtroRiel(_rielDerecho);
-        _rielDerecho.ConectarConElOtroRiel(_rielIzquierdo);
-        _rielIzquierdo.Show();
-        _rielDerecho.Show();
+        try
+        {
+            contexto = new AgendaDbContext();
+            contexto.Inicializar();
+            agenda = new AgendaService(contexto);
+        }
+        catch (Exception ex)
+        {
+            GuiaSummaryText.Text = $"No se pudo abrir la base: {ex.Message}";
+            DiaFooterText.Text = GuiaSummaryText.Text;
+            return false;
+        }
+
+        _guia = new PanelGuia(GuiaPanel, GuiaSummaryText, this, new SqliteTareaGuiaRepository(contexto));
+
+        _miniCalendario = new MiniCalendario(
+            CalendarMonthText, CalendarYearText, CalendarDaysGrid,
+            abrirDia: dia => _ = CambiarAsync(Vista.Dia, dia));
+
+        _dia = new VistaDia(
+            DiaScroll, AgendaCanvas, DiaHeaderDiaText, DiaHeaderMesText, DiaHeaderAnioText, DiaFooterText, agenda,
+            alMostrarDia: fecha =>
+            {
+                if (_vista == Vista.Dia)
+                    _miniCalendario!.Mostrar(fecha);
+            });
+
+        _semana = new VistaSemana(
+            SemanaHeadGrid, SemanaScroll, SemanaCanvas, NavLabelText, AgendaSubtitleText, agenda,
+            abrirDia: dia => _ = CambiarAsync(Vista.Dia, dia));
+
+        _mes = new VistaMes(
+            MesHeadGrid, MesRowsGrid, NavLabelText, AgendaSubtitleText, agenda,
+            abrirDia: dia => _ = CambiarAsync(Vista.Dia, dia),
+            abrirSemana: semana => _ = CambiarAsync(Vista.Semana, semana));
+
+        return true;
     }
 
     // ===================== navegación entre vistas =====================
 
     private void TabVista_Click(object sender, RoutedEventArgs e)
     {
-        if (sender is not ToggleButton { Tag: string tag })
+        if (sender is ToggleButton { Tag: string tag })
+            _ = CambiarAsync(Enum.Parse<Vista>(tag));
+    }
+
+    private void NavPrev_Click(object sender, RoutedEventArgs e) => _ = DesplazarAsync(-1);
+
+    private void NavNext_Click(object sender, RoutedEventArgs e) => _ = DesplazarAsync(+1);
+
+    private void NavHoy_Click(object sender, RoutedEventArgs e) => _ = IrAHoyAsync();
+
+    private void GuiaAgregar_Click(object sender, RoutedEventArgs e) => _ = _guia?.AgregarAsync();
+
+    /// <param name="fecha">
+    /// A dónde ir dentro de la vista nueva: el día a mostrar, o el lunes de la
+    /// semana. Si no se pasa, cada vista se queda donde estaba.
+    /// </param>
+    private async Task CambiarAsync(Vista vista, DateOnly? fecha = null)
+    {
+        if (_dia is null)
             return;
 
-        var nueva = tag switch
-        {
-            "Semana" => Vista.Semana,
-            "Mes" => Vista.Mes,
-            _ => Vista.Dia,
-        };
-
-        _ = CambiarVistaAsync(nueva);
-    }
-
-    private void NavPrev_Click(object sender, RoutedEventArgs e)
-    {
-        _diaResaltado = null;
-        _semanaResaltadaInicio = null;
-
-        if (_vista == Vista.Semana)
-        {
-            _semanaInicio = _semanaInicio.AddDays(-7);
-            _ = CargarSemanaAsync(_semanaInicio);
-        }
-        else if (_vista == Vista.Mes)
-        {
-            _mesActual = _mesActual.AddMonths(-1);
-            _ = CargarMesAsync(_mesActual);
-        }
-    }
-
-    private void NavNext_Click(object sender, RoutedEventArgs e)
-    {
-        _diaResaltado = null;
-        _semanaResaltadaInicio = null;
-
-        if (_vista == Vista.Semana)
-        {
-            _semanaInicio = _semanaInicio.AddDays(7);
-            _ = CargarSemanaAsync(_semanaInicio);
-        }
-        else if (_vista == Vista.Mes)
-        {
-            _mesActual = _mesActual.AddMonths(1);
-            _ = CargarMesAsync(_mesActual);
-        }
-    }
-
-    private void NavHoy_Click(object sender, RoutedEventArgs e)
-    {
-        _diaResaltado = null;
-        _semanaResaltadaInicio = null;
-
-        if (_vista == Vista.Semana)
-        {
-            _semanaInicio = InicioDeSemana(DateOnly.FromDateTime(DateTime.Today));
-            _ = CargarSemanaAsync(_semanaInicio);
-        }
-        else if (_vista == Vista.Mes)
-        {
-            _mesActual = new DateOnly(DateTime.Today.Year, DateTime.Today.Month, 1);
-            _ = CargarMesAsync(_mesActual);
-        }
-    }
-
-    private async Task CambiarVistaAsync(Vista vista, DateOnly? fechaDia = null, DateOnly? semanaInicio = null)
-    {
         _vista = vista;
-        _diaResaltado = null;
-        _semanaResaltadaInicio = null;
         ActualizarUiDeVista(vista);
 
         switch (vista)
         {
             case Vista.Dia:
-                await CargarDiaAsync(fechaDia ?? DateOnly.FromDateTime(DateTime.Today));
+                var dia = fecha ?? DateOnly.FromDateTime(DateTime.Today);
+                _miniCalendario!.Mostrar(dia);
+                await _dia.MostrarAsync(dia);
                 break;
             case Vista.Semana:
-                if (semanaInicio is { } s)
-                    _semanaInicio = s;
-                await CargarSemanaAsync(_semanaInicio);
+                await _semana!.MostrarAsync(fecha ?? _semana.Inicio);
                 break;
             case Vista.Mes:
-                await CargarMesAsync(_mesActual);
+                await _mes!.MostrarAsync(fecha ?? _mes.Mes);
                 break;
         }
     }
+
+    /// <summary>Un paso hacia atrás o hacia adelante en la vista activa (semana o mes).</summary>
+    private Task DesplazarAsync(int pasos) => _vista switch
+    {
+        Vista.Semana => _semana!.DesplazarAsync(pasos),
+        Vista.Mes => _mes!.DesplazarAsync(pasos),
+        _ => Task.CompletedTask, // la vista Día navega con el scroll continuo, no con flechas.
+    };
+
+    private Task IrAHoyAsync() => _vista switch
+    {
+        Vista.Semana => _semana!.IrAHoyAsync(),
+        Vista.Mes => _mes!.IrAHoyAsync(),
+        _ => Task.CompletedTask,
+    };
 
     private void ActualizarUiDeVista(Vista vista)
     {
@@ -233,14 +179,16 @@ public partial class MainWindow : Window
         TabSemana.IsChecked = vista == Vista.Semana;
         TabMes.IsChecked = vista == Vista.Mes;
 
-        DiaPanel.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
-        SemanaPanel.Visibility = vista == Vista.Semana ? Visibility.Visible : Visibility.Collapsed;
-        MesPanel.Visibility = vista == Vista.Mes ? Visibility.Visible : Visibility.Collapsed;
+        DiaPanel.Visibility = Visible(vista == Vista.Dia);
+        SemanaPanel.Visibility = Visible(vista == Vista.Semana);
+        MesPanel.Visibility = Visible(vista == Vista.Mes);
 
-        AgendaHeaderGenerico.Visibility = vista == Vista.Dia ? Visibility.Collapsed : Visibility.Visible;
-        DiaHeaderStack.Visibility = vista == Vista.Dia ? Visibility.Visible : Visibility.Collapsed;
+        // La vista Día trae su propio encabezado con la fecha en grande; las
+        // otras dos usan el genérico y la fila de navegación.
+        DiaHeaderStack.Visibility = Visible(vista == Vista.Dia);
+        AgendaHeaderGenerico.Visibility = Visible(vista != Vista.Dia);
+        AgendaNavRow.Visibility = Visible(vista != Vista.Dia);
 
-        AgendaNavRow.Visibility = vista == Vista.Dia ? Visibility.Collapsed : Visibility.Visible;
         NavHintText.Text = vista switch
         {
             Vista.Semana => "click resalta el día · doble click abre su vista Día",
@@ -249,341 +197,5 @@ public partial class MainWindow : Window
         };
     }
 
-    private static DateOnly InicioDeSemana(DateOnly fecha) => fecha.AddDays(-((int)fecha.DayOfWeek + 6) % 7);
-
-    // ===================== CALENDARIO (mini panel izquierdo) =====================
-
-    private void BuildCalendar(DateTime hoy)
-    {
-        var cultura = new CultureInfo("es-AR");
-        var nombreMes = cultura.DateTimeFormat.GetMonthName(hoy.Month);
-        CalendarMonthText.Text = char.ToUpper(nombreMes[0]) + nombreMes[1..];
-        CalendarYearText.Text = hoy.Year.ToString();
-
-        CalendarDaysGrid.Children.Clear();
-        CalendarDaysGrid.RowDefinitions.Clear();
-        CalendarDaysGrid.ColumnDefinitions.Clear();
-
-        for (var i = 0; i < 7; i++)
-            CalendarDaysGrid.ColumnDefinitions.Add(new ColumnDefinition());
-
-        CalendarDaysGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-
-        var encabezados = new[] { "L", "M", "M", "J", "V", "S", "D" };
-        for (var i = 0; i < 7; i++)
-        {
-            var encabezado = new TextBlock
-            {
-                Text = encabezados[i],
-                FontSize = 10.5,
-                FontWeight = FontWeights.SemiBold,
-                Foreground = (Brush)FindResource("TextMuted"),
-                HorizontalAlignment = HorizontalAlignment.Center,
-                Margin = new Thickness(0, 0, 0, 7),
-            };
-            Grid.SetRow(encabezado, 0);
-            Grid.SetColumn(encabezado, i);
-            CalendarDaysGrid.Children.Add(encabezado);
-        }
-
-        var primerDiaMes = new DateTime(hoy.Year, hoy.Month, 1);
-        var offset = ((int)primerDiaMes.DayOfWeek + 6) % 7;
-        var diasEnMes = DateTime.DaysInMonth(hoy.Year, hoy.Month);
-        var filas = (int)Math.Ceiling((offset + diasEnMes) / 7.0);
-
-        for (var f = 0; f < filas; f++)
-            CalendarDaysGrid.RowDefinitions.Add(new RowDefinition());
-
-        for (var dia = 1; dia <= diasEnMes; dia++)
-        {
-            var indice = offset + dia - 1;
-            var fila = indice / 7;
-            var columna = indice % 7;
-            var esHoy = dia == hoy.Day;
-
-            // Mismo Border 26x26 para todas las celdas (solo cambia color):
-            // si el día "hoy" era un Border y el resto TextBlocks sueltos,
-            // el círculo quedaba un par de píxeles desalineado respecto a
-            // los números planos de al lado.
-            var celda = new Border
-            {
-                Width = 26,
-                Height = 26,
-                CornerRadius = new CornerRadius(13),
-                Background = esHoy ? (Brush)FindResource("AccentFlexible") : Brushes.Transparent,
-                Child = new TextBlock
-                {
-                    Text = dia.ToString(),
-                    FontSize = 12,
-                    FontWeight = esHoy ? FontWeights.Bold : FontWeights.Normal,
-                    Foreground = esHoy ? Brushes.Black : (Brush)FindResource("TextPrimary"),
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center,
-                },
-            };
-
-            Grid.SetRow(celda, fila + 1);
-            Grid.SetColumn(celda, columna);
-            CalendarDaysGrid.Children.Add(celda);
-        }
-    }
-
-    // ===================== GUIA (TareaGuia) =====================
-    // La guía siempre refleja "hoy" real, independientemente de qué fecha
-    // esté mirando la vista Día/Semana/Mes — por eso se carga una sola vez
-    // en Window_Loaded y no depende de la fecha navegada.
-
-    private SqliteTareaGuiaRepository? _repoGuia;
-    private IReadOnlyList<TareaGuia> _tareasGuia = [];
-
-    private async Task CargarGuiaAsync()
-    {
-        try
-        {
-            var contexto = new AgendaDbContext();
-            contexto.Inicializar();
-            _repoGuia = new SqliteTareaGuiaRepository(contexto);
-            await RefrescarGuiaAsync();
-        }
-        catch (Exception ex)
-        {
-            // El panel de guía no es crítico para la agenda, pero fallar en
-            // silencio escondía problemas de esquema/migración.
-            GuiaSummaryText.Text = $"No se pudo cargar la guía: {ex.Message}";
-        }
-    }
-
-    private async Task RefrescarGuiaAsync()
-    {
-        if (_repoGuia is null)
-            return;
-
-        _tareasGuia = await _repoGuia.ObtenerTodasAsync();
-        RenderGuia(_tareasGuia);
-    }
-
-    private async void GuiaAgregar_Click(object sender, RoutedEventArgs e)
-    {
-        if (_repoGuia is null)
-            return;
-
-        var nueva = PedirTarea(tarea: null);
-        if (nueva is null)
-            return;
-
-        await _repoGuia.CrearAsync(nueva);
-        await RefrescarGuiaAsync();
-    }
-
-    /// <summary>Abre el diálogo de alta/edición y devuelve la tarea, o <c>null</c> si se canceló.</summary>
-    private TareaGuia? PedirTarea(TareaGuia? tarea)
-    {
-        var dialogo = new EditarTareaGuiaWindow(tarea, _tareasGuia.Select(t => t.Categoria))
-        {
-            Owner = this,
-        };
-
-        return dialogo.ShowDialog() == true ? dialogo.Resultado : null;
-    }
-
-    private void RenderGuia(IReadOnlyList<TareaGuia> tareas)
-    {
-        GuiaPanel.Children.Clear();
-
-        var pendientes = tareas.Count(t => !t.Hecha);
-        GuiaSummaryText.Text = tareas.Count == 0
-            ? "sin tareas · usá + para agregar"
-            : $"{pendientes} de {tareas.Count} pendientes";
-
-        foreach (var grupo in tareas.GroupBy(t => t.Categoria))
-        {
-            var encabezado = new TextBlock
-            {
-                Text = grupo.Key.ToUpperInvariant(),
-                FontSize = 10,
-                FontWeight = FontWeights.Bold,
-                Foreground = (Brush)FindResource("TextMuted"),
-                Margin = new Thickness(0, 14, 0, 10),
-            };
-            GuiaPanel.Children.Add(encabezado);
-
-            foreach (var tarea in grupo)
-                GuiaPanel.Children.Add(CrearFilaTarea(tarea));
-        }
-    }
-
-    private FrameworkElement CrearFilaTarea(TareaGuia tarea)
-    {
-        var fila = new Grid
-        {
-            Margin = new Thickness(0, 0, 0, 10),
-            Cursor = Cursors.Hand,
-            Background = Brushes.Transparent,
-        };
-        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-        fila.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-
-        var casilla = new Border
-        {
-            Width = 18,
-            Height = 18,
-            CornerRadius = new CornerRadius(5),
-            BorderBrush = tarea.Hecha ? (Brush)FindResource("AccentFlexible") : (Brush)FindResource("TextFaint"),
-            BorderThickness = new Thickness(1.6),
-            Background = tarea.Hecha ? (Brush)FindResource("AccentFlexible") : Brushes.Transparent,
-            VerticalAlignment = VerticalAlignment.Top,
-            Margin = new Thickness(0, 1, 11, 0),
-        };
-        if (tarea.Hecha)
-        {
-            casilla.Child = new Path
-            {
-                Data = Geometry.Parse("M4 9.5 L7.5 13 L14 5.5"),
-                Stroke = Brushes.Black,
-                StrokeThickness = 2,
-                StrokeStartLineCap = PenLineCap.Round,
-                StrokeEndLineCap = PenLineCap.Round,
-            };
-        }
-        Grid.SetColumn(casilla, 0);
-
-        var textos = new StackPanel();
-        textos.Children.Add(new TextBlock
-        {
-            Text = tarea.Title,
-            FontSize = 13,
-            Foreground = tarea.Hecha ? (Brush)FindResource("TextMuted") : (Brush)FindResource("TextPrimary"),
-            TextDecorations = tarea.Hecha ? TextDecorations.Strikethrough : null,
-            TextWrapping = TextWrapping.Wrap,
-        });
-        textos.Children.Add(new TextBlock
-        {
-            Text = DescribirEstado(tarea),
-            FontSize = 10.5,
-            Foreground = (Brush)FindResource("TextFaint"),
-            Margin = new Thickness(0, 2, 0, 0),
-        });
-        Grid.SetColumn(textos, 1);
-
-        var editar = new Button
-        {
-            Content = "✎",
-            Style = (Style)FindResource("NavArrowButtonStyle"),
-            Width = 22,
-            Height = 22,
-            FontSize = 12,
-            VerticalAlignment = VerticalAlignment.Top,
-            ToolTip = "Editar tarea",
-        };
-        editar.Click += async (_, _) => await EditarTareaAsync(tarea);
-        Grid.SetColumn(editar, 2);
-
-        var eliminar = new Button
-        {
-            Content = "✕",
-            Style = (Style)FindResource("NavArrowButtonStyle"),
-            Width = 22,
-            Height = 22,
-            FontSize = 11,
-            VerticalAlignment = VerticalAlignment.Top,
-            Margin = new Thickness(2, 0, 0, 0),
-            ToolTip = "Eliminar tarea",
-        };
-        eliminar.Click += async (_, _) => await EliminarTareaAsync(tarea);
-        Grid.SetColumn(eliminar, 3);
-
-        fila.Children.Add(casilla);
-        fila.Children.Add(textos);
-        fila.Children.Add(editar);
-        fila.Children.Add(eliminar);
-
-        HabilitarClick(fila);
-        fila.MouseLeftButtonUp += async (_, _) => await AlternarTareaAsync(tarea);
-
-        return fila;
-    }
-
-    private async Task AlternarTareaAsync(TareaGuia tarea)
-    {
-        if (_repoGuia is null)
-            return;
-
-        if (tarea.Hecha)
-            await _repoGuia.DesmarcarAsync(tarea.Id);
-        else
-            await _repoGuia.MarcarHechaAsync(tarea.Id, DateOnly.FromDateTime(DateTime.Today));
-
-        await RefrescarGuiaAsync();
-    }
-
-    private async Task EditarTareaAsync(TareaGuia tarea)
-    {
-        if (_repoGuia is null)
-            return;
-
-        var editada = PedirTarea(tarea);
-        if (editada is null)
-            return;
-
-        await _repoGuia.ActualizarAsync(editada);
-        await RefrescarGuiaAsync();
-    }
-
-    private async Task EliminarTareaAsync(TareaGuia tarea)
-    {
-        if (_repoGuia is null)
-            return;
-
-        var confirmar = MessageBox.Show(
-            this,
-            $"¿Eliminar \"{tarea.Title}\" de la guía? Esto borra también su historial.",
-            "Eliminar tarea",
-            MessageBoxButton.YesNo,
-            MessageBoxImage.Warning,
-            MessageBoxResult.No);
-
-        if (confirmar != MessageBoxResult.Yes)
-            return;
-
-        await _repoGuia.EliminarAsync(tarea.Id);
-        await RefrescarGuiaAsync();
-    }
-
-    private static string DescribirEstado(TareaGuia tarea)
-    {
-        var cadencia = tarea.Repeticion switch
-        {
-            Repeticion.Semanal => "semanal",
-            Repeticion.Mensual => "mensual",
-            _ => "una vez",
-        };
-
-        if (!tarea.Hecha)
-            return $"{cadencia} · {DescribirUltimaVez(tarea.UltimaVez)}";
-
-        var vigencia = tarea.Repeticion switch
-        {
-            Repeticion.Semanal => "hecha esta semana",
-            Repeticion.Mensual => "hecha este mes",
-            _ => "hecha",
-        };
-
-        return $"{cadencia} · {vigencia}";
-    }
-
-    private static string DescribirUltimaVez(DateOnly? ultimaVez)
-    {
-        if (ultimaVez is null)
-            return "sin registro";
-
-        var dias = DateOnly.FromDateTime(DateTime.Today).DayNumber - ultimaVez.Value.DayNumber;
-        return dias switch
-        {
-            0 => "hoy",
-            1 => "ayer",
-            _ => $"última vez hace {dias} días",
-        };
-    }
+    private static Visibility Visible(bool visible) => visible ? Visibility.Visible : Visibility.Collapsed;
 }

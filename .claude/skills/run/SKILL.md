@@ -7,7 +7,7 @@ description: Build and launch the Agenda Dinámica WPF widget (PepeWapOSx10.Shel
 
 Es una app WPF (.NET, Windows) que corre como un widget "on desktop": sin
 bordes, sin taskbar, fijada al fondo del z-order (ver
-`src/PepeWapOSx10.Shell.Widgets/AnclajeEscritorio.cs`). No es
+`src/PepeWapOSx10.Shell.Widgets/Escritorio/AnclajeEscritorio.cs`). No es
 `Topmost` — vive *debajo* de cualquier ventana normal, así que para verla o
 interactuar con ella no puede haber otra ventana tapándola en esa zona de
 pantalla.

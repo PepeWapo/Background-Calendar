@@ -10,16 +10,9 @@
         WindowStartupLocation="Manual"
         SizeToContent="Manual">
 
+    <!-- Los colores salen de Tema.xaml (App.Resources); acá solo vive el
+         estilo del casillero, que no lo usa ninguna otra ventana. -->
     <Window.Resources>
-        <SolidColorBrush x:Key="RailBackground" Color="#891B1F2A"/>
-        <SolidColorBrush x:Key="RailBorder" Color="#26E6E8EC"/>
-        <SolidColorBrush x:Key="RailText" Color="#8B93A1"/>
-        <SolidColorBrush x:Key="SlotIdle" Color="#0AFFFFFF"/>
-        <SolidColorBrush x:Key="SlotHoverBackground" Color="#5955C2D6"/>
-        <SolidColorBrush x:Key="SlotHoverBorder" Color="#8C55C2D6"/>
-        <SolidColorBrush x:Key="SlotSelectedBackground" Color="#8055C2D6"/>
-        <SolidColorBrush x:Key="SlotSelectedBorder" Color="#E655C2D6"/>
-
         <Style x:Key="IconSlotStyle" TargetType="ListBoxItem">
             <Setter Property="Width" Value="56"/>
             <Setter Property="Height" Value="56"/>
@@ -85,11 +78,11 @@
                  SelectionMode="Single"
                  ItemContainerStyle="{StaticResource IconSlotStyle}"
                  AllowDrop="True"
-                 MouseDoubleClick="IconosControl_MouseDoubleClick"
-                 PreviewMouseLeftButtonDown="IconosControl_PreviewMouseLeftButtonDown"
-                 PreviewMouseMove="IconosControl_PreviewMouseMove"
-                 DragOver="IconosControl_DragOver"
-                 Drop="IconosControl_Drop">
+                 PreviewMouseLeftButtonDown="Iconos_PreviewMouseLeftButtonDown"
+                 PreviewMouseMove="Iconos_PreviewMouseMove"
+                 MouseLeftButtonUp="Iconos_MouseLeftButtonUp"
+                 DragOver="Iconos_DragOver"
+                 Drop="Iconos_Drop">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
