@@ -10,6 +10,11 @@
 src/PepeWapOSx10.Calendario/config.json
 *.db
 
+# Videos del wallpaper animado: pesados, no son código — se versiona la
+# carpeta contenedora (.gitkeep) pero no el contenido.
+assets/animated-bg/*
+!assets/animated-bg/.gitkeep
+
 # User-specific files
 *.rsuser
 *.suo

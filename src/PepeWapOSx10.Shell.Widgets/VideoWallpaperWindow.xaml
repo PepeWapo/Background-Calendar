@@ -1,0 +1,27 @@
+<Window x:Class="PepeWapOSx10.Shell.Widgets.VideoWallpaperWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+        Title="Wallpaper"
+        Background="Black"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="Manual">
+
+    <!-- Dos reproductores superpuestos: el de arriba (mayor Panel.ZIndex) es
+         el que se ve normalmente; al cruzar, se desenfoca/desvanece mientras
+         el de abajo ya está reproduciendo el próximo video debajo suyo. -->
+    <Grid>
+        <vlc:VideoView x:Name="ReproductorB" Panel.ZIndex="0">
+            <vlc:VideoView.Effect>
+                <BlurEffect x:Name="DesenfoqueB" Radius="0"/>
+            </vlc:VideoView.Effect>
+        </vlc:VideoView>
+        <vlc:VideoView x:Name="ReproductorA" Panel.ZIndex="1">
+            <vlc:VideoView.Effect>
+                <BlurEffect x:Name="DesenfoqueA" Radius="0"/>
+            </vlc:VideoView.Effect>
+        </vlc:VideoView>
+    </Grid>
+</Window>

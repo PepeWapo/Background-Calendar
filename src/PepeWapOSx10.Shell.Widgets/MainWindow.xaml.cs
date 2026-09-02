@@ -22,6 +22,7 @@ public partial class MainWindow : Window
 
     private IconRailWindow? _rielIzquierdo;
     private IconRailWindow? _rielDerecho;
+    private VideoWallpaperWindow? _wallpaper;
 
     public MainWindow()
     {
@@ -100,9 +101,9 @@ public partial class MainWindow : Window
 
     private async void Window_Loaded(object sender, RoutedEventArgs e)
     {
-        AnclarAlEscritorio();
-        IniciarReanclajePeriodico();
+        AbrirWallpaperAnimado();
         AbrirRielesDeIconos();
+        AnclarTodoElEscritorio();
 
         BuildCalendar(DateTime.Today);
         ActualizarUiDeVista(Vista.Dia);
@@ -114,33 +115,23 @@ public partial class MainWindow : Window
     {
         _rielIzquierdo?.Close();
         _rielDerecho?.Close();
+        _wallpaper?.Close();
+    }
+
+    private void AbrirWallpaperAnimado()
+    {
+        _wallpaper = VideoWallpaperWindow.CrearSiHayVideos();
+        _wallpaper?.Show();
     }
 
     private void AbrirRielesDeIconos()
     {
-        var iconos = new List<IconRailItem>
-        {
-            new("📅", "Agenda"),
-            new("🗂️", "Proyectos"),
-            new("📁", "Documentos"),
-            new("🗒️", "Notas"),
-            new("📦", "Descargas"),
-            new("🎨", "Diseño"),
-            new("🎵", "Música"),
-            new("🎬", "Video"),
-            new("📷", "Fotos"),
-            new("🧩", "Utilidades"),
-            new("🗃️", "Backups"),
-            new("🧮", "Calculadora"),
-            new("🌐", "Chrome"),
-            new("💻", "Terminal"),
-            new("🧪", "Sandbox"),
-            new("⚙️", "Configuración"),
-        };
+        var rieles = RielIconos.MigrarYCargar();
 
-        var mitad = iconos.Count / 2;
-        _rielIzquierdo = new IconRailWindow(LadoEscritorio.Izquierda, iconos.Take(mitad).ToList());
-        _rielDerecho = new IconRailWindow(LadoEscritorio.Derecha, iconos.Skip(mitad).ToList());
+        _rielIzquierdo = new IconRailWindow(LadoEscritorio.Izquierda, rieles.Izquierda);
+        _rielDerecho = new IconRailWindow(LadoEscritorio.Derecha, rieles.Derecha);
+        _rielIzquierdo.ConectarConElOtroRiel(_rielDerecho);
+        _rielDerecho.ConectarConElOtroRiel(_rielIzquierdo);
         _rielIzquierdo.Show();
         _rielDerecho.Show();
     }

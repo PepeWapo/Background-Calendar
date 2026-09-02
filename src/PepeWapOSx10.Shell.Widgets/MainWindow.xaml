@@ -17,7 +17,7 @@
         Closed="Window_Closed">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="PanelBackground" Color="#61202430"/>
+        <SolidColorBrush x:Key="PanelBackground" Color="#A1202430"/>
         <SolidColorBrush x:Key="PanelBorder" Color="#14E6E8EC"/>
         <SolidColorBrush x:Key="TextPrimary" Color="#EDEFF2"/>
         <SolidColorBrush x:Key="TextMuted" Color="#8B93A1"/>

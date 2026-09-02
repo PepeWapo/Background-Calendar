@@ -11,26 +11,47 @@
         SizeToContent="Manual">
 
     <Window.Resources>
-        <SolidColorBrush x:Key="RailBackground" Color="#C81B1F2A"/>
+        <SolidColorBrush x:Key="RailBackground" Color="#891B1F2A"/>
         <SolidColorBrush x:Key="RailBorder" Color="#26E6E8EC"/>
         <SolidColorBrush x:Key="RailText" Color="#8B93A1"/>
         <SolidColorBrush x:Key="SlotIdle" Color="#0AFFFFFF"/>
         <SolidColorBrush x:Key="SlotHoverBackground" Color="#5955C2D6"/>
         <SolidColorBrush x:Key="SlotHoverBorder" Color="#8C55C2D6"/>
+        <SolidColorBrush x:Key="SlotSelectedBackground" Color="#8055C2D6"/>
+        <SolidColorBrush x:Key="SlotSelectedBorder" Color="#E655C2D6"/>
 
-        <Style x:Key="IconSlotStyle" TargetType="Border">
+        <Style x:Key="IconSlotStyle" TargetType="ListBoxItem">
             <Setter Property="Width" Value="56"/>
             <Setter Property="Height" Value="56"/>
             <Setter Property="Margin" Value="0,7"/>
-            <Setter Property="CornerRadius" Value="14"/>
-            <Setter Property="Background" Value="{StaticResource SlotIdle}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
             <Setter Property="RenderTransform">
                 <Setter.Value>
                     <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Slot" CornerRadius="14"
+                                Background="{StaticResource SlotIdle}"
+                                BorderThickness="1" BorderBrush="Transparent"
+                                ToolTip="{Binding Label}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Slot" Property="Background" Value="{StaticResource SlotHoverBackground}"/>
+                                <Setter TargetName="Slot" Property="BorderBrush" Value="{StaticResource SlotHoverBorder}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Slot" Property="Background" Value="{StaticResource SlotSelectedBackground}"/>
+                                <Setter TargetName="Slot" Property="BorderBrush" Value="{StaticResource SlotSelectedBorder}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -51,30 +72,35 @@
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.ExitActions>
-                    <Setter Property="Background" Value="{StaticResource SlotHoverBackground}"/>
-                    <Setter Property="BorderBrush" Value="{StaticResource SlotHoverBorder}"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
 
     <Border Background="{StaticResource RailBackground}" BorderBrush="{StaticResource RailBorder}"
-            BorderThickness="1" CornerRadius="18" Padding="0,14">
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
-            <ItemsControl x:Name="IconosControl">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border Style="{StaticResource IconSlotStyle}" ToolTip="{Binding Label}">
-                            <TextBlock Text="{Binding Glyph}" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+            BorderThickness="1" CornerRadius="18" Padding="0,14" ClipToBounds="True">
+        <ListBox x:Name="IconosControl"
+                 Background="Transparent" BorderThickness="0"
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 SelectionMode="Single"
+                 ItemContainerStyle="{StaticResource IconSlotStyle}"
+                 AllowDrop="True"
+                 MouseDoubleClick="IconosControl_MouseDoubleClick"
+                 PreviewMouseLeftButtonDown="IconosControl_PreviewMouseLeftButtonDown"
+                 PreviewMouseMove="IconosControl_PreviewMouseMove"
+                 DragOver="IconosControl_DragOver"
+                 Drop="IconosControl_Drop">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Icono}" Width="32" Height="32"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Border>
 </Window>
