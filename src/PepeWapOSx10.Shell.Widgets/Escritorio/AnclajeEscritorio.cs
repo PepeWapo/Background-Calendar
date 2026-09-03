@@ -58,6 +58,8 @@ internal sealed class AnclajeEscritorio : IDisposable
     // dispararse silenciosamente.
     private readonly WinEventProc _alCambiarDeVentana;
 
+    private bool _reafirmando;
+
     /// <param name="deAtrasHaciaAdelante">
     /// De la más al fondo (p. ej. el wallpaper animado) a la más al frente
     /// dentro de este grupo (p. ej. el widget principal, justo debajo de la
@@ -103,11 +105,28 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// </remarks>
     private void Reafirmar()
     {
-        for (var i = _deAtrasHaciaAdelante.Length - 1; i >= 0; i--)
-            Anclar(_deAtrasHaciaAdelante[i]);
+        // Mandar al fondo la ventana activa le saca la activación, y Windows
+        // activa entonces la que quede más arriba — lo que dispara otro
+        // EVENT_SYSTEM_FOREGROUND en medio de este mismo recorrido. Sin este
+        // guardo los dos recorridos se entrelazan y el orden relativo del
+        // grupo queda al azar: el wallpaper, que ocupa toda la pantalla, podía
+        // terminar anclado por encima de los rieles y del widget y taparlos.
+        if (_reafirmando)
+            return;
 
-        foreach (var ventana in _clickThrough)
-            HacerClickThroughConSusVentanas(ventana);
+        _reafirmando = true;
+        try
+        {
+            for (var i = _deAtrasHaciaAdelante.Length - 1; i >= 0; i--)
+                Anclar(_deAtrasHaciaAdelante[i]);
+
+            foreach (var ventana in _clickThrough)
+                HacerClickThroughConSusVentanas(ventana);
+        }
+        finally
+        {
+            _reafirmando = false;
+        }
     }
 
     public void Dispose()
@@ -139,6 +158,25 @@ internal sealed class AnclajeEscritorio : IDisposable
         var hwnd = Handle(ventana);
         CambiarEstiloExtendido(hwnd, agregar: WS_EX_TOOLWINDOW, quitar: WS_EX_APPWINDOW);
     }
+
+    /// <summary>
+    /// Impide que la ventana tome el foco, sin volverla click-through: sigue
+    /// recibiendo con normalidad sus propios clicks, hover y menús.
+    /// </summary>
+    /// <remarks>
+    /// Es lo que necesitan los rieles de iconos. Al no tenerlo, un click sobre
+    /// un ícono activaba la ventana del riel: Windows la reinserta al tope de
+    /// su banda del z-order y dispara <c>EVENT_SYSTEM_FOREGROUND</c>, con lo
+    /// que <see cref="Reafirmar"/> la mandaba de vuelta al fondo — y mandar al
+    /// fondo la ventana activa le saca la activación, así que Windows activaba
+    /// la siguiente y el ciclo se repetía. Ese ir y venir es el que dejaba al
+    /// wallpaper (pantalla completa) tapando todo lo demás.
+    ///
+    /// No alcanza con <see cref="Anclar"/>: eso corrige el z-order *después*
+    /// de que la activación ya ocurrió. Esto evita que ocurra.
+    /// </remarks>
+    public static void HacerNoActivable(Window ventana) =>
+        CambiarEstiloExtendido(Handle(ventana), agregar: WS_EX_NOACTIVATE, quitar: 0);
 
     /// <summary>
     /// Vuelve invisibles al mouse una ventana y todas las que haya abierto:

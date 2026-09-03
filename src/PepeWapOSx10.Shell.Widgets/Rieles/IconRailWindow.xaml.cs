@@ -48,7 +48,11 @@ public partial class IconRailWindow : Window
             ? area.Left + MargenLateral
             : area.Right - MargenLateral - AnchoRiel;
 
-        SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
+        SourceInitialized += (_, _) =>
+        {
+            AnclajeEscritorio.OcultarDeAltTab(this);
+            AnclajeEscritorio.HacerNoActivable(this);
+        };
     }
 
     private void Iconos_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -114,6 +118,57 @@ public partial class IconRailWindow : Window
             // no hay mucho más para hacer que no intentarlo.
         }
     }
+
+    // ===================== menú contextual =====================
+
+    private void MenuEjecutar_Click(object sender, RoutedEventArgs e)
+    {
+        if (IconoDelMenu(sender) is { } item)
+            Ejecutar(item);
+    }
+
+    /// <summary>
+    /// Abre el explorador en la carpeta de la app con el acceso directo ya
+    /// seleccionado — que es donde vive desde que se lo migró del escritorio.
+    /// </summary>
+    private void MenuAbrirUbicacion_Click(object sender, RoutedEventArgs e)
+    {
+        if (IconoDelMenu(sender) is not { } item)
+            return;
+
+        try
+        {
+            Process.Start(new ProcessStartInfo("explorer.exe", $"/select,\"{item.Target}\"") { UseShellExecute = true });
+        }
+        catch (System.ComponentModel.Win32Exception)
+        {
+            // sin explorador disponible no hay ubicación que mostrar.
+        }
+    }
+
+    private void MenuQuitar_Click(object sender, RoutedEventArgs e)
+    {
+        if (IconoDelMenu(sender) is not { } item)
+            return;
+
+        // Primero el archivo: si no se lo pudo mandar a la papelera, sacarlo de
+        // la lista solo lo haría reaparecer en el próximo arranque.
+        if (AccesosDirectos.EnviarAPapelera(item.Target))
+            _rieles.Quitar(item);
+    }
+
+    /// <summary>
+    /// El ícono sobre el que se abrió el menú contextual.
+    /// </summary>
+    /// <remarks>
+    /// Sale del <c>DataContext</c> del ítem de menú y no del
+    /// <c>PlacementTarget</c> del <see cref="ContextMenu"/>: aunque el menú sea
+    /// una única instancia compartida por todos los casilleros, WPF le hace
+    /// heredar el <c>DataContext</c> del casillero sobre el que se abrió, así
+    /// que cada <c>MenuItem</c> ya ve el <see cref="IconRailItem"/> correcto.
+    /// </remarks>
+    private static IconRailItem? IconoDelMenu(object sender) =>
+        (sender as FrameworkElement)?.DataContext as IconRailItem;
 
     private void Iconos_DragOver(object sender, DragEventArgs e)
     {

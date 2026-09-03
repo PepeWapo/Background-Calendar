@@ -70,6 +70,19 @@ internal sealed class RielesDeIconos
         Guardar();
     }
 
+    /// <summary>
+    /// Saca un ícono del riel en el que esté y persiste el resultado.
+    /// </summary>
+    /// <returns><c>false</c> si el ícono ya no estaba en ninguno de los dos.</returns>
+    public bool Quitar(IconRailItem item)
+    {
+        if (!Izquierda.Remove(item) && !Derecha.Remove(item))
+            return false;
+
+        Guardar();
+        return true;
+    }
+
     private void Guardar() => OrdenDeRieles.Guardar(Nombres(Izquierda), Nombres(Derecha));
 
     private static IEnumerable<string> Nombres(IEnumerable<IconRailItem> items) =>

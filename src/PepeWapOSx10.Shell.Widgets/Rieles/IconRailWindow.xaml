@@ -13,7 +13,21 @@
     <!-- Los colores salen de Tema.xaml (App.Resources); acá solo vive el
          estilo del casillero, que no lo usa ninguna otra ventana. -->
     <Window.Resources>
+        <!-- Una sola instancia compartida por todos los casilleros: el ícono
+             sobre el que se abrió sale del PlacementTarget, así que no hace
+             falta un menú por ítem. -->
+        <ContextMenu x:Key="MenuDeIcono" Style="{StaticResource MenuContextualStyle}">
+            <MenuItem Header="Ejecutar" Style="{StaticResource MenuContextualItemStyle}"
+                      Click="MenuEjecutar_Click"/>
+            <MenuItem Header="Abrir ubicación del acceso directo" Style="{StaticResource MenuContextualItemStyle}"
+                      Click="MenuAbrirUbicacion_Click"/>
+            <Separator Style="{StaticResource MenuContextualSeparadorStyle}"/>
+            <MenuItem Header="Quitar del riel" Style="{StaticResource MenuContextualItemStyle}"
+                      Click="MenuQuitar_Click"/>
+        </ContextMenu>
+
         <Style x:Key="IconSlotStyle" TargetType="ListBoxItem">
+            <Setter Property="ContextMenu" Value="{StaticResource MenuDeIcono}"/>
             <Setter Property="Width" Value="56"/>
             <Setter Property="Height" Value="56"/>
             <Setter Property="Margin" Value="0,7"/>

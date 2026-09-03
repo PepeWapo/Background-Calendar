@@ -42,6 +42,13 @@
     <SolidColorBrush x:Key="DialogBorder" Color="#26E6E8EC"/>
     <SolidColorBrush x:Key="InputBackground" Color="#14000000"/>
 
+    <!-- menús contextuales: mismo tono casi opaco que los diálogos, porque se
+         abren sobre el escritorio y tienen que leerse solos -->
+    <SolidColorBrush x:Key="MenuBackground" Color="#F21B1F2A"/>
+    <SolidColorBrush x:Key="MenuBorder" Color="#26E6E8EC"/>
+    <SolidColorBrush x:Key="MenuHoverBackground" Color="#2455C2D6"/>
+    <SolidColorBrush x:Key="MenuSeparator" Color="#1AE6E8EC"/>
+
     <!-- ===================== estilos ===================== -->
     <Style x:Key="PanelStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource PanelBackground}"/>
@@ -98,6 +105,61 @@
                             <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- El ContextMenu de WPF trae el chrome gris del sistema, que sobre el
+         escritorio oscuro del widget canta muchísimo; se le rehace la plantilla
+         para que use la misma paleta que el resto. -->
+    <Style x:Key="MenuContextualStyle" TargetType="ContextMenu">
+        <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContextMenu">
+                    <Border Background="{StaticResource MenuBackground}"
+                            BorderBrush="{StaticResource MenuBorder}"
+                            BorderThickness="1" CornerRadius="10" Padding="5">
+                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MenuContextualItemStyle" TargetType="MenuItem">
+        <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+        <Setter Property="Padding" Value="12,7"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="MenuItem">
+                    <Border x:Name="Bg" Background="Transparent" CornerRadius="6" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter ContentSource="Header" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="True">
+                            <Setter TargetName="Bg" Property="Background" Value="{StaticResource MenuHoverBackground}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{StaticResource TextFaint}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MenuContextualSeparadorStyle" TargetType="Separator">
+        <Setter Property="Height" Value="1"/>
+        <Setter Property="Margin" Value="8,4"/>
+        <Setter Property="Background" Value="{StaticResource MenuSeparator}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Separator">
+                    <Border Height="1" Background="{TemplateBinding Background}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
