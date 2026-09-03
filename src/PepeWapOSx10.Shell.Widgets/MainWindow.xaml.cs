@@ -1,6 +1,7 @@
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Threading;
 using PepeWapOSx10.Datos;
 
 namespace PepeWapOSx10.Shell.Widgets;
@@ -46,14 +47,39 @@ public partial class MainWindow : Window
         SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
     }
 
+    /// <summary>
+    /// Muestra el esqueleto de entrada y va reemplazándolo por los datos reales
+    /// a medida que llegan.
+    /// </summary>
+    /// <remarks>
+    /// El orden importa y no es el natural. Antes esto era todo secuencial —
+    /// abrir el escritorio, abrir la base, pedir la agenda — y recién al final
+    /// aparecía algo: el widget se veía como tres paneles vacíos durante lo que
+    /// tardara la primera bajada del ICS. Ahora primero se dibuja el esqueleto
+    /// y se le cede el turno al dispatcher para que ese frame llegue a
+    /// pantalla; después arranca todo lo caro, y lo que no necesita el hilo de
+    /// UI (abrir y migrar la base) se va a un hilo de fondo.
+    /// </remarks>
     private async void Window_Loaded(object sender, RoutedEventArgs e)
     {
+        Esqueleto.Mostrar(CalendarDaysGrid, AgendaCanvas, GuiaPanel);
+        ActualizarUiDeVista(Vista.Dia);
+
+        // Cede el turno hasta que no quede trabajo de layout ni de render
+        // pendiente: sin esto lo de abajo se encola antes del primer frame y
+        // el esqueleto no se llega a ver nunca.
+        await Dispatcher.Yield(DispatcherPriority.ContextIdle);
+
+        // Las ventanas de escritorio son ventanas WPF: se crean sí o sí en este
+        // hilo. Van después del esqueleto para no demorar ese primer frame.
         _escritorio = new EscritorioShell(this);
 
-        if (!ArmarPaneles())
+        if (!await ArmarPanelesAsync())
+        {
+            Esqueleto.Quitar(CalendarDaysGrid, AgendaCanvas, GuiaPanel);
             return;
+        }
 
-        ActualizarUiDeVista(Vista.Dia);
         await _guia!.RefrescarAsync();
         await _dia!.MostrarAsync(DateOnly.FromDateTime(DateTime.Today));
     }
@@ -70,15 +96,22 @@ public partial class MainWindow : Window
     /// guía que mostrar, así que el widget se queda con el mensaje de error a
     /// la vista en vez de caerse.
     /// </returns>
-    private bool ArmarPaneles()
+    private async Task<bool> ArmarPanelesAsync()
     {
         IAgendaService agenda;
         AgendaDbContext contexto;
 
         try
         {
-            contexto = new AgendaDbContext();
-            contexto.Inicializar();
+            // Abrir el archivo SQLite y correr el esquema/semilla es E/S pura y
+            // no toca ningún objeto de WPF, así que se hace fuera del hilo de
+            // UI: es lo más lento del arranque después del ICS.
+            contexto = await Task.Run(() =>
+            {
+                var abierto = new AgendaDbContext();
+                abierto.Inicializar();
+                return abierto;
+            });
             agenda = new AgendaService(contexto);
         }
         catch (Exception ex)

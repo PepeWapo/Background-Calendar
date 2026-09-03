@@ -23,7 +23,11 @@ public sealed class GoogleCalendarSource : ICalendarSource
 
     public async Task<IReadOnlyList<FixedEvent>> ObtenerFijosDelRangoAsync(DateOnly desde, DateOnly hasta)
     {
-        var contenido = await Http.GetStringAsync(_icsUrl);
+        // ConfigureAwait(false) para que el parseo de acá abajo no vuelva al
+        // hilo que haya llamado: bajar el ICS es espera, pero recorrer todos
+        // los eventos y expandir sus repeticiones es CPU, y hecho sobre el hilo
+        // de UI congelaba el widget entero en cada refresco.
+        var contenido = await Http.GetStringAsync(_icsUrl).ConfigureAwait(false);
         var calendario = Calendar.Load(contenido) ?? throw new InvalidOperationException("No se pudo parsear el ICS.");
 
         var inicioRango = desde.ToDateTime(TimeOnly.MinValue);
