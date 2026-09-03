@@ -98,8 +98,20 @@ Para dejarlo corriendo al iniciar sesión, se publica a una carpeta estable y
 se apunta ahí el acceso directo de la carpeta Inicio:
 
 ```powershell
-dotnet publish src/PepeWapOSx10.Shell.Widgets -c Release -o "$env:LOCALAPPDATA\PepeWapOSx10pp"
+dotnet publish src/PepeWapOSx10.Shell.Widgets -c Release -o "$env:LOCALAPPDATA\PepeWapOSx10\app"
 ```
+
+> **Correlo desde tu propia terminal, no desde un agente.** Los asistentes que
+> corren dentro de una app empaquetada (MSIX) tienen `%LOCALAPPDATA%`
+> redirigido a `...\AppData\Local\Packages\<paquete>\LocalCache\Local`, y la
+> redirección es transparente: la ruta *se ve* igual desde adentro. Publicar
+> desde ahí deja la app y los datos (`RielIconos`, `agenda.db`) dentro del
+> cache de esa app en vez de en la carpeta real, con dos consecuencias — el
+> acceso directo de arranque queda apuntando adentro del paquete, y una
+> ejecución normal del widget no encuentra nada y arranca con los rieles
+> vacíos. Ya pasó una vez (2026-09-03) y costó un rato entenderlo. Para
+> comprobar si hay redirección activa: escribir un archivo en
+> `%LOCALAPPDATA%\PepeWapOSx10` y ver si aparece bajo `Packages\...\LocalCache`.
 
 Para probar el motor de agenda solo, sin UI:
 
