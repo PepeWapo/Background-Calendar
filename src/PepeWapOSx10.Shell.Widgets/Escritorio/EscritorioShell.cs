@@ -18,13 +18,15 @@ internal sealed class EscritorioShell : IDisposable
     private readonly VideoWallpaperWindow? _wallpaper;
     private readonly IconRailWindow _rielIzquierdo;
     private readonly IconRailWindow _rielDerecho;
+    private readonly TaskbarWindow _taskbar;
     private readonly AnclajeEscritorio _anclaje;
 
     /// <summary>
-    /// Abre el wallpaper y los rieles, y los ancla junto con el widget en un
-    /// único orden fijo. De atrás hacia adelante: wallpaper animado, rieles,
-    /// widget — que queda justo debajo de la taskbar y de las ventanas
-    /// normales, que no participan de este anclaje y siempre van por encima.
+    /// Abre el wallpaper, los rieles y la taskbar, y los ancla junto con el
+    /// widget en un único orden fijo. De atrás hacia adelante: wallpaper
+    /// animado, rieles, taskbar, widget — que queda justo debajo de la barra de
+    /// tareas de Windows y de las ventanas normales, que no participan de este
+    /// anclaje y siempre van por encima.
     /// </summary>
     public EscritorioShell(Window widget)
     {
@@ -39,7 +41,10 @@ internal sealed class EscritorioShell : IDisposable
         _rielIzquierdo.Show();
         _rielDerecho.Show();
 
-        List<Window> deAtrasHaciaAdelante = [_rielIzquierdo, _rielDerecho, widget];
+        _taskbar = new TaskbarWindow();
+        _taskbar.Show();
+
+        List<Window> deAtrasHaciaAdelante = [_rielIzquierdo, _rielDerecho, _taskbar, widget];
         if (_wallpaper is not null)
             deAtrasHaciaAdelante.Insert(0, _wallpaper);
 
@@ -51,6 +56,7 @@ internal sealed class EscritorioShell : IDisposable
     public void Dispose()
     {
         _anclaje.Dispose();
+        _taskbar.Close();
         _rielIzquierdo.Close();
         _rielDerecho.Close();
         _wallpaper?.Close();
