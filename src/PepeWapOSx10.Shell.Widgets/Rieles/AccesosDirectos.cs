@@ -1,5 +1,6 @@
 using System.IO;
 using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.FileIO;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
@@ -50,7 +51,12 @@ internal static class AccesosDirectos
             if (!Directory.Exists(escritorio))
                 continue;
 
-            foreach (var acceso in EnCarpeta(escritorio))
+            // La lista se materializa antes de mover nada: enumerar una carpeta
+            // de forma perezosa mientras se le sacan archivos deja la
+            // enumeración caminando sobre un directorio que cambia debajo, y
+            // Windows puede saltearse entradas — accesos directos que se
+            // quedarían en el escritorio hasta el próximo arranque.
+            foreach (var acceso in EnCarpeta(escritorio).ToList())
             {
                 var destino = Path.Combine(Carpeta, Path.GetFileName(acceso));
                 if (File.Exists(destino))
@@ -88,6 +94,31 @@ internal static class AccesosDirectos
         return ExtraerIcono(ruta) is { } icono
             ? new IconRailItem(Path.GetFileNameWithoutExtension(ruta), ruta, icono)
             : null;
+    }
+
+    /// <summary>
+    /// Manda el acceso directo a la papelera de reciclaje.
+    /// </summary>
+    /// <remarks>
+    /// Va a la papelera y no a <c>File.Delete</c> porque quitar un ícono del
+    /// riel es la única forma que tiene el usuario de deshacer la migración de
+    /// un acceso directo, y esa migración ya se lo sacó del escritorio: si acá
+    /// se borrara de verdad, un click en el menú perdería el acceso directo
+    /// para siempre. Tampoco alcanza con sacarlo de <c>orden.json</c> y dejar
+    /// el archivo: la reconciliación del próximo arranque lo volvería a
+    /// repartir en un riel.
+    /// </remarks>
+    public static bool EnviarAPapelera(string ruta)
+    {
+        try
+        {
+            FileSystem.DeleteFile(ruta, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
+            return true;
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or OperationCanceledException or FileNotFoundException)
+        {
+            return false;
+        }
     }
 
     private static IEnumerable<string> EnCarpeta(string carpeta) =>
