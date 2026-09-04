@@ -35,16 +35,27 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        // Alto y posición calculados en vez de fijos en el XAML: deja el
-        // mismo margen superior que los rieles de iconos (misma línea de
-        // arranque arriba) y reserva espacio libre abajo para la futura
-        // taskbar del widget.
+        Colocar();
+        EspacioEscritorio.SeguirALaPantallaPrincipal(this, Colocar);
+
+        SourceInitialized += (_, _) =>
+        {
+            AnclajeEscritorio.OcultarDeAltTab(this);
+            AnclajeEscritorio.ImpedirMinimizado(this);
+        };
+    }
+
+    /// <summary>
+    /// Alto y posición calculados en vez de fijos en el XAML: deja el mismo
+    /// margen superior que los rieles de iconos (misma línea de arranque
+    /// arriba) y reserva espacio libre abajo para la taskbar del widget.
+    /// </summary>
+    private void Colocar()
+    {
         var area = SystemParameters.WorkArea;
         Height = area.Height - EspacioEscritorio.MargenSuperior - EspacioEscritorio.MargenInferiorReservado;
         Top = area.Top + EspacioEscritorio.MargenSuperior;
         Left = area.Left + (area.Width - Width) / 2;
-
-        SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
     }
 
     /// <summary>
@@ -86,7 +97,27 @@ public partial class MainWindow : Window
 
     private void Window_Closed(object sender, EventArgs e) => _escritorio?.Dispose();
 
-    private void Root_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.ArrastrarVentana(e);
+    /// <summary>
+    /// Al soltar el click, el widget vuelve al fondo del z-order.
+    /// </summary>
+    /// <remarks>
+    /// Clickear el widget lo activa, y activar una ventana la sube al tope de
+    /// su banda del z-order — no se puede evitar sin volverla no activable, y
+    /// esta necesita el foco de verdad (botones, edición de tareas). Se acepta
+    /// entonces que suba mientras dure el gesto, y se la baja al terminarlo.
+    ///
+    /// Va en el evento de vista previa porque tunelea desde la raíz: llega
+    /// siempre, aunque el control clickeado marque el <c>up</c> como manejado.
+    /// </remarks>
+    protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)
+    {
+        base.OnPreviewMouseLeftButtonUp(e);
+
+        // Después de que termine de despacharse el gesto: el reanclaje mira el
+        // estado del botón para no pisar un click en curso, y acá todavía es
+        // parte de ese click.
+        Dispatcher.BeginInvoke(DispatcherPriority.Input, () => _escritorio?.Reanclar());
+    }
 
     /// <summary>
     /// Cablea los paneles contra la base de datos y el calendario.

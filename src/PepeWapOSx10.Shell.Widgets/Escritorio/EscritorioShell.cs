@@ -53,6 +53,17 @@ internal sealed class EscritorioShell : IDisposable
             clickThrough: _wallpaper is null ? [] : [_wallpaper]);
     }
 
+    /// <summary>
+    /// Devuelve el grupo a su z-order anclado en el acto, sin esperar al
+    /// próximo evento de ventana ni al timer.
+    /// </summary>
+    /// <remarks>
+    /// Lo pide el widget al soltar el click: mientras el botón está apretado el
+    /// anclaje se hace a un lado para que la ventana pueda quedar al frente y
+    /// recibir el gesto con normalidad (ver <see cref="AnclajeEscritorio.Reafirmar"/>).
+    /// </remarks>
+    public void Reanclar() => _anclaje.Reafirmar();
+
     public void Dispose()
     {
         _anclaje.Dispose();

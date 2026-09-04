@@ -24,20 +24,29 @@ public partial class TaskbarWindow : Window
     {
         InitializeComponent();
 
-        // La ventana es más alta que la barra que dibuja: ocupa toda la franja
-        // reservada y centra la barra adentro. Lo que sobra es fondo nulo, así
-        // que no se ve ni recibe clicks.
-        var area = SystemParameters.WorkArea;
-        Width = AnchoBarra;
-        Height = EspacioEscritorio.MargenInferiorReservado;
-        Left = area.Left + (area.Width - Width) / 2;
-        Top = area.Bottom - Height;
+        Colocar();
+        EspacioEscritorio.SeguirALaPantallaPrincipal(this, Colocar);
 
         SourceInitialized += (_, _) =>
         {
             AnclajeEscritorio.OcultarDeAltTab(this);
             AnclajeEscritorio.HacerNoActivable(this);
+            AnclajeEscritorio.ImpedirMinimizado(this);
         };
+    }
+
+    /// <summary>
+    /// La ventana es más alta que la barra que dibuja: ocupa toda la franja
+    /// reservada y centra la barra adentro. Lo que sobra es fondo nulo, así que
+    /// no se ve ni recibe clicks.
+    /// </summary>
+    private void Colocar()
+    {
+        var area = SystemParameters.WorkArea;
+        Width = AnchoBarra;
+        Height = EspacioEscritorio.MargenInferiorReservado;
+        Left = area.Left + (area.Width - Width) / 2;
+        Top = area.Bottom - Height;
     }
 
     /// <summary>

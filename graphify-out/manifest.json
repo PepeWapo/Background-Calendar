@@ -1,0 +1,428 @@
+{
+  "PepeWapOSx10.slnx": {
+    "mtime": 1787811597.123883,
+    "seen": 1788425308.7762804,
+    "ast_hash": "3d7fa77188e9d243cbb36679a96b0b0c",
+    "semantic_hash": "3d7fa77188e9d243cbb36679a96b0b0c"
+  },
+  "design/canvas.json": {
+    "mtime": 1787817097.2738621,
+    "seen": 1788425308.7762804,
+    "ast_hash": "31d58d90719a2bb379d1624fbbb12b11",
+    "semantic_hash": "31d58d90719a2bb379d1624fbbb12b11"
+  },
+  "src/PepeWapOSx10.App/App.xaml": {
+    "mtime": 1787807900.8102562,
+    "seen": 1788425308.7762804,
+    "ast_hash": "7ae036f69aecc76a483969d7a0ae7f7f",
+    "semantic_hash": "7ae036f69aecc76a483969d7a0ae7f7f"
+  },
+  "src/PepeWapOSx10.App/App.xaml.cs": {
+    "mtime": 1787807900.8210971,
+    "seen": 1788425308.7762804,
+    "ast_hash": "f777e8aab39d9590cc65eb7c1b6ddc6d",
+    "semantic_hash": "f777e8aab39d9590cc65eb7c1b6ddc6d"
+  },
+  "src/PepeWapOSx10.App/AssemblyInfo.cs": {
+    "mtime": 1787807900.8220966,
+    "seen": 1788425308.7762804,
+    "ast_hash": "8a158a8a488c0dd7d226a06783fc2860",
+    "semantic_hash": "8a158a8a488c0dd7d226a06783fc2860"
+  },
+  "src/PepeWapOSx10.App/MainWindow.xaml": {
+    "mtime": 1787807900.834375,
+    "seen": 1788425308.7762804,
+    "ast_hash": "b643128abc6f8bf007b668bd56319937",
+    "semantic_hash": "b643128abc6f8bf007b668bd56319937"
+  },
+  "src/PepeWapOSx10.App/MainWindow.xaml.cs": {
+    "mtime": 1787807900.8353739,
+    "seen": 1788425308.7762804,
+    "ast_hash": "b2efac9b6e1c60d7415ee90aeee4e686",
+    "semantic_hash": "b2efac9b6e1c60d7415ee90aeee4e686"
+  },
+  "src/PepeWapOSx10.App/PepeWapOSx10.App.csproj": {
+    "mtime": 1787807922.1723833,
+    "seen": 1788425308.7762804,
+    "ast_hash": "85f2b263084f34f7092535f66dbbb102",
+    "semantic_hash": "85f2b263084f34f7092535f66dbbb102"
+  },
+  "src/PepeWapOSx10.Calendario/GoogleCalendarSource.cs": {
+    "mtime": 1788407729.6063201,
+    "seen": 1788425308.7762804,
+    "ast_hash": "28b9cb3f2bf1d74bd8c9a80a3a049704",
+    "semantic_hash": "28b9cb3f2bf1d74bd8c9a80a3a049704"
+  },
+  "src/PepeWapOSx10.Calendario/PepeWapOSx10.Calendario.csproj": {
+    "mtime": 1787811536.812993,
+    "seen": 1788425308.7762804,
+    "ast_hash": "b066e96fbe879a28343882084345c971",
+    "semantic_hash": "b066e96fbe879a28343882084345c971"
+  },
+  "src/PepeWapOSx10.Datos/AgendaDbContext.cs": {
+    "mtime": 1788361035.1374712,
+    "seen": 1788425308.7762804,
+    "ast_hash": "49828062ac215879181e0b6c22390107",
+    "semantic_hash": "49828062ac215879181e0b6c22390107"
+  },
+  "src/PepeWapOSx10.Datos/PepeWapOSx10.Datos.csproj": {
+    "mtime": 1787811551.8684955,
+    "seen": 1788425308.7762804,
+    "ast_hash": "467feb51891cff1ca07b24e63f7beacf",
+    "semantic_hash": "467feb51891cff1ca07b24e63f7beacf"
+  },
+  "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs": {
+    "mtime": 1787811572.8810174,
+    "seen": 1788425308.7762804,
+    "ast_hash": "af5bf74506e3e1228c28ee4256aff83a",
+    "semantic_hash": "af5bf74506e3e1228c28ee4256aff83a"
+  },
+  "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs": {
+    "mtime": 1788355955.890616,
+    "seen": 1788425308.7762804,
+    "ast_hash": "0e4051bd3af477cb006dd23f3bd2eef7",
+    "semantic_hash": "0e4051bd3af477cb006dd23f3bd2eef7"
+  },
+  "src/PepeWapOSx10.Dominio/Interfaces/ICalendarSource.cs": {
+    "mtime": 1788129699.9390416,
+    "seen": 1788425308.7762804,
+    "ast_hash": "4b1f156b451a9b07fa9254db34a58b9f",
+    "semantic_hash": "4b1f156b451a9b07fa9254db34a58b9f"
+  },
+  "src/PepeWapOSx10.Dominio/Interfaces/IFlexibleTaskRepository.cs": {
+    "mtime": 1787811384.005984,
+    "seen": 1788425308.7762804,
+    "ast_hash": "d628bbce3142a95c2252fa26e2c804d4",
+    "semantic_hash": "d628bbce3142a95c2252fa26e2c804d4"
+  },
+  "src/PepeWapOSx10.Dominio/Interfaces/ITareaGuiaRepository.cs": {
+    "mtime": 1788156132.2701128,
+    "seen": 1788425308.7762804,
+    "ast_hash": "b39c26b6b50f1e96fe7025ced21aad78",
+    "semantic_hash": "b39c26b6b50f1e96fe7025ced21aad78"
+  },
+  "src/PepeWapOSx10.Dominio/Modelos/FixedEvent.cs": {
+    "mtime": 1787811376.367052,
+    "seen": 1788425308.7762804,
+    "ast_hash": "749cc2654974d4384496cb7f470b73f2",
+    "semantic_hash": "749cc2654974d4384496cb7f470b73f2"
+  },
+  "src/PepeWapOSx10.Dominio/Modelos/FlexibleTask.cs": {
+    "mtime": 1787811378.0118065,
+    "seen": 1788425308.7762804,
+    "ast_hash": "dc949b9f045a2a0abd122a18245c89f1",
+    "semantic_hash": "dc949b9f045a2a0abd122a18245c89f1"
+  },
+  "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs": {
+    "mtime": 1787811380.727829,
+    "seen": 1788425308.7762804,
+    "ast_hash": "c444e6d21169e6d2f665357c5670d19f",
+    "semantic_hash": "c444e6d21169e6d2f665357c5670d19f"
+  },
+  "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs": {
+    "mtime": 1788141746.7713132,
+    "seen": 1788425308.7762804,
+    "ast_hash": "dfa6f68ee140377f9f33f00e3b8e5722",
+    "semantic_hash": "dfa6f68ee140377f9f33f00e3b8e5722"
+  },
+  "src/PepeWapOSx10.Dominio/PepeWapOSx10.Dominio.csproj": {
+    "mtime": 1787807887.0981517,
+    "seen": 1788425308.7762804,
+    "ast_hash": "46b0780bd56312ea2d1bab391f179e89",
+    "semantic_hash": "46b0780bd56312ea2d1bab391f179e89"
+  },
+  "src/PepeWapOSx10.Dominio/Scheduler.cs": {
+    "mtime": 1787811402.3299792,
+    "seen": 1788425308.7762804,
+    "ast_hash": "4a43bf4d9779a253c1ff84e267481180",
+    "semantic_hash": "4a43bf4d9779a253c1ff84e267481180"
+  },
+  "src/PepeWapOSx10.Dominio/SemanaIso.cs": {
+    "mtime": 1788355234.6554537,
+    "seen": 1788425308.7762804,
+    "ast_hash": "27ccbadb6231da8b939b6e807fbd5b35",
+    "semantic_hash": "27ccbadb6231da8b939b6e807fbd5b35"
+  },
+  "src/PepeWapOSx10.Shell.Iconos/Class1.cs": {
+    "mtime": 1787807890.8905346,
+    "seen": 1788425308.7762804,
+    "ast_hash": "2d4550ca2ab6b037e2e1a672cffdf5b1",
+    "semantic_hash": "2d4550ca2ab6b037e2e1a672cffdf5b1"
+  },
+  "src/PepeWapOSx10.Shell.Iconos/PepeWapOSx10.Shell.Iconos.csproj": {
+    "mtime": 1787807920.6453798,
+    "seen": 1788425308.7762804,
+    "ast_hash": "9f69854191bef734beda09c8af8511fd",
+    "semantic_hash": "9f69854191bef734beda09c8af8511fd"
+  },
+  "src/PepeWapOSx10.Shell.Taskbar/Class1.cs": {
+    "mtime": 1787807892.0471435,
+    "seen": 1788425308.7762804,
+    "ast_hash": "d1a5b8a25796723eab2f0fe9060730c9",
+    "semantic_hash": "d1a5b8a25796723eab2f0fe9060730c9"
+  },
+  "src/PepeWapOSx10.Shell.Taskbar/PepeWapOSx10.Shell.Taskbar.csproj": {
+    "mtime": 1787807921.2171488,
+    "seen": 1788425308.7762804,
+    "ast_hash": "9f69854191bef734beda09c8af8511fd",
+    "semantic_hash": "9f69854191bef734beda09c8af8511fd"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/AgendaService.cs": {
+    "mtime": 1788360924.9637225,
+    "seen": 1788425308.7762804,
+    "ast_hash": "505b9aa5b4e9a822ffc309f0979bca00",
+    "semantic_hash": "505b9aa5b4e9a822ffc309f0979bca00"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs": {
+    "mtime": 1788407691.8295648,
+    "seen": 1788425308.7762804,
+    "ast_hash": "5d23af8e6431bfc3cf768af7350149e5",
+    "semantic_hash": "5d23af8e6431bfc3cf768af7350149e5"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs": {
+    "mtime": 1788355345.3163655,
+    "seen": 1788425308.7762804,
+    "ast_hash": "d991fbee6932e7c8bce18f92fa76bc4e",
+    "semantic_hash": "d991fbee6932e7c8bce18f92fa76bc4e"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/MiniCalendario.cs": {
+    "mtime": 1788355939.5178616,
+    "seen": 1788425308.7762804,
+    "ast_hash": "e653b9e9c6599a9b583f2d178dd60c28",
+    "semantic_hash": "e653b9e9c6599a9b583f2d178dd60c28"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/PanelGuia.cs": {
+    "mtime": 1788355446.8112974,
+    "seen": 1788425308.7762804,
+    "ast_hash": "6f354fb314145d716ac1f7666c82d53a",
+    "semantic_hash": "6f354fb314145d716ac1f7666c82d53a"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs": {
+    "mtime": 1788355754.7932744,
+    "seen": 1788425308.7762804,
+    "ast_hash": "f43a3607fd15e0f9b6ff9dc0413c3c9d",
+    "semantic_hash": "f43a3607fd15e0f9b6ff9dc0413c3c9d"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs": {
+    "mtime": 1788355828.8486776,
+    "seen": 1788425308.7762804,
+    "ast_hash": "986567e72ffa29aa388cadbb3c30a463",
+    "semantic_hash": "986567e72ffa29aa388cadbb3c30a463"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs": {
+    "mtime": 1788355789.4938564,
+    "seen": 1788425308.7762804,
+    "ast_hash": "df883208ae16323e94845a25c39a718c",
+    "semantic_hash": "df883208ae16323e94845a25c39a718c"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/App.xaml": {
+    "mtime": 1788355176.260046,
+    "seen": 1788425308.7762804,
+    "ast_hash": "192d0d9bd62db6ec7c2a60c1a3fefb0d",
+    "semantic_hash": "192d0d9bd62db6ec7c2a60c1a3fefb0d"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs": {
+    "mtime": 1788345590.8948338,
+    "seen": 1788425308.7762804,
+    "ast_hash": "f9f1b2cb03f21dba960616f39b611317",
+    "semantic_hash": "f9f1b2cb03f21dba960616f39b611317"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/AssemblyInfo.cs": {
+    "mtime": 1787807899.6062558,
+    "seen": 1788425308.7762804,
+    "ast_hash": "8a158a8a488c0dd7d226a06783fc2860",
+    "semantic_hash": "8a158a8a488c0dd7d226a06783fc2860"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/EditarTareaGuiaWindow.xaml": {
+    "mtime": 1788355917.3929818,
+    "seen": 1788425308.7762804,
+    "ast_hash": "20556a6f318fa295d18655b188f042c7",
+    "semantic_hash": "20556a6f318fa295d18655b188f042c7"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/EditarTareaGuiaWindow.xaml.cs": {
+    "mtime": 1788355955.890616,
+    "seen": 1788425308.7762804,
+    "ast_hash": "5e612c43082e450a430673823b5d8331",
+    "semantic_hash": "5e612c43082e450a430673823b5d8331"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Escritorio/AnclajeEscritorio.cs": {
+    "mtime": 1788503711.6013565,
+    "seen": 1788503918.4681787,
+    "ast_hash": "1725ba1bca3ea7e697d5ccdbcc25011c",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Escritorio/EscritorioShell.cs": {
+    "mtime": 1788501296.1462445,
+    "seen": 1788503918.4681787,
+    "ast_hash": "8b8b24bf580346ab5efd7cec5229ba9b",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Escritorio/EspacioEscritorio.cs": {
+    "mtime": 1788502193.6148303,
+    "seen": 1788503918.4681787,
+    "ast_hash": "241028bda3369368af25e8d5bd937f3e",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml": {
+    "mtime": 1788501227.406076,
+    "seen": 1788503918.4681787,
+    "ast_hash": "97ddd3d3e60c753075183e5938bac0b7",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs": {
+    "mtime": 1788502206.020892,
+    "seen": 1788503918.4681787,
+    "ast_hash": "1fc5df7b5b9a45a1e93c8da5ac6acec3",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/PepeWapOSx10.Shell.Widgets.csproj": {
+    "mtime": 1788345585.9951458,
+    "seen": 1788425308.7762804,
+    "ast_hash": "22780b895fd2b3a422f8fbe36635c06f",
+    "semantic_hash": "22780b895fd2b3a422f8fbe36635c06f"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs": {
+    "mtime": 1788407511.5741858,
+    "seen": 1788425308.7762804,
+    "ast_hash": "a0501db1fb20ba44c5e059fbfec99210",
+    "semantic_hash": "a0501db1fb20ba44c5e059fbfec99210"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailItem.cs": {
+    "mtime": 1788348279.2995563,
+    "seen": 1788425308.7762804,
+    "ast_hash": "8f2b59b1676466c0c6b66856553731fc",
+    "semantic_hash": "8f2b59b1676466c0c6b66856553731fc"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml": {
+    "mtime": 1788407235.8695343,
+    "seen": 1788425308.7762804,
+    "ast_hash": "f4cddc40cb31a309f4fdffc4d090ced6",
+    "semantic_hash": "f4cddc40cb31a309f4fdffc4d090ced6"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs": {
+    "mtime": 1788502214.5103009,
+    "seen": 1788503918.4681787,
+    "ast_hash": "9345fbf961181361601729b1acee0992",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/OrdenDeRieles.cs": {
+    "mtime": 1788355597.9235299,
+    "seen": 1788425308.7762804,
+    "ast_hash": "dd630dea1d11b9244277a02677896ddf",
+    "semantic_hash": "dd630dea1d11b9244277a02677896ddf"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs": {
+    "mtime": 1788407241.7562609,
+    "seen": 1788425308.7762804,
+    "ast_hash": "ea2e3c07d4e03618cb6c1c856247d493",
+    "semantic_hash": "ea2e3c07d4e03618cb6c1c856247d493"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml": {
+    "mtime": 1788419504.210638,
+    "seen": 1788425308.7762804,
+    "ast_hash": "68510e761a891b2ac8e0efbff6657043",
+    "semantic_hash": "68510e761a891b2ac8e0efbff6657043"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs": {
+    "mtime": 1788502223.4695976,
+    "seen": 1788503918.4681787,
+    "ast_hash": "51d8ea8be5d998a1ec2c01375a7322fb",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Tema.xaml": {
+    "mtime": 1788407197.0678022,
+    "seen": 1788425308.7762804,
+    "ast_hash": "6af50a08f5ae6398f7badff7fe77a042",
+    "semantic_hash": "6af50a08f5ae6398f7badff7fe77a042"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Ui/FormatoEspanol.cs": {
+    "mtime": 1788355202.3281753,
+    "seen": 1788425308.7762804,
+    "ast_hash": "6eb543682ade83dd6ef9cb25f2b1e800",
+    "semantic_hash": "6eb543682ade83dd6ef9cb25f2b1e800"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs": {
+    "mtime": 1788355471.2911816,
+    "seen": 1788425308.7762804,
+    "ast_hash": "d8267cd96f05c23ade3ef5f040fecf08",
+    "semantic_hash": "d8267cd96f05c23ade3ef5f040fecf08"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs": {
+    "mtime": 1788355324.6718159,
+    "seen": 1788425308.7762804,
+    "ast_hash": "11b7433fb839f3b4066980309109eba7",
+    "semantic_hash": "11b7433fb839f3b4066980309109eba7"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Ui/Paleta.cs": {
+    "mtime": 1788355202.309175,
+    "seen": 1788425308.7762804,
+    "ast_hash": "1b3fe65dcfc11dae16559bcfa89a77a0",
+    "semantic_hash": "1b3fe65dcfc11dae16559bcfa89a77a0"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Wallpaper/VideoWallpaperWindow.xaml": {
+    "mtime": 1788356519.2712555,
+    "seen": 1788425308.7762804,
+    "ast_hash": "c9e1d92f5efdb32b064c889f517a495e",
+    "semantic_hash": "c9e1d92f5efdb32b064c889f517a495e"
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Wallpaper/VideoWallpaperWindow.xaml.cs": {
+    "mtime": 1788503647.6801836,
+    "seen": 1788503918.4681787,
+    "ast_hash": "422630d3d8e6a7d499e2a798eb3ae6f3",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Wallpaper/WallpaperConfig.cs": {
+    "mtime": 1788345108.8773022,
+    "seen": 1788425308.7762804,
+    "ast_hash": "67e40b98853d6529b24ab35a896c8cfc",
+    "semantic_hash": "67e40b98853d6529b24ab35a896c8cfc"
+  },
+  "src/PepeWapOSx10.SmokeTest/PepeWapOSx10.SmokeTest.csproj": {
+    "mtime": 1787811609.2437015,
+    "seen": 1788425308.7762804,
+    "ast_hash": "ca05bf26d7d0418a857222f312822dda",
+    "semantic_hash": "ca05bf26d7d0418a857222f312822dda"
+  },
+  "src/PepeWapOSx10.SmokeTest/Program.cs": {
+    "mtime": 1787811616.341039,
+    "seen": 1788425308.7762804,
+    "ast_hash": "c32fbb2ba0942832b4a78afb2f7c286d",
+    "semantic_hash": "c32fbb2ba0942832b4a78afb2f7c286d"
+  },
+  ".claude/settings.json": {
+    "mtime": 1788425350.7870293,
+    "seen": 1788503918.4681787,
+    "ast_hash": "610e56f272191e38a62e04dbfeb0ac8a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/run/SKILL.md": {
+    "mtime": 1788361245.5914567,
+    "seen": 1788503918.4681787,
+    "ast_hash": "6ed66f8a97150c648d8847159777f19a",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1788425350.7740288,
+    "seen": 1788503918.4681787,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788417359.9813979,
+    "seen": 1788503918.4681787,
+    "ast_hash": "2e6efe4ba361f294c9b68069a863f534",
+    "semantic_hash": ""
+  },
+  "design/Main.dc.html": {
+    "mtime": 1787817097.2378035,
+    "seen": 1788503918.4681787,
+    "ast_hash": "dd2b509b508575433450255d00b2b74f",
+    "semantic_hash": ""
+  },
+  "design/TaskbarStyle.dc.html": {
+    "mtime": 1787817097.255084,
+    "seen": 1788503918.4681787,
+    "ast_hash": "de5ca2ab5f8c473a84d755f6d6bd8ddc",
+    "semantic_hash": ""
+  }
+}

@@ -40,19 +40,26 @@ public partial class IconRailWindow : Window
         _rieles = rieles;
         IconosControl.ItemsSource = rieles.De(lado);
 
-        var area = SystemParameters.WorkArea;
-        Width = AnchoRiel;
-        Height = Math.Max(AltoMinimo, area.Height - EspacioEscritorio.MargenSuperior - EspacioEscritorio.MargenInferiorReservado);
-        Top = area.Top + EspacioEscritorio.MargenSuperior;
-        Left = lado == LadoEscritorio.Izquierda
-            ? area.Left + MargenLateral
-            : area.Right - MargenLateral - AnchoRiel;
+        Colocar();
+        EspacioEscritorio.SeguirALaPantallaPrincipal(this, Colocar);
 
         SourceInitialized += (_, _) =>
         {
             AnclajeEscritorio.OcultarDeAltTab(this);
             AnclajeEscritorio.HacerNoActivable(this);
+            AnclajeEscritorio.ImpedirMinimizado(this);
         };
+    }
+
+    private void Colocar()
+    {
+        var area = SystemParameters.WorkArea;
+        Width = AnchoRiel;
+        Height = Math.Max(AltoMinimo, area.Height - EspacioEscritorio.MargenSuperior - EspacioEscritorio.MargenInferiorReservado);
+        Top = area.Top + EspacioEscritorio.MargenSuperior;
+        Left = _lado == LadoEscritorio.Izquierda
+            ? area.Left + MargenLateral
+            : area.Right - MargenLateral - AnchoRiel;
     }
 
     private void Iconos_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -18,7 +18,7 @@
 
     <!-- Colores y estilos: Tema.xaml (mergeado en App.Resources). -->
 
-    <Grid Margin="20" Background="Transparent" MouseLeftButtonDown="Root_MouseLeftButtonDown">
+    <Grid Margin="20" Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="225"/>
             <ColumnDefinition Width="22"/>
@@ -104,7 +104,7 @@
                     <!-- Vista Semana -->
                     <DockPanel x:Name="SemanaPanel" Visibility="Collapsed">
                         <Grid x:Name="SemanaHeadGrid" DockPanel.Dock="Top" Margin="0,0,0,8"/>
-                        <ScrollViewer x:Name="SemanaScroll" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" Height="612">
+                        <ScrollViewer x:Name="SemanaScroll" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
                             <Canvas x:Name="SemanaCanvas" Width="733"/>
                         </ScrollViewer>
                     </DockPanel>

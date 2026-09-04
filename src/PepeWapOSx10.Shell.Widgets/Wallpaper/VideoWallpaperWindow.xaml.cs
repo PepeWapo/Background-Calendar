@@ -37,7 +37,7 @@ public partial class VideoWallpaperWindow : Window
     private readonly Random _orden = new();
     private readonly LibVLC _libVlc;
     private readonly MediaPlayer _reproductor;
-    private readonly string _recorte;
+    private string _recorte;
 
     private int _indiceActual = -1;
     private bool _rotando;
@@ -64,17 +64,12 @@ public partial class VideoWallpaperWindow : Window
         InitializeComponent();
         _videos = videos;
 
-        Left = SystemParameters.VirtualScreenLeft;
-        Top = SystemParameters.VirtualScreenTop;
-        Width = SystemParameters.VirtualScreenWidth;
-        Height = SystemParameters.VirtualScreenHeight;
+        _recorte = string.Empty;
+        Colocar();
 
-        // Le dice a VLC que recorte cada video a la proporción de la pantalla
-        // antes de dibujarlo: como el VideoView siempre estira el resultado
-        // para llenar todo su espacio, recortar primero a la misma proporción
-        // es lo que logra "centrado, sin franjas, sin deformar" en vez de
-        // pillarbox/letterbox o una imagen estirada.
-        _recorte = $"{(int)Width}:{(int)Height}";
+        // Conectar la tableta digitalizadora agranda el escritorio virtual, y
+        // con él la franja que el wallpaper tiene que tapar.
+        EspacioEscritorio.SeguirALaPantallaPrincipal(this, Colocar);
 
         _libVlc = new LibVLC();
         _reproductor = new MediaPlayer(_libVlc) { Mute = true };
@@ -83,7 +78,12 @@ public partial class VideoWallpaperWindow : Window
         _reproductor.EndReached += (_, _) => Dispatcher.BeginInvoke(AlTerminar);
         _reproductor.EncounteredError += (_, _) => Dispatcher.BeginInvoke(AlFallarReproduccion);
 
-        SourceInitialized += (_, _) => AnclajeEscritorio.OcultarDeAltTab(this);
+        SourceInitialized += (_, _) =>
+        {
+            AnclajeEscritorio.OcultarDeAltTab(this);
+            AnclajeEscritorio.ImpedirMinimizado(this);
+            AnclajeEscritorio.RechazarActivacionPorClick(this);
+        };
         Loaded += (_, _) =>
         {
             ElegirSiguienteIndice();
@@ -103,6 +103,27 @@ public partial class VideoWallpaperWindow : Window
         _indiceActual = _videos.Count <= 1
             ? 0
             : Enumerable.Range(0, _videos.Count).Where(i => i != _indiceActual).OrderBy(_ => _orden.Next()).First();
+    }
+
+    /// <summary>
+    /// El wallpaper tapa el escritorio virtual entero, no una pantalla.
+    /// </summary>
+    /// <remarks>
+    /// El recorte le dice a VLC que corte cada video a la proporción de la
+    /// pantalla antes de dibujarlo: como el <c>VideoView</c> siempre estira el
+    /// resultado para llenar todo su espacio, recortar primero a la misma
+    /// proporción es lo que logra "centrado, sin franjas, sin deformar" en vez
+    /// de pillarbox/letterbox o una imagen estirada. Se aplica al empezar cada
+    /// video, así que un cambio de pantallas se acomoda en la próxima rotación.
+    /// </remarks>
+    private void Colocar()
+    {
+        Left = SystemParameters.VirtualScreenLeft;
+        Top = SystemParameters.VirtualScreenTop;
+        Width = SystemParameters.VirtualScreenWidth;
+        Height = SystemParameters.VirtualScreenHeight;
+
+        _recorte = $"{(int)Width}:{(int)Height}";
     }
 
     private void ReproducirActual()

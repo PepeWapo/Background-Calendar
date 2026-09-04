@@ -1,5 +1,7 @@
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Threading;
 
@@ -95,15 +97,8 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// cambia qué ventana está en primer plano o minimiza/restaura alguna —
     /// que es cuando en la práctica se nota un salto de z-order si se espera
     /// al próximo tick del timer.
-    ///
-    /// <c>SetWindowPos(HWND_BOTTOM)</c> deja a la ventana llamada *más atrás
-    /// que cualquier otra*: si dos ventanas lo piden, la que lo pidió después
-    /// termina debajo de la que lo pidió antes. Por eso acá se ancla en orden
-    /// inverso al declarado — la última de <c>deAtrasHaciaAdelante</c> se
-    /// ancla primero (queda arriba) y la primera se ancla al final (queda al
-    /// fondo de todas).
     /// </remarks>
-    private void Reafirmar()
+    public void Reafirmar()
     {
         // Mandar al fondo la ventana activa le saca la activación, y Windows
         // activa entonces la que quede más arriba — lo que dispara otro
@@ -114,12 +109,26 @@ internal sealed class AnclajeEscritorio : IDisposable
         if (_reafirmando)
             return;
 
+        // Mientras el botón izquierdo está apretado, el widget se queda donde
+        // el click lo puso (al frente): así el gesto en curso —arrastrar un
+        // ícono entre rieles, marcar una celda— se completa con la ventana a
+        // la vista. El reanclaje llega al soltar, vía Reanclar.
+        //
+        // Alcanza con mirar el estado del botón en vez de que cada ventana
+        // avise: el evento del hook y el WM_LBUTTONDOWN llegan a la misma cola
+        // de este hilo, y no hay garantía de cuál se despacha primero, así que
+        // un flag seteado desde un handler de WPF podía llegar tarde.
+        if (Mouse.LeftButton == MouseButtonState.Pressed)
+            return;
+
         _reafirmando = true;
         try
         {
-            for (var i = _deAtrasHaciaAdelante.Length - 1; i >= 0; i--)
-                Anclar(_deAtrasHaciaAdelante[i]);
+            if (!YaEstaAnclado())
+                AnclarGrupo();
 
+            // Esto sí se rehace siempre: LibVLC recrea sus ventanas por su
+            // cuenta y las nuevas nacen sin los estilos puestos.
             foreach (var ventana in _clickThrough)
                 HacerClickThroughConSusVentanas(ventana);
         }
@@ -127,6 +136,114 @@ internal sealed class AnclajeEscritorio : IDisposable
         {
             _reafirmando = false;
         }
+    }
+
+    /// <summary>
+    /// El grupo ya está junto, en su orden relativo, y sin ninguna ventana
+    /// ajena metida en el medio.
+    /// </summary>
+    /// <remarks>
+    /// Es la mitad del arreglo del parpadeo. Reordenar el grupo no puede
+    /// evitar un estado intermedio en el que el wallpaper —pantalla completa—
+    /// queda por encima del widget: para llevar al widget al fondo del z-order
+    /// hay que pasarlo por debajo del wallpaper antes de bajar el wallpaper
+    /// debajo suyo, y DWM alcanza a componer ese instante. Se probó hacerlo
+    /// atómico con <c>DeferWindowPos</c> y no sirve: dentro de una transacción
+    /// los destinos se resuelven todos contra el z-order previo al
+    /// <c>Begin</c>, y el grupo termina invertido (el wallpaper arriba de todo).
+    ///
+    /// Lo que sí se puede es no reordenar cuando no hace falta. El parpadeo
+    /// "cada cierto tiempo" era el timer de reafirmación rehaciendo el mismo
+    /// orden que ya estaba puesto, cada 10s, sin que nada lo hubiera tocado.
+    /// </remarks>
+    private bool YaEstaAnclado()
+    {
+        var esperadas = new IntPtr[_deAtrasHaciaAdelante.Length];
+        for (var i = 0; i < esperadas.Length; i++)
+        {
+            esperadas[i] = Handle(_deAtrasHaciaAdelante[i]);
+            if (esperadas[i] == IntPtr.Zero)
+                return false;
+        }
+
+        var proceso = GetCurrentProcessId();
+        var siguiente = 0;
+
+        foreach (var hwnd in VisiblesDeAbajoHaciaArriba())
+        {
+            if (siguiente == esperadas.Length)
+                break;
+
+            if (hwnd == esperadas[siguiente])
+            {
+                siguiente++;
+                continue;
+            }
+
+            // Debajo del grupo hay siempre ventanas del escritorio de Explorer,
+            // que es el único lugar del z-order más bajo que el nuestro. No
+            // cuentan como desanclaje; cualquier otra ventana ajena por debajo
+            // sí, porque el grupo la estaría tapando.
+            if (siguiente == 0 && EsElEscritorio(hwnd))
+                continue;
+
+            // Las ventanas propias que no son del grupo (las que crea LibVLC
+            // para el video) flotan sobre su dueña y no rompen el anclaje.
+            GetWindowThreadProcessId(hwnd, out var duenio);
+            if (duenio == proceso)
+                continue;
+
+            return false;
+        }
+
+        return siguiente == esperadas.Length;
+    }
+
+    private static bool EsElEscritorio(IntPtr hwnd)
+    {
+        var clase = new StringBuilder(64);
+        GetClassName(hwnd, clase, clase.Capacity);
+        var nombre = clase.ToString();
+
+        // Progman es el escritorio; WorkerW son las capas que Explorer intercala
+        // con él para el fondo de pantalla y los iconos.
+        return nombre is "Progman" or "WorkerW";
+    }
+
+    private static List<IntPtr> VisiblesDeAbajoHaciaArriba()
+    {
+        var deArribaHaciaAbajo = new List<IntPtr>();
+        EnumWindows((hwnd, _) =>
+        {
+            if (IsWindowVisible(hwnd))
+                deArribaHaciaAbajo.Add(hwnd);
+            return true;
+        }, IntPtr.Zero);
+
+        deArribaHaciaAbajo.Reverse();
+        return deArribaHaciaAbajo;
+    }
+
+    /// <summary>
+    /// Devuelve el grupo entero al fondo del z-order, en su orden relativo.
+    /// </summary>
+    /// <remarks>
+    /// Solo se llama cuando el orden está realmente mal (ver
+    /// <see cref="YaEstaAnclado"/>): el recorrido pasa por un estado intermedio
+    /// en el que el wallpaper tapa al widget, y hacerlo sin necesidad era el
+    /// parpadeo periódico.
+    ///
+    /// <c>SetWindowPos(HWND_BOTTOM)</c> deja a la ventana llamada *más atrás
+    /// que cualquier otra*: si dos ventanas lo piden, la que lo pidió después
+    /// termina debajo de la que lo pidió antes. Por eso acá se ancla en orden
+    /// inverso al declarado — la última de <c>deAtrasHaciaAdelante</c> se
+    /// ancla primero (queda arriba) y la primera se ancla al final (queda al
+    /// fondo de todas).
+    /// </remarks>
+    private void AnclarGrupo()
+    {
+        for (var i = _deAtrasHaciaAdelante.Length - 1; i >= 0; i--)
+            SetWindowPos(Handle(_deAtrasHaciaAdelante[i]), HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
     }
 
     public void Dispose()
@@ -138,9 +255,40 @@ internal sealed class AnclajeEscritorio : IDisposable
         _hooks.Clear();
     }
 
-    /// <summary>Empuja la ventana al fondo del z-order.</summary>
-    public static void Anclar(Window ventana) =>
-        SetWindowPos(Handle(ventana), HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
+    /// <summary>
+    /// Impide que la ventana se minimice, venga la orden de donde venga.
+    /// </summary>
+    /// <remarks>
+    /// "Mostrar escritorio" (Win+D) minimizaba el widget entero y dejaba el
+    /// escritorio pelado: para Windows estas son ventanas normales y las
+    /// minimiza junto con todo lo demás, aunque conceptualmente sean *parte*
+    /// del escritorio que Win+D quiere descubrir.
+    ///
+    /// Se traga el <c>WM_SYSCOMMAND</c>, que es por donde llega la orden en el
+    /// caso normal, y además se revierte el estado si algo la minimizó por otra
+    /// vía (<c>ShowWindow</c> directo, que no manda ningún mensaje que se pueda
+    /// interceptar).
+    /// </remarks>
+    public static void ImpedirMinimizado(Window ventana)
+    {
+        HwndSource.FromHwnd(Handle(ventana))?.AddHook(TragarMinimizado);
+
+        ventana.StateChanged += (_, _) =>
+        {
+            if (ventana.WindowState == WindowState.Minimized)
+                ventana.WindowState = WindowState.Normal;
+        };
+    }
+
+    private static IntPtr TragarMinimizado(IntPtr hwnd, int mensaje, IntPtr wParam, IntPtr lParam, ref bool manejado)
+    {
+        // Los 4 bits bajos de wParam los usa Windows internamente en los
+        // comandos de sistema; hay que enmascararlos antes de comparar.
+        if (mensaje == WM_SYSCOMMAND && (wParam.ToInt64() & 0xFFF0) == SC_MINIMIZE)
+            manejado = true;
+
+        return IntPtr.Zero;
+    }
 
     /// <summary>
     /// Saca la ventana del Alt+Tab y de cualquier otro selector de tareas.
@@ -177,6 +325,32 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// </remarks>
     public static void HacerNoActivable(Window ventana) =>
         CambiarEstiloExtendido(Handle(ventana), agregar: WS_EX_NOACTIVATE, quitar: 0);
+
+    /// <summary>
+    /// Rechaza la activación que Windows ofrece al clickear la ventana o
+    /// cualquiera de sus hijas.
+    /// </summary>
+    /// <remarks>
+    /// Lo necesita el wallpaper. <c>WS_EX_NOACTIVATE</c> no le alcanza: el
+    /// click no cae en él sino en la ventana nativa que LibVLC crea para
+    /// dibujar el video, y de ese click Windows ofrece la activación al
+    /// top-level que la contiene —el wallpaper— sin mirar su estilo. Como el
+    /// wallpaper ocupa la pantalla entera, tenerlo en primer plano hace que
+    /// Windows lo tome por una app en pantalla completa y esconda la barra de
+    /// tareas real: era la secuencia "click en el widget, después click en el
+    /// fondo, y la barra de tareas desaparece".
+    /// </remarks>
+    public static void RechazarActivacionPorClick(Window ventana) =>
+        HwndSource.FromHwnd(Handle(ventana))?.AddHook(NoActivarConElClick);
+
+    private static IntPtr NoActivarConElClick(IntPtr hwnd, int mensaje, IntPtr wParam, IntPtr lParam, ref bool manejado)
+    {
+        if (mensaje != WM_MOUSEACTIVATE)
+            return IntPtr.Zero;
+
+        manejado = true;
+        return MA_NOACTIVATE;
+    }
 
     /// <summary>
     /// Vuelve invisibles al mouse una ventana y todas las que haya abierto:
@@ -271,6 +445,21 @@ internal sealed class AnclajeEscritorio : IDisposable
     [DllImport("user32.dll")]
     private static extern bool EnumThreadWindows(uint dwThreadId, EnumWindowsProc lpfn, IntPtr lParam);
 
+    [DllImport("user32.dll")]
+    private static extern bool EnumWindows(EnumWindowsProc lpfn, IntPtr lParam);
+
+    [DllImport("user32.dll")]
+    private static extern bool IsWindowVisible(IntPtr hWnd);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
+
+    [DllImport("user32.dll")]
+    private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+    [DllImport("kernel32.dll")]
+    private static extern uint GetCurrentProcessId();
+
     [DllImport("kernel32.dll")]
     private static extern uint GetCurrentThreadId();
 
@@ -294,5 +483,9 @@ internal sealed class AnclajeEscritorio : IDisposable
     private const uint EVENT_SYSTEM_FOREGROUND = 0x0003;
     private const uint EVENT_SYSTEM_MINIMIZESTART = 0x0016;
     private const uint EVENT_SYSTEM_MINIMIZEEND = 0x0017;
+    private const int WM_MOUSEACTIVATE = 0x0021;
+    private static readonly IntPtr MA_NOACTIVATE = new(3);
+    private const int WM_SYSCOMMAND = 0x0112;
+    private const int SC_MINIMIZE = 0xF020;
     private const uint WINEVENT_OUTOFCONTEXT = 0x0000;
 }
