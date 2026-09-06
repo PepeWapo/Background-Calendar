@@ -93,7 +93,6 @@ public sealed class AgendaDbContext
         }
 
         MigrarRepeticionDeTareasGuia(conexion);
-        SembrarFlexibleTasks(conexion);
         SembrarTareasGuia(conexion);
     }
 
@@ -137,26 +136,6 @@ public sealed class AgendaDbContext
         }
 
         return false;
-    }
-
-    private static void SembrarFlexibleTasks(SqliteConnection conexion)
-    {
-        using var contarComando = conexion.CreateCommand();
-        contarComando.CommandText = "SELECT COUNT(*) FROM flexible_tasks;";
-        var cantidad = (long)contarComando.ExecuteScalar()!;
-        if (cantidad > 0)
-            return;
-
-        using var insertar = conexion.CreateCommand();
-        insertar.CommandText =
-            """
-            INSERT INTO flexible_tasks
-                (id, title, duration_min, priority, dias_permitidos, hora_min, hora_max, recurrente)
-            VALUES
-                ('platzi', 'Platzi', 60, 1, '0,1,2,3,4', '08:30', '12:30', 1),
-                ('proyectos-personales', 'Proyectos personales', 60, 2, '0,1,2,3,4', '08:30', '12:30', 1);
-            """;
-        insertar.ExecuteNonQuery();
     }
 
     private static void SembrarTareasGuia(SqliteConnection conexion)

@@ -48,14 +48,20 @@ public sealed class GoogleCalendarSource : ICalendarSource
                 if (ocurrencia.Period.StartTime is not { } inicioCal)
                     continue;
 
-                var inicio = inicioCal.Value;
+                // AsUtc.ToLocalTime() en vez de .Value: para eventos guardados en UTC
+                // puro (sin TZID -- p.ej. "Entreno Piernas/Pecho/Espalda" creados vía
+                // integraciones que no fijan zona horaria), .Value devuelve la hora UTC
+                // cruda sin convertir, corriendo el evento por el offset de Buenos Aires
+                // (3 horas). Para eventos con TZID, AsUtc.ToLocalTime() da el mismo
+                // resultado que .Value, así que es seguro para ambos casos.
+                var inicio = inicioCal.AsUtc.ToLocalTime();
                 if (inicio >= finRango)
                     break;
 
                 if (ocurrencia.Period.EffectiveEndTime is not { } finCal)
                     continue;
 
-                var fin = finCal.Value;
+                var fin = finCal.AsUtc.ToLocalTime();
                 if (fin <= inicioRango)
                     continue;
 
