@@ -31,9 +31,17 @@ public partial class MainWindow : Window
     private VistaSemana? _semana;
     private VistaMes? _mes;
 
+    private static readonly TimeSpan IntervaloDeRefresco = TimeSpan.FromMinutes(5);
+
+    private readonly DispatcherTimer _temporizadorRefresco;
+    private bool _refrescando;
+
     public MainWindow()
     {
         InitializeComponent();
+
+        _temporizadorRefresco = new DispatcherTimer { Interval = IntervaloDeRefresco };
+        _temporizadorRefresco.Tick += TemporizadorRefresco_Tick;
 
         Colocar();
         EspacioEscritorio.SeguirALaPantallaPrincipal(this, Colocar);
@@ -93,9 +101,41 @@ public partial class MainWindow : Window
 
         await _guia!.RefrescarAsync();
         await _dia!.MostrarAsync(DateOnly.FromDateTime(DateTime.Today));
+
+        _temporizadorRefresco.Start();
     }
 
-    private void Window_Closed(object sender, EventArgs e) => _escritorio?.Dispose();
+    /// <summary>
+    /// Cada <see cref="IntervaloDeRefresco"/> vuelve a pedir la agenda de la
+    /// vista activa: sin esto la línea de "ahora" y los eventos nuevos del
+    /// calendario quedaban congelados hasta navegar o reiniciar.
+    /// </summary>
+    private async void TemporizadorRefresco_Tick(object? sender, EventArgs e)
+    {
+        if (_dia is null || _refrescando)
+            return;
+
+        _refrescando = true;
+        try
+        {
+            await (_vista switch
+            {
+                Vista.Dia => _dia.RefrescarAsync(),
+                Vista.Semana => _semana!.RefrescarAsync(),
+                _ => _mes!.RefrescarAsync(),
+            });
+        }
+        finally
+        {
+            _refrescando = false;
+        }
+    }
+
+    private void Window_Closed(object sender, EventArgs e)
+    {
+        _temporizadorRefresco.Stop();
+        _escritorio?.Dispose();
+    }
 
     /// <summary>
     /// Al soltar el click, el widget vuelve al fondo del z-order.

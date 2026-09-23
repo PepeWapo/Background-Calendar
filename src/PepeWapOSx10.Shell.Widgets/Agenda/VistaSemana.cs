@@ -68,6 +68,24 @@ internal sealed class VistaSemana
         }
     }
 
+    /// <summary>Vuelve a pedir la semana visible conservando el día resaltado.</summary>
+    public async Task RefrescarAsync()
+    {
+        try
+        {
+            var inicio = Inicio;
+            var dias = Enumerable.Range(0, 7).Select(inicio.AddDays).ToList();
+            var agendas = await _agenda.ObtenerDiasAsync(dias);
+
+            if (inicio == Inicio)
+                Render(dias, agendas);
+        }
+        catch (Exception ex)
+        {
+            _subtitulo.Text = $"No se pudo actualizar la semana: {ex.Message}";
+        }
+    }
+
     public Task DesplazarAsync(int semanas) => MostrarAsync(Inicio.AddDays(7 * semanas));
 
     public Task IrAHoyAsync() => MostrarAsync(DateOnly.FromDateTime(DateTime.Today));

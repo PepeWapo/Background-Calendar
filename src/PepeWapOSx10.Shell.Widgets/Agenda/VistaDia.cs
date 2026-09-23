@@ -78,6 +78,41 @@ internal sealed class VistaDia
         }
     }
 
+    /// <summary>
+    /// Vuelve a pedir los días cargados y redibuja sin mover el scroll: sirve
+    /// para que la línea de "ahora" y los eventos nuevos aparezcan solos.
+    /// </summary>
+    public async Task RefrescarAsync()
+    {
+        if (_diasCargados.Count == 0 || _cargandoDiaAdyacente)
+            return;
+
+        try
+        {
+            var fechas = _diasCargados.Select(d => d.Fecha).ToList();
+            var nuevos = new List<DiaCargado>(fechas.Count);
+            foreach (var fecha in fechas)
+                nuevos.Add(new DiaCargado(fecha, await _agenda.ObtenerDiaAsync(fecha)));
+
+            // Si mientras se esperaba cambió el conjunto de días (navegación),
+            // este resultado ya es viejo.
+            if (_cargandoDiaAdyacente || !fechas.SequenceEqual(_diasCargados.Select(d => d.Fecha)))
+                return;
+
+            var offset = _scroll.VerticalOffset;
+            _diasCargados.Clear();
+            _diasCargados.AddRange(nuevos);
+            Render();
+
+            _scroll.UpdateLayout();
+            _scroll.ScrollToVerticalOffset(offset);
+        }
+        catch (Exception ex)
+        {
+            _pie.Text = $"No se pudo actualizar la agenda: {ex.Message}";
+        }
+    }
+
     private void AlRodarLaRueda(object sender, MouseWheelEventArgs e)
     {
         if (e.Delta > 0 && _scroll.VerticalOffset <= MargenDeExtremo)

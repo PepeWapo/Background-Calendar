@@ -72,6 +72,24 @@ internal sealed class VistaMes
         }
     }
 
+    /// <summary>Vuelve a pedir el mes visible conservando el resaltado.</summary>
+    public async Task RefrescarAsync()
+    {
+        try
+        {
+            var mes = Mes;
+            var dias = DiasDeLaGrilla(mes);
+            var agendas = await _agenda.ObtenerDiasAsync(dias);
+
+            if (mes == Mes)
+                Render(dias, agendas);
+        }
+        catch (Exception ex)
+        {
+            _subtitulo.Text = $"No se pudo actualizar el mes: {ex.Message}";
+        }
+    }
+
     public Task DesplazarAsync(int meses) => MostrarAsync(Mes.AddMonths(meses));
 
     public Task IrAHoyAsync() => MostrarAsync(DateOnly.FromDateTime(DateTime.Today));
