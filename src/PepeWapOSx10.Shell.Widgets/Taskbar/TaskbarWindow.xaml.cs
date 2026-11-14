@@ -20,6 +20,15 @@ public partial class TaskbarWindow : Window
 {
     private const double AnchoBarra = 260;
 
+    private bool _modoJuego;
+
+    /// <summary>
+    /// Se dispara al prender o apagar el modo juego; el argumento es el estado
+    /// nuevo (<c>true</c> = prendido). Quien lo escucha decide qué congelar: la
+    /// barra solo conoce el botón.
+    /// </summary>
+    internal event Action<bool>? ModoJuegoCambiado;
+
     internal TaskbarWindow()
     {
         InitializeComponent();
@@ -47,6 +56,18 @@ public partial class TaskbarWindow : Window
         Height = EspacioEscritorio.MargenInferiorReservado;
         Left = area.Left + (area.Width - Width) / 2;
         Top = area.Bottom - Height;
+    }
+
+    /// <summary>
+    /// Modo juego: congela el video del wallpaper para que no gaste GPU ni CPU
+    /// mientras se juega. El ícono queda resaltado mientras está prendido.
+    /// </summary>
+    private void BotonModoJuego_Click(object sender, RoutedEventArgs e)
+    {
+        _modoJuego = !_modoJuego;
+        IconoModoJuego.Stroke = _modoJuego ? (System.Windows.Media.Brush)FindResource("AccentFlexible") : (System.Windows.Media.Brush)FindResource("TextMuted");
+        BotonModoJuego.ToolTip = _modoJuego ? "Modo juego: activado (clic para reanudar el fondo)" : "Modo juego: congela el fondo animado";
+        ModoJuegoCambiado?.Invoke(_modoJuego);
     }
 
     /// <summary>

@@ -246,15 +246,15 @@
     "semantic_hash": "5e612c43082e450a430673823b5d8331"
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/AnclajeEscritorio.cs": {
-    "mtime": 1794665643.141667,
-    "seen": 1794665698.6312933,
-    "ast_hash": "7c87f9d5e2cc8980a32c73c25cfc62f3",
+    "mtime": 1794667134.0919268,
+    "seen": 1794667547.133677,
+    "ast_hash": "7477ce5ec161c878ff9fa65d11630946",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/EscritorioShell.cs": {
-    "mtime": 1788501296.1462445,
-    "seen": 1788503918.4681787,
-    "ast_hash": "8b8b24bf580346ab5efd7cec5229ba9b",
+    "mtime": 1794667186.3496785,
+    "seen": 1794667547.133677,
+    "ast_hash": "ed5fb2f728a1ef85274802f73fe46bf8",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/EspacioEscritorio.cs": {
@@ -318,15 +318,15 @@
     "semantic_hash": "ea2e3c07d4e03618cb6c1c856247d493"
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml": {
-    "mtime": 1788419504.210638,
-    "seen": 1788425308.7762804,
-    "ast_hash": "68510e761a891b2ac8e0efbff6657043",
-    "semantic_hash": "68510e761a891b2ac8e0efbff6657043"
+    "mtime": 1794667503.3281682,
+    "seen": 1794667547.133677,
+    "ast_hash": "6104717f7f5a5ea0d70f9a4609303368",
+    "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs": {
-    "mtime": 1788502223.4695976,
-    "seen": 1788503918.4681787,
-    "ast_hash": "51d8ea8be5d998a1ec2c01375a7322fb",
+    "mtime": 1794667186.385681,
+    "seen": 1794667547.133677,
+    "ast_hash": "5b5e6a004bb9ce187fb95c1934ab9d45",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Tema.xaml": {
@@ -366,9 +366,9 @@
     "semantic_hash": "c9e1d92f5efdb32b064c889f517a495e"
   },
   "src/PepeWapOSx10.Shell.Widgets/Wallpaper/VideoWallpaperWindow.xaml.cs": {
-    "mtime": 1788503647.6801836,
-    "seen": 1788503918.4681787,
-    "ast_hash": "422630d3d8e6a7d499e2a798eb3ae6f3",
+    "mtime": 1794667145.981905,
+    "seen": 1794667547.133677,
+    "ast_hash": "42a6f010535ac962c0bf90ee5bf27266",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Wallpaper/WallpaperConfig.cs": {
@@ -423,6 +423,12 @@
     "mtime": 1787817097.255084,
     "seen": 1788503918.4681787,
     "ast_hash": "de5ca2ab5f8c473a84d755f6d6bd8ddc",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Wallpaper/EspejosDeWallpaper.cs": {
+    "mtime": 1794667502.8876286,
+    "seen": 1794667547.133677,
+    "ast_hash": "209d2ad78b32f0b917be2f22d2f33889",
     "semantic_hash": ""
   }
 }

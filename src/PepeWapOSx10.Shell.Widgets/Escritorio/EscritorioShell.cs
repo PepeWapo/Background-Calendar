@@ -20,6 +20,7 @@ internal sealed class EscritorioShell : IDisposable
     private readonly IconRailWindow _rielDerecho;
     private readonly TaskbarWindow _taskbar;
     private readonly AnclajeEscritorio _anclaje;
+    private readonly EspejosDeWallpaper? _espejos;
 
     /// <summary>
     /// Abre el wallpaper, los rieles y la taskbar, y los ancla junto con el
@@ -42,6 +43,7 @@ internal sealed class EscritorioShell : IDisposable
         _rielDerecho.Show();
 
         _taskbar = new TaskbarWindow();
+        _taskbar.ModoJuegoCambiado += congelado => _wallpaper?.Congelar(congelado);
         _taskbar.Show();
 
         List<Window> deAtrasHaciaAdelante = [_rielIzquierdo, _rielDerecho, _taskbar, widget];
@@ -51,6 +53,10 @@ internal sealed class EscritorioShell : IDisposable
         _anclaje = new AnclajeEscritorio(
             deAtrasHaciaAdelante,
             clickThrough: _wallpaper is null ? [] : [_wallpaper]);
+
+        // El mismo video en las demás pantallas, sin reproducirlo otra vez.
+        if (_wallpaper is not null)
+            _espejos = new EspejosDeWallpaper(_wallpaper, _anclaje);
     }
 
     /// <summary>
@@ -66,6 +72,7 @@ internal sealed class EscritorioShell : IDisposable
 
     public void Dispose()
     {
+        _espejos?.Dispose();
         _anclaje.Dispose();
         _taskbar.Close();
         _rielIzquierdo.Close();

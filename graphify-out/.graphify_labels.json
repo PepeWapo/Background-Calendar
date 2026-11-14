@@ -4,10 +4,10 @@
   "2": "IconRailWindow",
   "3": "VistaMes",
   "4": "PanelGuia",
-  "5": ".Empaquetar",
+  "5": "AgendaService",
   "6": "PepeWapOSx10.Shell.Widgets",
   "7": "AnclajeEscritorio",
-  "8": "Paleta",
+  "8": "EspejoWallpaperWindow",
   "9": "VideoWallpaperWindow",
   "10": "Window",
   "11": "MiniCalendario",
@@ -19,11 +19,12 @@
   "17": "PepeWapOSx10.Dominio.csproj",
   "18": "Background Calendar (PepeWapOSx10)",
   "19": "Esqueleto",
+  "20": ".AbrirConexion",
+  "21": ".Empaquetar",
   "22": "Bg",
   "23": "PepeWapOSx10.Shell.Taskbar/Class1.cs",
   "24": "PepeWapOSx10.Shell.Iconos/Class1.cs",
   "25": "PepeWapOSx10.App/AssemblyInfo.cs",
   "26": "PepeWapOSx10.Shell.Widgets/AssemblyInfo.cs",
-  "27": "CLAUDE.md",
-  "28": "FormatoEspanol"
+  "27": "CLAUDE.md"
 }

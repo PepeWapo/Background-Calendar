@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using System.Windows;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
@@ -95,6 +95,27 @@ public partial class VideoWallpaperWindow : Window
         };
     }
 
+    /// <summary>
+    /// Modo juego: el video queda detenido en el frame actual. VLC deja de
+    /// decodificar y la rotación se suspende, así que el wallpaper (y sus
+    /// espejos, que solo muestran lo que éste dibuja) no consumen nada.
+    /// </summary>
+    public bool Congelado { get; private set; }
+
+    public void Congelar(bool congelar)
+    {
+        if (Congelado == congelar)
+            return;
+
+        Congelado = congelar;
+        _reproductor.SetPause(congelar);
+
+        if (congelar)
+            _rotacionTimer?.Stop();
+        else
+            _rotacionTimer?.Start();
+    }
+
     private void ElegirSiguienteIndice()
     {
         // Barajado simple: próximo índice al azar entre los que no sean el
@@ -106,9 +127,14 @@ public partial class VideoWallpaperWindow : Window
     }
 
     /// <summary>
-    /// El wallpaper tapa el escritorio virtual entero, no una pantalla.
+    /// El wallpaper tapa la pantalla principal. Las demás pantallas muestran el
+    /// mismo video a través de <see cref="EspejosDeWallpaper"/>.
     /// </summary>
     /// <remarks>
+    /// Antes tapaba el escritorio virtual entero con un único video: con dos
+    /// pantallas el recorte se calculaba sobre el rectángulo que las abarca a
+    /// las dos y el video quedaba partido a la mitad entre ellas.
+    ///
     /// El recorte le dice a VLC que corte cada video a la proporción de la
     /// pantalla antes de dibujarlo: como el <c>VideoView</c> siempre estira el
     /// resultado para llenar todo su espacio, recortar primero a la misma
@@ -118,10 +144,11 @@ public partial class VideoWallpaperWindow : Window
     /// </remarks>
     private void Colocar()
     {
-        Left = SystemParameters.VirtualScreenLeft;
-        Top = SystemParameters.VirtualScreenTop;
-        Width = SystemParameters.VirtualScreenWidth;
-        Height = SystemParameters.VirtualScreenHeight;
+        // La pantalla principal siempre está en el origen del escritorio virtual.
+        Left = 0;
+        Top = 0;
+        Width = SystemParameters.PrimaryScreenWidth;
+        Height = SystemParameters.PrimaryScreenHeight;
 
         _recorte = $"{(int)Width}:{(int)Height}";
     }
@@ -158,15 +185,18 @@ public partial class VideoWallpaperWindow : Window
     /// </remarks>
     private async Task RotarAsync()
     {
-        if (_videos.Count <= 1 || _rotando)
+        if (_videos.Count <= 1 || _rotando || Congelado)
             return; // nada para rotar si hay un solo video, o ya hay una rotación en curso.
 
         _rotando = true;
         try
         {
             await FundirAsync(hasta: 1.0);
-            ElegirSiguienteIndice();
-            ReproducirActual();
+            if (!Congelado)
+            {
+                ElegirSiguienteIndice();
+                ReproducirActual();
+            }
             await FundirAsync(hasta: 0.0);
         }
         finally
@@ -193,7 +223,7 @@ public partial class VideoWallpaperWindow : Window
     /// </summary>
     private void AlTerminar()
     {
-        if (!_rotando)
+        if (!_rotando && !Congelado)
             ReproducirActual();
     }
 

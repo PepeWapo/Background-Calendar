@@ -49,8 +49,8 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// </summary>
     private static readonly TimeSpan IntervaloDeReafirmacion = TimeSpan.FromSeconds(10);
 
-    private readonly Window[] _deAtrasHaciaAdelante;
-    private readonly Window[] _clickThrough;
+    private readonly List<Window> _deAtrasHaciaAdelante;
+    private readonly List<Window> _clickThrough;
     private readonly List<IntPtr> _hooks = [];
     private readonly DispatcherTimer _timer;
     private readonly DispatcherTimer _repaso;
@@ -200,7 +200,7 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// </remarks>
     private bool YaEstaAnclado()
     {
-        var esperadas = new IntPtr[_deAtrasHaciaAdelante.Length];
+        var esperadas = new IntPtr[_deAtrasHaciaAdelante.Count];
         for (var i = 0; i < esperadas.Length; i++)
         {
             esperadas[i] = Handle(_deAtrasHaciaAdelante[i]);
@@ -320,7 +320,7 @@ internal sealed class AnclajeEscritorio : IDisposable
     /// </remarks>
     private void AnclarGrupo()
     {
-        for (var i = _deAtrasHaciaAdelante.Length - 1; i >= 0; i--)
+        for (var i = _deAtrasHaciaAdelante.Count - 1; i >= 0; i--)
             SetWindowPos(Handle(_deAtrasHaciaAdelante[i]), HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
     }
 
@@ -365,6 +365,33 @@ internal sealed class AnclajeEscritorio : IDisposable
         }, IntPtr.Zero);
 
         return hay;
+    }
+
+    /// <summary>
+    /// Suma una ventana al grupo en el lugar <paramref name="indice"/> (0 = el
+    /// fondo de todo). La ventana ya tiene que estar mostrada: se necesita su
+    /// HWND para anclarla.
+    /// </summary>
+    /// <remarks>
+    /// Los espejos del wallpaper nacen y mueren con la configuración de
+    /// pantallas, así que el grupo no puede ser fijo. Una ventana propia que
+    /// quedara fuera del grupo no se manda al fondo, y flotaría sobre las
+    /// ventanas normales de su pantalla.
+    /// </remarks>
+    public void Agregar(Window ventana, int indice, bool clickThrough)
+    {
+        _deAtrasHaciaAdelante.Insert(Math.Min(indice, _deAtrasHaciaAdelante.Count), ventana);
+        if (clickThrough)
+            _clickThrough.Add(ventana);
+
+        Reafirmar();
+    }
+
+    /// <summary>Saca la ventana del grupo (antes de cerrarla).</summary>
+    public void Quitar(Window ventana)
+    {
+        _deAtrasHaciaAdelante.Remove(ventana);
+        _clickThrough.Remove(ventana);
     }
 
     public void Dispose()

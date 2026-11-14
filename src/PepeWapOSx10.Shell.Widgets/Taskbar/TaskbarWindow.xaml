@@ -95,6 +95,21 @@
 
             <Rectangle Width="1" Height="18" Margin="8,0" Fill="{StaticResource MenuSeparator}"/>
 
+            <Button x:Name="BotonModoJuego" Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0"
+                    ToolTip="Modo juego: congela el fondo animado" Click="BotonModoJuego_Click">
+                <Viewbox Width="18" Height="18">
+                    <Canvas Width="24" Height="24">
+                        <!-- Joystick de arcade: base, palanca con bola y dos botones. -->
+                        <Path x:Name="IconoModoJuego"
+                              Data="M12 7v6 M4 20h16 M5 20l1-4.5A2 2 0 0 1 8 14h8a2 2 0 0 1 2 1.5L19 20 M8.5 17.2h.01 M15.5 17.2h.01"
+                              Stroke="{StaticResource TextMuted}" StrokeThickness="1.5"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+                        <Ellipse Canvas.Left="9.5" Canvas.Top="2" Width="5" Height="5"
+                                 Stroke="{Binding Stroke, ElementName=IconoModoJuego}" StrokeThickness="1.5"/>
+                    </Canvas>
+                </Viewbox>
+            </Button>
+
             <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Suspender">
                 <Viewbox Width="17" Height="17">
                     <Canvas Width="24" Height="24">
