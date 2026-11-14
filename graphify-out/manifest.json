@@ -282,10 +282,10 @@
     "semantic_hash": "22780b895fd2b3a422f8fbe36635c06f"
   },
   "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs": {
-    "mtime": 1788407511.5741858,
-    "seen": 1788425308.7762804,
-    "ast_hash": "a0501db1fb20ba44c5e059fbfec99210",
-    "semantic_hash": "a0501db1fb20ba44c5e059fbfec99210"
+    "mtime": 1794674271.133751,
+    "seen": 1794674902.2455845,
+    "ast_hash": "6c96741712bf6be4c07831d732347ee4",
+    "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailItem.cs": {
     "mtime": 1788348279.2995563,
@@ -318,22 +318,22 @@
     "semantic_hash": "ea2e3c07d4e03618cb6c1c856247d493"
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml": {
-    "mtime": 1794667503.3281682,
-    "seen": 1794667547.133677,
-    "ast_hash": "6104717f7f5a5ea0d70f9a4609303368",
+    "mtime": 1794674468.9970968,
+    "seen": 1794674902.2455845,
+    "ast_hash": "77872cab06202ef03f78482ba95933f7",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs": {
-    "mtime": 1794667186.385681,
-    "seen": 1794667547.133677,
-    "ast_hash": "5b5e6a004bb9ce187fb95c1934ab9d45",
+    "mtime": 1794674663.2132344,
+    "seen": 1794674902.2455845,
+    "ast_hash": "77146a71d27a92792169578d9e247583",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Tema.xaml": {
-    "mtime": 1788407197.0678022,
-    "seen": 1788425308.7762804,
-    "ast_hash": "6af50a08f5ae6398f7badff7fe77a042",
-    "semantic_hash": "6af50a08f5ae6398f7badff7fe77a042"
+    "mtime": 1794674344.6991887,
+    "seen": 1794674902.2455845,
+    "ast_hash": "0258e7dafc5662c0260c788db988bc5c",
+    "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Ui/FormatoEspanol.cs": {
     "mtime": 1788355202.3281753,
@@ -429,6 +429,48 @@
     "mtime": 1794667502.8876286,
     "seen": 1794667547.133677,
     "ast_hash": "209d2ad78b32f0b917be2f22d2f33889",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/AppsDeInicio.cs": {
+    "mtime": 1794674366.7832165,
+    "seen": 1794674902.2455845,
+    "ast_hash": "99b90a14f444c90d6c9255144ed9e9c0",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaDelSistema.cs": {
+    "mtime": 1794674841.8333404,
+    "seen": 1794674902.2455845,
+    "ast_hash": "1b7ae0f1ea133ae6b190b84102f6a511",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaPopover.cs": {
+    "mtime": 1794674841.8333404,
+    "seen": 1794674902.2455845,
+    "ast_hash": "4b2291f7c3ad3f06af7c0738f376445f",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs": {
+    "mtime": 1794674397.2877617,
+    "seen": 1794674902.2455845,
+    "ast_hash": "57ae07b77cf3771f87c38c90a40b528c",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs": {
+    "mtime": 1794674406.4645164,
+    "seen": 1794674902.2455845,
+    "ast_hash": "d52db97e0ff53c76fc1743adfcfd6c03",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs": {
+    "mtime": 1794674366.3911083,
+    "seen": 1794674902.2455845,
+    "ast_hash": "78643f94a6549b39d26505bca37f001e",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Taskbar/ProgramasAbiertos.cs": {
+    "mtime": 1794674484.8586428,
+    "seen": 1794674902.2455845,
+    "ast_hash": "fa59ff3fe064ac97026fb199aaa0248e",
     "semantic_hash": ""
   }
 }

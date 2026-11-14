@@ -124,7 +124,8 @@ internal static class AccesosDirectos
     private static IEnumerable<string> EnCarpeta(string carpeta) =>
         Extensiones.SelectMany(ext => Directory.EnumerateFiles(carpeta, $"*{ext}"));
 
-    private static BitmapSource? ExtraerIcono(string ruta)
+    /// <summary>El ícono grande que el shell de Windows le asigna a un archivo (también lo usa la taskbar).</summary>
+    internal static BitmapSource? ExtraerIcono(string ruta)
     {
         var info = new ShFileInfo();
         SHGetFileInfo(ruta, 0, ref info, (uint)Marshal.SizeOf<ShFileInfo>(), SHGFI_ICON | SHGFI_LARGEICON);

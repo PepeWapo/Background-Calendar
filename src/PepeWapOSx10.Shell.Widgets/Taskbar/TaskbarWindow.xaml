@@ -44,11 +44,9 @@
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <!-- Fila superior: menú de Windows, Explorador, y donde va a colgar la
-             lista de apps en ejecución/ancladas (pendiente, ver Pendiente en
-             el .xaml.cs). -->
+        <!-- Fila superior: menú de inicio, Explorador y programas en ejecución. -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,6">
-            <Button x:Name="BotonMenuWindows" Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Menú de Windows"
+            <Button x:Name="BotonMenuWindows" Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Inicio"
                     Click="BotonMenuWindows_Click">
                 <Viewbox Width="18" Height="18">
                     <Canvas Width="24" Height="24">
@@ -71,16 +69,14 @@
                 </Viewbox>
             </Button>
 
-            <Rectangle Width="1" Height="20" Margin="8,0" Fill="{StaticResource MenuSeparator}"/>
+            <Rectangle x:Name="SeparadorDeApps" Width="1" Height="20" Margin="8,0" Fill="{StaticResource MenuSeparator}" Visibility="Collapsed"/>
 
-            <!-- Pendiente (próxima fase): acá van los íconos de programas en
-                 ejecución y anclados, enumerados en vivo (EnumWindows) con la
-                 posibilidad de anclar/desanclar. Por ahora queda vacío. -->
+            <!-- Programas en ejecución, enumerados en vivo (ver ProgramasAbiertos).
+                 La fila se re-centra sola al crecer: es el StackPanel de arriba. -->
             <StackPanel x:Name="AppsEnEjecucion" Orientation="Horizontal"/>
         </StackPanel>
 
-        <!-- Fila inferior: bandeja de Windows (real, vía flyout nativo) y
-             apagado — todo más chico y apagado que la fila principal. -->
+        <!-- Fila inferior: bandeja del sistema y apagado — todo más chico y apagado que la fila principal. -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="BotonBandeja" Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Bandeja del sistema"
                     Click="BotonBandeja_Click">
