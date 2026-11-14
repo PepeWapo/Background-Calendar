@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bfae8abe`
+- Built from commit: `5d0dcfe0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -29,14 +29,14 @@
 - MiniCalendario
 - Correr Agenda Dinámica
 - TaskbarWindow
-- Window
+- .Empaquetar
 - DetectorDobleClick
 - AccesosDirectos
 - PepeWapOSx10.Dominio.csproj
 - Background Calendar (PepeWapOSx10)
 - Esqueleto
 - .AbrirConexion
-- .Empaquetar
+- Window
 - Bg
 - PepeWapOSx10.Shell.Taskbar/Class1.cs
 - PepeWapOSx10.Shell.Iconos/Class1.cs
@@ -127,9 +127,9 @@ Nodes (7): 1. Matar cualquier instancia previa, 2. Build, 3. Lanzar, 4. Verla / 
 Cohesion: 0.10
 Nodes (22): Stroke, AppsEnEjecucion, Bg, BotonBandeja, BotonExplorador, BotonMenuWindows, BotonModoJuego, IconoModoJuego (+14 more)
 
-### Community 14 - "Window"
-Cohesion: 0.12
-Nodes (10): Application, PepeWapOSx10.App, Application, App, Window, MainWindow, Application, App (+2 more)
+### Community 14 - ".Empaquetar"
+Cohesion: 0.17
+Nodes (16): End, Fin, Inicio, DayOfWeek, IReadOnlyList, TimeOnly, FlexibleTask, DateOnly (+8 more)
 
 ### Community 15 - "DetectorDobleClick"
 Cohesion: 0.13
@@ -155,9 +155,9 @@ Nodes (8): Border, Canvas, double, Grid, Panel, TimeSpan, UIElement, Esqueleto
 Cohesion: 0.10
 Nodes (15): SqliteCommand, SqliteConnection, string, AgendaDbContext, DateOnly, DayOfWeek, IReadOnlyList, IReadOnlySet (+7 more)
 
-### Community 21 - ".Empaquetar"
-Cohesion: 0.17
-Nodes (16): End, Fin, Inicio, DayOfWeek, IReadOnlyList, TimeOnly, FlexibleTask, DateOnly (+8 more)
+### Community 21 - "Window"
+Cohesion: 0.12
+Nodes (10): Application, PepeWapOSx10.App, Application, App, Window, MainWindow, Application, App (+2 more)
 
 ### Community 22 - "Bg"
 Cohesion: 0.50
@@ -171,9 +171,9 @@ Nodes (3): Bg, ResourceDictionary, Border
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainWindow` connect `Window` to `VistaDia`, `VistaMes`, `PanelGuia`, `PepeWapOSx10.Shell.Widgets`, `AnclajeEscritorio`, `MiniCalendario`, `Window`, `.AbrirConexion`?**
+- **Why does `MainWindow` connect `Window` to `VistaDia`, `VistaMes`, `PanelGuia`, `PepeWapOSx10.Shell.Widgets`, `AnclajeEscritorio`, `MiniCalendario`, `.AbrirConexion`, `Window`?**
   _High betweenness centrality (0.306) - this node is a cross-community bridge._
-- **Why does `PepeWapOSx10.Shell.Widgets` connect `PepeWapOSx10.Shell.Widgets` to `VistaDia`, `IconRailWindow`, `VistaMes`, `AnclajeEscritorio`, `EspejoWallpaperWindow`, `VideoWallpaperWindow`, `Window`, `MiniCalendario`, `TaskbarWindow`, `Window`, `DetectorDobleClick`, `AccesosDirectos`, `Esqueleto`?**
+- **Why does `PepeWapOSx10.Shell.Widgets` connect `PepeWapOSx10.Shell.Widgets` to `VistaDia`, `IconRailWindow`, `VistaMes`, `AnclajeEscritorio`, `EspejoWallpaperWindow`, `VideoWallpaperWindow`, `Window`, `MiniCalendario`, `TaskbarWindow`, `DetectorDobleClick`, `AccesosDirectos`, `Esqueleto`, `Window`?**
   _High betweenness centrality (0.235) - this node is a cross-community bridge._
 - **Why does `EscritorioShell` connect `AnclajeEscritorio` to `Window`, `IconRailWindow`, `EspejoWallpaperWindow`, `VideoWallpaperWindow`, `TaskbarWindow`?**
   _High betweenness centrality (0.139) - this node is a cross-community bridge._

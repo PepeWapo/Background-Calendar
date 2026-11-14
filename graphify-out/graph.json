@@ -199,64 +199,42 @@
       "source_location": "L19"
     },
     {
-      "id": "src_pepewaposx10_app_app_xaml_pepewaposx10_app_app",
-      "label": "App",
+      "id": "src_pepewaposx10_dominio_modelos_flexibletask_pepewaposx10_dominio_modelos_flexibletask",
+      "label": "FlexibleTask",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
       "metadata": {
-        "is_partial": true,
-        "namespace": "PepeWapOSx10.App",
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
         "scope_chain": [
-          "s77"
+          "s0"
         ]
       },
-      "norm_label": "app",
-      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
-      "source_location": "L10"
+      "norm_label": "flexibletask",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FlexibleTask.cs",
+      "source_location": "L3"
     },
     {
-      "id": "src_pepewaposx10_app_mainwindow_xaml_pepewaposx10_app_mainwindow",
-      "label": "MainWindow",
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler",
+      "label": "Scheduler",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
       "metadata": {
-        "is_partial": true,
-        "namespace": "PepeWapOSx10.App",
+        "namespace": "PepeWapOSx10.Dominio",
         "scope_chain": [
-          "s300"
+          "s37"
         ]
       },
-      "norm_label": "mainwindow",
-      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml.cs",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_app_xaml_pepewaposx10_shell_widgets_app",
-      "label": "App",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "metadata": {
-        "is_partial": true,
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s104"
-        ]
-      },
-      "norm_label": "app",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "source_location": "L11"
+      "norm_label": "scheduler",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L5"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick",
@@ -547,42 +525,64 @@
       "source_location": "L4"
     },
     {
-      "id": "src_pepewaposx10_dominio_modelos_flexibletask_pepewaposx10_dominio_modelos_flexibletask",
-      "label": "FlexibleTask",
+      "id": "src_pepewaposx10_app_app_xaml_pepewaposx10_app_app",
+      "label": "App",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
+        "is_partial": true,
+        "namespace": "PepeWapOSx10.App",
         "scope_chain": [
-          "s0"
+          "s77"
         ]
       },
-      "norm_label": "flexibletask",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FlexibleTask.cs",
-      "source_location": "L3"
+      "norm_label": "app",
+      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
+      "source_location": "L10"
     },
     {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler",
-      "label": "Scheduler",
+      "id": "src_pepewaposx10_app_mainwindow_xaml_pepewaposx10_app_mainwindow",
+      "label": "MainWindow",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
+        "is_partial": true,
+        "namespace": "PepeWapOSx10.App",
         "scope_chain": [
-          "s37"
+          "s300"
         ]
       },
-      "norm_label": "scheduler",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L5"
+      "norm_label": "mainwindow",
+      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_app_xaml_pepewaposx10_shell_widgets_app",
+      "label": "App",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s104"
+        ]
+      },
+      "norm_label": "app",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "source_location": "L11"
     },
     {
       "id": "src_pepewaposx10_shell_taskbar_class1_pepewaposx10_shell_taskbar_class1",
@@ -2326,22 +2326,130 @@
       "source_location": "L157"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_app_xaml_pepewaposx10_shell_widgets_app_onstartup",
-      "label": ".OnStartup()",
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_armaragenda",
+      "label": ".ArmarAgenda()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "namespace": "PepeWapOSx10.Dominio",
         "scope_chain": [
-          "s104"
+          "s37"
         ]
       },
-      "norm_label": ".onstartup()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "source_location": "L13"
+      "norm_label": ".armaragenda()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_calcularhuecos",
+      "label": ".CalcularHuecos()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".calcularhuecos()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_diaaindice",
+      "label": ".DiaAIndice()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".diaaindice()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L98"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_empaquetar",
+      "label": ".Empaquetar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".empaquetar()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_inferirventanadia",
+      "label": ".InferirVentanaDia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".inferirventanadia()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_maxhora",
+      "label": ".MaxHora()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".maxhora()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L100"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_minhora",
+      "label": ".MinHora()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s37"
+        ]
+      },
+      "norm_label": ".minhora()",
+      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
+      "source_location": "L106"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick_esdoble",
@@ -3478,130 +3586,22 @@
       "source_location": "L170"
     },
     {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_armaragenda",
-      "label": ".ArmarAgenda()",
+      "id": "src_pepewaposx10_shell_widgets_app_xaml_pepewaposx10_shell_widgets_app_onstartup",
+      "label": ".OnStartup()",
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s37"
+          "s104"
         ]
       },
-      "norm_label": ".armaragenda()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_calcularhuecos",
-      "label": ".CalcularHuecos()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".calcularhuecos()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_diaaindice",
-      "label": ".DiaAIndice()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".diaaindice()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L98"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_empaquetar",
-      "label": ".Empaquetar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".empaquetar()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_inferirventanadia",
-      "label": ".InferirVentanaDia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".inferirventanadia()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_maxhora",
-      "label": ".MaxHora()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".maxhora()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L100"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_pepewaposx10_dominio_scheduler_minhora",
-      "label": ".MinHora()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s37"
-        ]
-      },
-      "norm_label": ".minhora()",
-      "source_file": "src/PepeWapOSx10.Dominio/Scheduler.cs",
-      "source_location": "L106"
+      "norm_label": ".onstartup()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "source_location": "L13"
     },
     {
       "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso_indicededia",
@@ -7471,150 +7471,167 @@
       "source_location": "L103"
     },
     {
-      "id": "application",
-      "label": "Application",
+      "id": "end",
+      "label": "End",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
-      "norm_label": "application",
+      "norm_label": "end",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "csharp_namespace:2a064373c3dca199",
-      "label": "PepeWapOSx10.App",
+      "id": "fin",
+      "label": "Fin",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "PepeWapOSx10.App"
-      },
-      "norm_label": "pepewaposx10.app",
-      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
-      "source_location": "L5",
-      "type": "namespace"
-    },
-    {
-      "id": "src_pepewaposx10_app_app",
-      "label": "PepeWapOSx10.App/App.xaml",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.app/app.xaml",
-      "source_file": "src/PepeWapOSx10.App/App.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_app_app_application",
-      "label": "Application",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "application",
-      "source_file": "src/PepeWapOSx10.App/App.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_app_app_xaml",
-      "label": "PepeWapOSx10.App/App.xaml.cs",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.app/app.xaml.cs",
-      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_app_mainwindow",
-      "label": "PepeWapOSx10.App/MainWindow.xaml",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.app/mainwindow.xaml",
-      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_app_mainwindow_window",
-      "label": "Window",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "window",
-      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_app_mainwindow_xaml",
-      "label": "PepeWapOSx10.App/MainWindow.xaml.cs",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.app/mainwindow.xaml.cs",
-      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_app",
-      "label": "PepeWapOSx10.Shell.Widgets/App.xaml",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.shell.widgets/app.xaml",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_app_application",
-      "label": "Application",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "application",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_app_xaml",
-      "label": "PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.shell.widgets/app.xaml.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "startupeventargs",
-      "label": "StartupEventArgs",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Window",
-      "file_type": "code",
-      "norm_label": "startupeventargs",
+      "norm_label": "fin",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "window",
-      "label": "Window",
+      "id": "inicio",
+      "label": "Inicio",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Window",
+      "community_name": ".Empaquetar",
       "file_type": "code",
-      "norm_label": "window",
+      "norm_label": "inicio",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_flexibletask",
+      "label": "FlexibleTask.cs",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "flexibletask.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FlexibleTask.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_dayofweek",
+      "label": "DayOfWeek",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "dayofweek",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_timeonly",
+      "label": "TimeOnly",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "timeonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_dayofweek",
+      "label": "DayOfWeek",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "dayofweek",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_ireadonlyset",
+      "label": "IReadOnlySet",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "ireadonlyset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_list",
+      "label": "List",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "list",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_scheduler_cs_timeonly",
+      "label": "TimeOnly",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "timeonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "start",
+      "label": "Start",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "start",
       "source_file": "",
       "source_location": ""
     },
@@ -8792,167 +8809,150 @@
       "source_location": ""
     },
     {
-      "id": "end",
-      "label": "End",
+      "id": "application",
+      "label": "Application",
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
-      "norm_label": "end",
+      "norm_label": "application",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "fin",
-      "label": "Fin",
+      "id": "csharp_namespace:2a064373c3dca199",
+      "label": "PepeWapOSx10.App",
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
-      "norm_label": "fin",
-      "source_file": "",
-      "source_location": ""
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "PepeWapOSx10.App"
+      },
+      "norm_label": "pepewaposx10.app",
+      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
+      "source_location": "L5",
+      "type": "namespace"
     },
     {
-      "id": "inicio",
-      "label": "Inicio",
+      "id": "src_pepewaposx10_app_app",
+      "label": "PepeWapOSx10.App/App.xaml",
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
-      "norm_label": "inicio",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_flexibletask",
-      "label": "FlexibleTask.cs",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "flexibletask.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FlexibleTask.cs",
+      "norm_label": "pepewaposx10.app/app.xaml",
+      "source_file": "src/PepeWapOSx10.App/App.xaml",
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_dayofweek",
-      "label": "DayOfWeek",
+      "id": "src_pepewaposx10_app_app_application",
+      "label": "Application",
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
-      "norm_label": "dayofweek",
+      "norm_label": "application",
+      "source_file": "src/PepeWapOSx10.App/App.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_app_app_xaml",
+      "label": "PepeWapOSx10.App/App.xaml.cs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.app/app.xaml.cs",
+      "source_file": "src/PepeWapOSx10.App/App.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_app_mainwindow",
+      "label": "PepeWapOSx10.App/MainWindow.xaml",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.app/mainwindow.xaml",
+      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_app_mainwindow_window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "window",
+      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_app_mainwindow_xaml",
+      "label": "PepeWapOSx10.App/MainWindow.xaml.cs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.app/mainwindow.xaml.cs",
+      "source_file": "src/PepeWapOSx10.App/MainWindow.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_app",
+      "label": "PepeWapOSx10.Shell.Widgets/App.xaml",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.shell.widgets/app.xaml",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_app_application",
+      "label": "Application",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "application",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_app_xaml",
+      "label": "PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.shell.widgets/app.xaml.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "startupeventargs",
+      "label": "StartupEventArgs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "startupeventargs",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_ireadonlylist",
-      "label": "IReadOnlyList",
+      "id": "window",
+      "label": "Window",
       "_origin": "ast",
       "community": 21,
-      "community_name": ".Empaquetar",
+      "community_name": "Window",
       "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_flexibletask_cs_timeonly",
-      "label": "TimeOnly",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "timeonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_dayofweek",
-      "label": "DayOfWeek",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "dayofweek",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_ireadonlyset",
-      "label": "IReadOnlySet",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "ireadonlyset",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_list",
-      "label": "List",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "list",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_scheduler_cs_timeonly",
-      "label": "TimeOnly",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "timeonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "start",
-      "label": "Start",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "start",
+      "norm_label": "window",
       "source_file": "",
       "source_location": ""
     },
@@ -29408,5 +29408,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bfae8abece11f13e8c2493f030c3543b496772d1"
+  "built_at_commit": "5d0dcfe0081dfdaaedebc36f7de76b86c4ba638b"
 }
