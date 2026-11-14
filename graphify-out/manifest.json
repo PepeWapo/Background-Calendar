@@ -246,9 +246,9 @@
     "semantic_hash": "5e612c43082e450a430673823b5d8331"
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/AnclajeEscritorio.cs": {
-    "mtime": 1788503711.6013565,
-    "seen": 1788503918.4681787,
-    "ast_hash": "1725ba1bca3ea7e697d5ccdbcc25011c",
+    "mtime": 1794665643.141667,
+    "seen": 1794665698.6312933,
+    "ast_hash": "7c87f9d5e2cc8980a32c73c25cfc62f3",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/EscritorioShell.cs": {

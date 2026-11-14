@@ -53,6 +53,7 @@ internal sealed class AnclajeEscritorio : IDisposable
     private readonly Window[] _clickThrough;
     private readonly List<IntPtr> _hooks = [];
     private readonly DispatcherTimer _timer;
+    private readonly DispatcherTimer _repaso;
 
     // Referencia al delegate del hook nativo: si no se guarda en algún lado,
     // el GC lo puede colectar en cualquier momento (no hay ninguna referencia
@@ -61,6 +62,9 @@ internal sealed class AnclajeEscritorio : IDisposable
     private readonly WinEventProc _alCambiarDeVentana;
 
     private bool _reafirmando;
+
+    // El grupo está sobre el escritorio de Explorer por un Win+D en curso.
+    private bool _sobreElEscritorio;
 
     /// <param name="deAtrasHaciaAdelante">
     /// De la más al fondo (p. ej. el wallpaper animado) a la más al frente
@@ -79,7 +83,23 @@ internal sealed class AnclajeEscritorio : IDisposable
 
         Reafirmar();
 
-        _alCambiarDeVentana = (_, _, _, _, _, _, _) => Reafirmar();
+        // Win+D tarda unos cientos de ms en terminar de acomodar sus ventanas:
+        // un único Reafirmar al primer evento puede llegar antes de que el
+        // escritorio de Explorer suba, y no volver a correr hasta el timer de
+        // 10s. El repaso corre una vez más cuando las cosas se asentaron.
+        _repaso = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(400) };
+        _repaso.Tick += (_, _) =>
+        {
+            _repaso.Stop();
+            Reafirmar();
+        };
+
+        _alCambiarDeVentana = (_, _, _, _, _, _, _) =>
+        {
+            Reafirmar();
+            _repaso.Stop();
+            _repaso.Start();
+        };
         Enganchar(EVENT_SYSTEM_FOREGROUND, EVENT_SYSTEM_FOREGROUND);
         Enganchar(EVENT_SYSTEM_MINIMIZESTART, EVENT_SYSTEM_MINIMIZEEND);
 
@@ -124,8 +144,30 @@ internal sealed class AnclajeEscritorio : IDisposable
         _reafirmando = true;
         try
         {
-            if (!YaEstaAnclado())
+            // "Mostrar escritorio" (Win+D) no minimiza nuestras ventanas (ver
+            // ImpedirMinimizado) pero sí sube el escritorio de Explorer —un
+            // WorkerW con el fondo y los íconos— por encima de todo, y las
+            // tapa. Mientras eso dure, el grupo se pone por encima del
+            // escritorio; cuando Win+D se deshace el WorkerW se va y el
+            // grupo vuelve al fondo.
+            if (!_sobreElEscritorio && EscritorioTapaAlGrupo())
+            {
+                AnclarGrupoArriba();
+                _sobreElEscritorio = true;
+            }
+            else if (_sobreElEscritorio)
+            {
+                if (!HayEscritorioMostrado())
+                {
+                    SoltarGrupoDeArriba();
+                    _sobreElEscritorio = false;
+                    AnclarGrupo();
+                }
+            }
+            else if (!YaEstaAnclado())
+            {
                 AnclarGrupo();
+            }
 
             // Esto sí se rehace siempre: LibVLC recrea sus ventanas por su
             // cuenta y las nuevas nacen sin los estilos puestos.
@@ -199,6 +241,42 @@ internal sealed class AnclajeEscritorio : IDisposable
         return siguiente == esperadas.Length;
     }
 
+    /// <summary>
+    /// Hay una ventana visible del escritorio de Explorer por encima de al
+    /// menos una del grupo — el estado en el que deja Win+D.
+    /// </summary>
+    private bool EscritorioTapaAlGrupo()
+    {
+        var propias = new HashSet<IntPtr>();
+        foreach (var ventana in _deAtrasHaciaAdelante)
+        {
+            var hwnd = Handle(ventana);
+            if (hwnd == IntPtr.Zero)
+                return false;
+            propias.Add(hwnd);
+        }
+
+        // De arriba hacia abajo: si aparece el escritorio antes de haber
+        // visto todo el grupo, lo está tapando.
+        var vistas = 0;
+        var arribaHaciaAbajo = VisiblesDeAbajoHaciaArriba();
+        arribaHaciaAbajo.Reverse();
+        foreach (var hwnd in arribaHaciaAbajo)
+        {
+            if (propias.Contains(hwnd))
+            {
+                if (++vistas == propias.Count)
+                    return false;
+            }
+            else if (EsElEscritorio(hwnd))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private static bool EsElEscritorio(IntPtr hwnd)
     {
         var clase = new StringBuilder(64);
@@ -246,9 +324,53 @@ internal sealed class AnclajeEscritorio : IDisposable
             SetWindowPos(Handle(_deAtrasHaciaAdelante[i]), HWND_BOTTOM, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
     }
 
+    /// <summary>
+    /// Pone el grupo por encima del escritorio de Explorer, en su orden
+    /// relativo (la inversa de <see cref="AnclarGrupo"/>: <c>HWND_TOPMOST</c>
+    /// deja a la ventana arriba de todas, así que se empieza por la del fondo).
+    /// </summary>
+    /// <remarks>
+    /// Tiene que ser <c>TOPMOST</c>: medido con un Win+D real, el WorkerW que
+    /// sube Explorer queda por encima de cualquier ventana de la banda normal
+    /// y <c>HWND_TOP</c> devuelve éxito sin moverse del lugar.
+    /// </remarks>
+    private void AnclarGrupoArriba()
+    {
+        foreach (var ventana in _deAtrasHaciaAdelante)
+            SetWindowPos(Handle(ventana), HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE | SWP_NOOWNERZORDER);
+    }
+
+    private void SoltarGrupoDeArriba()
+    {
+        foreach (var ventana in _deAtrasHaciaAdelante)
+            SetWindowPos(Handle(ventana), HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE | SWP_NOOWNERZORDER);
+    }
+
+    /// <summary>Hay un WorkerW visible: Win+D sigue activo.</summary>
+    private static bool HayEscritorioMostrado()
+    {
+        var hay = false;
+        EnumWindows((hwnd, _) =>
+        {
+            if (!IsWindowVisible(hwnd))
+                return true;
+
+            var clase = new StringBuilder(64);
+            GetClassName(hwnd, clase, clase.Capacity);
+            if (clase.ToString() != "WorkerW")
+                return true;
+
+            hay = true;
+            return false;
+        }, IntPtr.Zero);
+
+        return hay;
+    }
+
     public void Dispose()
     {
         _timer.Stop();
+        _repaso.Stop();
 
         foreach (var hook in _hooks)
             UnhookWinEvent(hook);
@@ -471,9 +593,12 @@ internal sealed class AnclajeEscritorio : IDisposable
     private static extern bool UnhookWinEvent(IntPtr hWinEventHook);
 
     private static readonly IntPtr HWND_BOTTOM = new(1);
+    private static readonly IntPtr HWND_TOPMOST = new(-1);
+    private static readonly IntPtr HWND_NOTOPMOST = new(-2);
     private const uint SWP_NOSIZE = 0x0001;
     private const uint SWP_NOMOVE = 0x0002;
     private const uint SWP_NOACTIVATE = 0x0010;
+    private const uint SWP_NOOWNERZORDER = 0x0200;
     private const int GWL_EXSTYLE = -20;
     private const int WS_EX_TRANSPARENT = 0x00000020;
     private const int WS_EX_TOOLWINDOW = 0x00000080;

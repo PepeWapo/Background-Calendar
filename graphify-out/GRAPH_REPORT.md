@@ -1,16 +1,16 @@
-# Graph Report - AgendaDinamica  (2026-09-23)
+# Graph Report - AgendaDinamica  (2026-11-14)
 
 ## Corpus Check
-- 69 files · ~26,402 words
+- 69 files · ~26,896 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 708 nodes · 1338 edges · 29 communities (26 shown, 3 thin omitted)
+- 712 nodes · 1356 edges · 27 communities (24 shown, 3 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 36 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `58746fda`
+- Built from commit: `e9d03bd1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,23 +20,21 @@
 - IconRailWindow
 - VistaMes
 - PanelGuia
-- AgendaService
-- .AbrirConexion
-- AnclajeEscritorio
+- .Empaquetar
 - PepeWapOSx10.Shell.Widgets
+- AnclajeEscritorio
+- Paleta
 - VideoWallpaperWindow
 - Window
 - MiniCalendario
 - Correr Agenda Dinámica
 - TaskbarWindow
-- .Empaquetar
+- Window
 - DetectorDobleClick
 - AccesosDirectos
 - PepeWapOSx10.Dominio.csproj
 - Background Calendar (PepeWapOSx10)
 - Esqueleto
-- OrdenDeRieles
-- VistaSemana
 - Bg
 - PepeWapOSx10.Shell.Taskbar/Class1.cs
 - PepeWapOSx10.Shell.Iconos/Class1.cs
@@ -44,7 +42,7 @@
 - FormatoEspanol
 
 ## God Nodes (most connected - your core abstractions)
-1. `AnclajeEscritorio` - 43 edges
+1. `AnclajeEscritorio` - 47 edges
 2. `Window` - 36 edges
 3. `MainWindow` - 30 edges
 4. `PepeWapOSx10.Shell.Widgets` - 26 edges
@@ -70,19 +68,19 @@
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 3 thin omitted)
+## Communities (27 total, 3 thin omitted)
 
 ### Community 0 - "Window"
-Cohesion: 0.06
-Nodes (47): AgendaCanvas, AgendaHeaderGenerico, AgendaNavRow, AgendaSubtitleText, CalendarDaysGrid, CalendarMonthText, CalendarYearText, DiaFooterText (+39 more)
+Cohesion: 0.05
+Nodes (48): AgendaCanvas, AgendaHeaderGenerico, AgendaNavRow, AgendaSubtitleText, CalendarDaysGrid, CalendarMonthText, CalendarYearText, DiaFooterText (+40 more)
 
 ### Community 1 - "VistaDia"
-Cohesion: 0.06
-Nodes (32): DiaCargado, Ellipse, MouseWheelEventArgs, Rectangle, BlockKind, DateOnly, IReadOnlyList, Task (+24 more)
+Cohesion: 0.05
+Nodes (42): DiaCargado, Ellipse, MouseWheelEventArgs, Rectangle, BlockKind, DateOnly, IReadOnlyList, Task (+34 more)
 
 ### Community 2 - "IconRailWindow"
 Cohesion: 0.09
-Nodes (22): Icono, Label, DragEventArgs, ImageSource, MouseEventArgs, ObservableCollection, Point, IconRailItem (+14 more)
+Nodes (21): Icono, Label, DragEventArgs, ImageSource, MouseEventArgs, ObservableCollection, Point, IconRailItem (+13 more)
 
 ### Community 3 - "VistaMes"
 Cohesion: 0.15
@@ -92,21 +90,21 @@ Nodes (15): DateTime, ScheduledBlock, Action, Border, DateOnly, double, Framewor
 Cohesion: 0.11
 Nodes (19): DateOnly, IReadOnlyList, Task, ITareaGuiaRepository, DateOnly, TareaGuia, Border, Button (+11 more)
 
-### Community 5 - "AgendaService"
-Cohesion: 0.10
-Nodes (24): Dictionary, HttpClient, DateOnly, IReadOnlyList, string, Task, GoogleCalendarSource, DateOnly (+16 more)
+### Community 5 - ".Empaquetar"
+Cohesion: 0.07
+Nodes (40): Dictionary, End, Fin, HttpClient, Inicio, DateOnly, IReadOnlyList, string (+32 more)
 
-### Community 6 - ".AbrirConexion"
-Cohesion: 0.10
-Nodes (15): SqliteCommand, SqliteConnection, string, AgendaDbContext, DateOnly, DayOfWeek, IReadOnlyList, IReadOnlySet (+7 more)
+### Community 6 - "PepeWapOSx10.Shell.Widgets"
+Cohesion: 0.07
+Nodes (21): PepeWapOSx10.Dominio, PepeWapOSx10.Shell.Widgets, PepeWapOSx10.Calendario, PepeWapOSx10.Datos, PepeWapOSx10.Dominio.Interfaces, PepeWapOSx10.Dominio.Modelos, SqliteCommand, SqliteConnection (+13 more)
 
 ### Community 7 - "AnclajeEscritorio"
 Cohesion: 0.10
 Nodes (15): EnumWindowsProc, IDisposable, bool, DispatcherTimer, DllImport, int, IntPtr, List (+7 more)
 
-### Community 8 - "PepeWapOSx10.Shell.Widgets"
-Cohesion: 0.09
-Nodes (13): PepeWapOSx10.Dominio, PepeWapOSx10.Shell.Widgets, PepeWapOSx10.Calendario, PepeWapOSx10.Datos, PepeWapOSx10.Dominio.Interfaces, PepeWapOSx10.Dominio.Modelos, Action, double (+5 more)
+### Community 8 - "Paleta"
+Cohesion: 0.17
+Nodes (7): Action, double, Window, EspacioEscritorio, Brush, Paleta, Style
 
 ### Community 9 - "VideoWallpaperWindow"
 Cohesion: 0.08
@@ -125,20 +123,20 @@ Cohesion: 0.25
 Nodes (7): 1. Matar cualquier instancia previa, 2. Build, 3. Lanzar, 4. Verla / interactuar con ella (importante, no es un top-level normal), 5. Cerrar, Correr Agenda Dinámica, Notas / trampas conocidas
 
 ### Community 13 - "TaskbarWindow"
-Cohesion: 0.06
-Nodes (27): Application, PepeWapOSx10.App, Application, App, Window, MainWindow, Application, App (+19 more)
+Cohesion: 0.12
+Nodes (17): AppsEnEjecucion, Bg, BotonBandeja, BotonExplorador, BotonMenuWindows, Window, DllImport, double (+9 more)
 
-### Community 14 - ".Empaquetar"
-Cohesion: 0.17
-Nodes (16): End, Fin, Inicio, DayOfWeek, IReadOnlyList, TimeOnly, FlexibleTask, DateOnly (+8 more)
+### Community 14 - "Window"
+Cohesion: 0.12
+Nodes (10): Application, PepeWapOSx10.App, Application, App, Window, MainWindow, Application, App (+2 more)
 
 ### Community 15 - "DetectorDobleClick"
 Cohesion: 0.13
 Nodes (12): Action, Button, DateTime, DllImport, FrameworkElement, Func, MouseButtonEventArgs, string (+4 more)
 
 ### Community 16 - "AccesosDirectos"
-Cohesion: 0.14
-Nodes (12): BitmapSource, HashSet, ShFileInfo, SpecialFolder, DllImport, IEnumerable, int, IntPtr (+4 more)
+Cohesion: 0.08
+Nodes (21): BitmapSource, HashSet, JsonDocument, JsonSerializerOptions, Reparto, ShFileInfo, SpecialFolder, DllImport (+13 more)
 
 ### Community 17 - "PepeWapOSx10.Dominio.csproj"
 Cohesion: 0.10
@@ -149,16 +147,8 @@ Cohesion: 0.29
 Nodes (6): Background Calendar (PepeWapOSx10), Configuración, Correrlo, Estado actual, Estructura de la solución, Requisitos
 
 ### Community 19 - "Esqueleto"
-Cohesion: 0.21
-Nodes (8): Border, Canvas, double, Grid, Panel, TimeSpan, UIElement, Esqueleto
-
-### Community 20 - "OrdenDeRieles"
 Cohesion: 0.23
-Nodes (8): JsonDocument, JsonSerializerOptions, Reparto, IReadOnlySet, List, string, OrdenDeRieles, Reparto
-
-### Community 21 - "VistaSemana"
-Cohesion: 0.20
-Nodes (11): Action, Border, Canvas, DateOnly, double, Grid, IReadOnlyList, ScrollViewer (+3 more)
+Nodes (8): Border, Canvas, double, Grid, Panel, TimeSpan, UIElement, Esqueleto
 
 ### Community 22 - "Bg"
 Cohesion: 0.50
@@ -176,17 +166,17 @@ Nodes (5): CultureInfo, DateOnly, DayOfWeek, string, FormatoEspanol
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MainWindow` connect `Window` to `VistaDia`, `VistaMes`, `PanelGuia`, `AnclajeEscritorio`, `PepeWapOSx10.Shell.Widgets`, `MiniCalendario`, `TaskbarWindow`, `VistaSemana`?**
-  _High betweenness centrality (0.304) - this node is a cross-community bridge._
-- **Why does `PepeWapOSx10.Shell.Widgets` connect `PepeWapOSx10.Shell.Widgets` to `VistaDia`, `IconRailWindow`, `AnclajeEscritorio`, `VideoWallpaperWindow`, `Window`, `TaskbarWindow`, `DetectorDobleClick`, `AccesosDirectos`, `Esqueleto`, `OrdenDeRieles`, `FormatoEspanol`?**
+- **Why does `MainWindow` connect `Window` to `VistaDia`, `VistaMes`, `PanelGuia`, `PepeWapOSx10.Shell.Widgets`, `AnclajeEscritorio`, `MiniCalendario`, `Window`?**
+  _High betweenness centrality (0.305) - this node is a cross-community bridge._
+- **Why does `PepeWapOSx10.Shell.Widgets` connect `PepeWapOSx10.Shell.Widgets` to `VistaDia`, `IconRailWindow`, `AnclajeEscritorio`, `Paleta`, `VideoWallpaperWindow`, `Window`, `TaskbarWindow`, `Window`, `DetectorDobleClick`, `AccesosDirectos`, `Esqueleto`, `FormatoEspanol`?**
   _High betweenness centrality (0.232) - this node is a cross-community bridge._
 - **Why does `EscritorioShell` connect `AnclajeEscritorio` to `Window`, `VideoWallpaperWindow`, `IconRailWindow`, `TaskbarWindow`?**
-  _High betweenness centrality (0.128) - this node is a cross-community bridge._
+  _High betweenness centrality (0.133) - this node is a cross-community bridge._
 - **What connects `net10.0-windows`, `Microsoft.NET.Sdk`, `net10.0` to the rest of the system?**
   _53 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Window` be split into smaller, more focused modules?**
-  _Cohesion score 0.05764145954521417 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05336538461538461 - nodes in this community are weakly interconnected._
 - **Should `VistaDia` be split into smaller, more focused modules?**
-  _Cohesion score 0.06057692307692308 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05126582278481013 - nodes in this community are weakly interconnected._
 - **Should `IconRailWindow` be split into smaller, more focused modules?**
-  _Cohesion score 0.08879492600422834 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08668076109936575 - nodes in this community are weakly interconnected._
