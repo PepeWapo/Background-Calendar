@@ -4,51 +4,13 @@
   "graph": {},
   "nodes": [
     {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_blockkind",
-      "label": "BlockKind",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "blockkind",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_scheduledblock",
-      "label": "ScheduledBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "scheduledblock",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
-      "source_location": "L10"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice",
       "label": "IAgendaService",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -67,7 +29,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "is_nested_type": true,
@@ -87,7 +49,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -98,44 +60,6 @@
       "norm_label": "vistadia",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
       "source_location": "L12"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana",
-      "label": "VistaSemana",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": "vistasemana",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo",
-      "label": "LineaDeTiempo",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": "lineadetiempo",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L22"
     },
     {
       "id": "src_pepewaposx10_app_app_xaml_pepewaposx10_app_app",
@@ -275,26 +199,6 @@
       "source_location": "L16"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
-      "label": "TaskbarWindow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "is_partial": true,
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": "taskbarwindow",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L20"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_pepewaposx10_shell_widgets_bandejadelsistema",
       "label": "BandejaDelSistema",
       "_callable": true,
@@ -351,6 +255,25 @@
       "norm_label": "punto",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaDelSistema.cs",
       "source_location": "L304"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover_pepewaposx10_shell_widgets_bandejapopover",
+      "label": "BandejaPopover",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "BandejaDelSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "bandejapopover",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaPopover.cs",
+      "source_location": "L13"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_programasabiertos_pepewaposx10_shell_widgets_programaabierto",
@@ -757,51 +680,13 @@
       "source_location": "L17"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick",
-      "label": "DetectorDobleClick",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": "detectordobleclick",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion",
-      "label": "Interaccion",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": "interaccion",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L11"
-    },
-    {
       "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext",
       "label": "AgendaDbContext",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -819,8 +704,8 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -838,8 +723,8 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -850,6 +735,216 @@
       "norm_label": "sqlitetareaguiarepository",
       "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
       "source_location": "L8"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_repeticion",
+      "label": "Repeticion",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": ".AbrirConexion",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "repeticion",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana",
+      "label": "VistaSemana",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": "vistasemana",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_blockkind",
+      "label": "BlockKind",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "blockkind",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_scheduledblock",
+      "label": "ScheduledBlock",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "scheduledblock",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo",
+      "label": "LineaDeTiempo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": "lineadetiempo",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick",
+      "label": "DetectorDobleClick",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": "detectordobleclick",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L92"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion",
+      "label": "Interaccion",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": "interaccion",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_pepewaposx10_shell_widgets_listaventanaspopover",
+      "label": "ListaVentanasPopover",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s82"
+        ]
+      },
+      "norm_label": "listaventanaspopover",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase",
+      "label": "PopoverBase",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s118"
+        ]
+      },
+      "norm_label": "popoverbase",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "label": "TaskbarWindow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": "taskbarwindow",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "label": "AccionesDeSistema",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": "accionesdesistema",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L11"
     },
     {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository_pepewaposx10_dominio_interfaces_itareaguiarepository",
@@ -869,25 +964,6 @@
       "norm_label": "itareaguiarepository",
       "source_file": "src/PepeWapOSx10.Dominio/Interfaces/ITareaGuiaRepository.cs",
       "source_location": "L5"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_repeticion",
-      "label": "Repeticion",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "repeticion",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
-      "source_location": "L4"
     },
     {
       "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_tareaguia",
@@ -1078,63 +1154,6 @@
       "norm_label": "espacioescritorio",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Escritorio/EspacioEscritorio.cs",
       "source_location": "L14"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover_pepewaposx10_shell_widgets_bandejapopover",
-      "label": "BandejaPopover",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s129"
-        ]
-      },
-      "norm_label": "bandejapopover",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaPopover.cs",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_pepewaposx10_shell_widgets_listaventanaspopover",
-      "label": "ListaVentanasPopover",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s82"
-        ]
-      },
-      "norm_label": "listaventanaspopover",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase",
-      "label": "PopoverBase",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s118"
-        ]
-      },
-      "norm_label": "popoverbase",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L23"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_escritorio_anclajeescritorio_pepewaposx10_shell_widgets_anclajeescritorio",
@@ -1336,7 +1355,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1354,7 +1373,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1372,7 +1391,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1390,7 +1409,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1408,7 +1427,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1426,7 +1445,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1444,7 +1463,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -1455,510 +1474,6 @@
       "norm_label": ".refrescarasync()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
       "source_location": "L85"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_render",
-      "label": ".Render()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s96"
-        ]
-      },
-      "norm_label": ".render()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L213"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_renderbanda",
-      "label": ".RenderBanda()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s96"
-        ]
-      },
-      "norm_label": ".renderbanda()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L227"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_renderseparadordedia",
-      "label": ".RenderSeparadorDeDia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s96"
-        ]
-      },
-      "norm_label": ".renderseparadordedia()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L263"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_celdadedia",
-      "label": ".CeldaDeDia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".celdadedia()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L135"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_desplazarasync",
-      "label": ".DesplazarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".desplazarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L89"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_irahoyasync",
-      "label": ".IrAHoyAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".irahoyasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_mostrarasync",
-      "label": ".MostrarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".mostrarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L55"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_refrescarasync",
-      "label": ".RefrescarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".refrescarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L72"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_render",
-      "label": ".Render()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".render()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_renderencabezado",
-      "label": ".RenderEncabezado()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".renderencabezado()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L105"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_rendergrilla",
-      "label": ".RenderGrilla()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s174"
-        ]
-      },
-      "norm_label": ".rendergrilla()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L188"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_colorde",
-      "label": ".ColorDe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".colorde()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L118"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_contenidocompacto",
-      "label": ".ContenidoCompacto()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".contenidocompacto()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L161"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_contenidoextendido",
-      "label": ".ContenidoExtendido()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".contenidoextendido()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L192"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarahora",
-      "label": ".DibujarAhora()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".dibujarahora()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L95"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarbloque",
-      "label": ".DibujarBloque()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".dibujarbloque()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L103"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarhoras",
-      "label": ".DibujarHoras()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".dibujarhoras()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_duracion",
-      "label": ".Duracion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".duracion()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L222"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_encolumna",
-      "label": ".EnColumna()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".encolumna()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L228"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_etiquetadehora",
-      "label": ".EtiquetaDeHora()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".etiquetadehora()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L60"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_fondodebloque",
-      "label": ".FondoDeBloque()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".fondodebloque()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L141"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_lineahorizontal",
-      "label": ".LineaHorizontal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".lineahorizontal()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L70"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_lineavertical",
-      "label": ".LineaVertical()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".lineavertical()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L73"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_minutosapixeles",
-      "label": ".MinutosAPixeles()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".minutosapixeles()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L41"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_pastilla",
-      "label": ".Pastilla()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".pastilla()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_posicionar",
-      "label": ".Posicionar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".posicionar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L134"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_punto",
-      "label": ".Punto()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".punto()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L125"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_rectangulo",
-      "label": ".Rectangulo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s147"
-        ]
-      },
-      "norm_label": ".rectangulo()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L76"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_app_xaml_pepewaposx10_shell_widgets_app_onstartup",
@@ -2303,102 +1818,12 @@
       "source_location": "L35"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_alternar",
-      "label": ".Alternar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s118"
-        ]
-      },
-      "norm_label": ".alternar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L79"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_actualizarprogramas",
-      "label": ".ActualizarProgramas()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".actualizarprogramas()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L87"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_alclickearpestana",
-      "label": ".AlClickearPestana()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".alclickearpestana()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L192"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonbandeja_click",
-      "label": ".BotonBandeja_Click()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".botonbandeja_click()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L238"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonexplorador_click",
-      "label": ".BotonExplorador_Click()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".botonexplorador_click()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L222"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonmenuwindows_click",
       "label": ".BotonMenuWindows_Click()",
       "_callable": true,
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -2408,7 +1833,7 @@
       },
       "norm_label": ".botonmenuwindows_click()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L219"
+      "source_location": "L233"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonmodojuego_click",
@@ -2416,7 +1841,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -2427,78 +1852,6 @@
       "norm_label": ".botonmodojuego_click()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
       "source_location": "L210"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_colocar",
-      "label": ".Colocar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".colocar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L71"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_crearpestana",
-      "label": ".CrearPestana()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".crearpestana()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L118"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_insigniadecantidad",
-      "label": ".InsigniaDeCantidad()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".insigniadecantidad()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L164"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_textodetooltip",
-      "label": ".TextoDeTooltip()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s140"
-        ]
-      },
-      "norm_label": ".textodetooltip()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L184"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_pepewaposx10_shell_widgets_bandejadelsistema_abrirdesborde",
@@ -3653,24 +3006,6 @@
       "source_location": "L154"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover_iniciar",
-      "label": ".Iniciar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "MenuInicioPopover",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s185"
-        ]
-      },
-      "norm_label": ".iniciar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
-      "source_location": "L192"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover_rodear",
       "label": ".Rodear()",
       "_callable": true,
@@ -4769,24 +4104,6 @@
       "source_location": "L189"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_chip",
-      "label": ".Chip()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s231"
-        ]
-      },
-      "norm_label": ".chip()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs",
-      "source_location": "L276"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_columnasdesemana",
       "label": ".ColumnasDeSemana()",
       "_callable": true,
@@ -5003,120 +4320,12 @@
       "source_location": "L297"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick_esdoble",
-      "label": ".EsDoble()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".esdoble()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L100"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick_getdoubleclicktime",
-      "label": ".GetDoubleClickTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".getdoubleclicktime()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L94"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_alseleccionar",
-      "label": ".AlSeleccionar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".alseleccionar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L56"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_arrastrarventana",
-      "label": ".ArrastrarVentana()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".arrastrarventana()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_conclick",
-      "label": ".ConClick()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".conclick()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L73"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_habilitarclick",
-      "label": ".HabilitarClick()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s120"
-        ]
-      },
-      "norm_label": ".habilitarclick()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L31"
-    },
-    {
       "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_abrirconexion",
       "label": ".AbrirConexion()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5133,8 +4342,8 @@
       "label": ".Inicializar()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5151,8 +4360,8 @@
       "label": ".MigrarRepeticionDeTareasGuia()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5169,8 +4378,8 @@
       "label": ".RutaPorDefecto()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5187,8 +4396,8 @@
       "label": ".SembrarTareasGuia()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5205,8 +4414,8 @@
       "label": ".TieneColumna()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5223,8 +4432,8 @@
       "label": ".IndiceADia()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5241,8 +4450,8 @@
       "label": ".MarcarAgendadaAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5259,8 +4468,8 @@
       "label": ".ObtenerTodasAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5277,8 +4486,8 @@
       "label": ".ObtenerYaAgendadasAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5295,8 +4504,8 @@
       "label": ".ActualizarAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5313,8 +4522,8 @@
       "label": ".AgregarDatos()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5331,8 +4540,8 @@
       "label": ".CrearAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5349,8 +4558,8 @@
       "label": ".DesmarcarAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5367,8 +4576,8 @@
       "label": ".EliminarAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5385,8 +4594,8 @@
       "label": ".LeerRepeticion()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5403,8 +4612,8 @@
       "label": ".MarcarHechaAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5421,8 +4630,8 @@
       "label": ".ObtenerTodasAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5439,8 +4648,8 @@
       "label": ".SigueHecha()",
       "_callable": true,
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Datos",
@@ -5451,6 +4660,1104 @@
       "norm_label": ".siguehecha()",
       "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
       "source_location": "L45"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_celdadedia",
+      "label": ".CeldaDeDia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".celdadedia()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L135"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_desplazarasync",
+      "label": ".DesplazarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".desplazarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L89"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_irahoyasync",
+      "label": ".IrAHoyAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".irahoyasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_mostrarasync",
+      "label": ".MostrarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".mostrarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L55"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_refrescarasync",
+      "label": ".RefrescarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".refrescarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L72"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_render",
+      "label": ".Render()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".render()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L93"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_renderencabezado",
+      "label": ".RenderEncabezado()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".renderencabezado()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L105"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_rendergrilla",
+      "label": ".RenderGrilla()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s174"
+        ]
+      },
+      "norm_label": ".rendergrilla()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L188"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_minutosapixeles",
+      "label": ".MinutosAPixeles()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".minutosapixeles()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_chip",
+      "label": ".Chip()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s231"
+        ]
+      },
+      "norm_label": ".chip()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs",
+      "source_location": "L276"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_colorde",
+      "label": ".ColorDe()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".colorde()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L118"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_contenidocompacto",
+      "label": ".ContenidoCompacto()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".contenidocompacto()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L161"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_contenidoextendido",
+      "label": ".ContenidoExtendido()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".contenidoextendido()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L192"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarbloque",
+      "label": ".DibujarBloque()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".dibujarbloque()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L103"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_duracion",
+      "label": ".Duracion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".duracion()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L222"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_encolumna",
+      "label": ".EnColumna()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".encolumna()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L228"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_fondodebloque",
+      "label": ".FondoDeBloque()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".fondodebloque()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L141"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_punto",
+      "label": ".Punto()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".punto()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L125"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick_esdoble",
+      "label": ".EsDoble()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".esdoble()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L100"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_detectordobleclick_getdoubleclicktime",
+      "label": ".GetDoubleClickTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".getdoubleclicktime()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L94"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_alseleccionar",
+      "label": ".AlSeleccionar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".alseleccionar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L56"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_arrastrarventana",
+      "label": ".ArrastrarVentana()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".arrastrarventana()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_conclick",
+      "label": ".ConClick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".conclick()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L73"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_pepewaposx10_shell_widgets_interaccion_habilitarclick",
+      "label": ".HabilitarClick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s120"
+        ]
+      },
+      "norm_label": ".habilitarclick()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_render",
+      "label": ".Render()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".render()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L213"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_renderbanda",
+      "label": ".RenderBanda()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".renderbanda()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L227"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_renderseparadordedia",
+      "label": ".RenderSeparadorDeDia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".renderseparadordedia()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L263"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarahora",
+      "label": ".DibujarAhora()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".dibujarahora()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L95"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_dibujarhoras",
+      "label": ".DibujarHoras()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".dibujarhoras()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_etiquetadehora",
+      "label": ".EtiquetaDeHora()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".etiquetadehora()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L60"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_lineahorizontal",
+      "label": ".LineaHorizontal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".lineahorizontal()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L70"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_lineavertical",
+      "label": ".LineaVertical()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".lineavertical()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L73"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_pastilla",
+      "label": ".Pastilla()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".pastilla()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_posicionar",
+      "label": ".Posicionar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".posicionar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L134"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_rectangulo",
+      "label": ".Rectangulo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s147"
+        ]
+      },
+      "norm_label": ".rectangulo()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L76"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_pepewaposx10_shell_widgets_listaventanaspopover_armar",
+      "label": ".Armar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s82"
+        ]
+      },
+      "norm_label": ".armar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_almostrar",
+      "label": ".AlMostrar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s118"
+        ]
+      },
+      "norm_label": ".almostrar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L107"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_alternar",
+      "label": ".Alternar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s118"
+        ]
+      },
+      "norm_label": ".alternar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L79"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_cerrarabierto",
+      "label": ".CerrarAbierto()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s118"
+        ]
+      },
+      "norm_label": ".cerrarabierto()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L92"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_mostrarsobre",
+      "label": ".MostrarSobre()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s118"
+        ]
+      },
+      "norm_label": ".mostrarsobre()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L111"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonbandeja_click",
+      "label": ".BotonBandeja_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonbandeja_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L252"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_actualizarprogramas",
+      "label": ".ActualizarProgramas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".actualizarprogramas()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L87"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_alclickearpestana",
+      "label": ".AlClickearPestana()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".alclickearpestana()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L192"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_colocar",
+      "label": ".Colocar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".colocar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L71"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_crearpestana",
+      "label": ".CrearPestana()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".crearpestana()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L118"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_insigniadecantidad",
+      "label": ".InsigniaDeCantidad()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".insigniadecantidad()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L164"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_textodetooltip",
+      "label": ".TextoDeTooltip()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".textodetooltip()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L184"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_abrirvistadetareas",
+      "label": ".AbrirVistaDeTareas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".abrirvistadetareas()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L39"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_keybd_event",
+      "label": ".keybd_event()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".keybd_event()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_setsuspendstate",
+      "label": ".SetSuspendState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".setsuspendstate()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_suspender",
+      "label": ".Suspender()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".suspender()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonsuspender_click",
+      "label": ".BotonSuspender_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonsuspender_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L224"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "label": ".BotonVistaDeTareas_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonvistadetareas_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L218"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_apagar",
+      "label": ".Apagar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".apagar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_cerrarsesion",
+      "label": ".CerrarSesion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".cerrarsesion()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_ejecutar",
+      "label": ".Ejecutar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".ejecutar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_reiniciar",
+      "label": ".Reiniciar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s65"
+        ]
+      },
+      "norm_label": ".reiniciar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonapagar_click",
+      "label": ".BotonApagar_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonapagar_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L228"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botoncerrarsesion_click",
+      "label": ".BotonCerrarSesion_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botoncerrarsesion_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L230"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonexplorador_click",
+      "label": ".BotonExplorador_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonexplorador_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L236"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonreiniciar_click",
+      "label": ".BotonReiniciar_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s140"
+        ]
+      },
+      "norm_label": ".botonreiniciar_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L226"
     },
     {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository_pepewaposx10_dominio_interfaces_itareaguiarepository_actualizarasync",
@@ -6189,78 +6496,6 @@
       "norm_label": ".seguiralapantallaprincipal()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Escritorio/EspacioEscritorio.cs",
       "source_location": "L35"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_pepewaposx10_shell_widgets_listaventanaspopover_armar",
-      "label": ".Armar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s82"
-        ]
-      },
-      "norm_label": ".armar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_almostrar",
-      "label": ".AlMostrar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s118"
-        ]
-      },
-      "norm_label": ".almostrar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L107"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_cerrarabierto",
-      "label": ".CerrarAbierto()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s118"
-        ]
-      },
-      "norm_label": ".cerrarabierto()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_mostrarsobre",
-      "label": ".MostrarSobre()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s118"
-        ]
-      },
-      "norm_label": ".mostrarsobre()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L111"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_escritorio_anclajeescritorio_pepewaposx10_shell_widgets_anclajeescritorio_agregar",
@@ -7752,68 +7987,13 @@
       "source_location": "L37"
     },
     {
-      "id": "diacargado",
-      "label": "DiaCargado",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "diacargado",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "ellipse",
-      "label": "Ellipse",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "ellipse",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "mousewheeleventargs",
       "label": "MouseWheelEventArgs",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "mousewheeleventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "rectangle",
-      "label": "Rectangle",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "rectangle",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock",
-      "label": "ScheduledBlock.cs",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "scheduledblock.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_cs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "datetime",
       "source_file": "",
       "source_location": ""
     },
@@ -7822,7 +8002,7 @@
       "label": "DateOnly",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "dateonly",
       "source_file": "",
@@ -7833,7 +8013,7 @@
       "label": "IReadOnlyList",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "ireadonlylist",
       "source_file": "",
@@ -7844,7 +8024,7 @@
       "label": "Task",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "",
@@ -7855,7 +8035,7 @@
       "label": "Action",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "action",
       "source_file": "",
@@ -7866,7 +8046,7 @@
       "label": "bool",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
@@ -7877,7 +8057,7 @@
       "label": "Canvas",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "canvas",
       "source_file": "",
@@ -7888,7 +8068,7 @@
       "label": "DateOnly",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "dateonly",
       "source_file": "",
@@ -7899,7 +8079,7 @@
       "label": "double",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "double",
       "source_file": "",
@@ -7910,7 +8090,7 @@
       "label": "int",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "int",
       "source_file": "",
@@ -7921,7 +8101,7 @@
       "label": "IReadOnlyList",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "ireadonlylist",
       "source_file": "",
@@ -7932,7 +8112,7 @@
       "label": "List",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "list",
       "source_file": "",
@@ -7943,7 +8123,7 @@
       "label": "ScrollViewer",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "scrollviewer",
       "source_file": "",
@@ -7954,7 +8134,7 @@
       "label": "Task",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "",
@@ -7965,207 +8145,9 @@
       "label": "TextBlock",
       "_origin": "ast",
       "community": 1,
-      "community_name": "ScheduledBlock",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "textblock",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_action",
-      "label": "Action",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "action",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "border",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_canvas",
-      "label": "Canvas",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "canvas",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_double",
-      "label": "double",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_grid",
-      "label": "Grid",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "grid",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_scrollviewer",
-      "label": "ScrollViewer",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "scrollviewer",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_textblock",
-      "label": "TextBlock",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "textblock",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "border",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_brush",
-      "label": "Brush",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "brush",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_canvas",
-      "label": "Canvas",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "canvas",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_double",
-      "label": "double",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_grid",
-      "label": "Grid",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "grid",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_uielement",
-      "label": "UIElement",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "uielement",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "thickness",
-      "label": "Thickness",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "thickness",
       "source_file": "",
       "source_location": ""
     },
@@ -8858,22 +8840,11 @@
       "source_location": "L86"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_func",
-      "label": "Func",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "func",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow",
       "label": "TaskbarWindow.xaml",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "taskbarwindow.xaml",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -8884,18 +8855,18 @@
       "label": "AppsEnEjecucion",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "appsenejecucion",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L76"
+      "source_location": "L91"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_bg",
       "label": "Bg",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "bg",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -8906,18 +8877,18 @@
       "label": "BotonBandeja",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "botonbandeja",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L81"
+      "source_location": "L96"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_botonexplorador",
       "label": "BotonExplorador",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "botonexplorador",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -8928,7 +8899,7 @@
       "label": "BotonMenuWindows",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "botonmenuwindows",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -8939,161 +8910,62 @@
       "label": "BotonModoJuego",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "botonmodojuego",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L94"
+      "source_location": "L109"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_iconomodojuego",
       "label": "IconoModoJuego",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "iconomodojuego",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L99"
+      "source_location": "L114"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_separadordeapps",
       "label": "SeparadorDeApps",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "separadordeapps",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L72"
+      "source_location": "L87"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
       "label": "Window",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "code",
       "norm_label": "window",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml",
-      "label": "TaskbarWindow.xaml.cs",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "taskbarwindow.xaml.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_bool",
-      "label": "bool",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "bool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_dictionary",
-      "label": "Dictionary",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "dictionary",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_dispatchertimer",
-      "label": "DispatcherTimer",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "dispatchertimer",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_frameworkelement",
-      "label": "FrameworkElement",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "frameworkelement",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
-      "label": "RoutedEventArgs",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "routedeventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_string",
-      "label": "string",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_timespan",
-      "label": "TimeSpan",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "timespan",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_uielement",
-      "label": "UIElement",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "TaskbarWindow",
-      "file_type": "code",
-      "norm_label": "uielement",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "binding_stroke",
       "label": "Stroke",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "stroke",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L104"
+      "source_location": "L119"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_xaml_border",
       "label": "Border",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "border",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -9104,29 +8976,29 @@
       "label": "Rectangle",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "rectangle",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L72"
+      "source_location": "L87"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_xaml_stackpanel",
       "label": "StackPanel",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "stackpanel",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L76"
+      "source_location": "L91"
     },
     {
       "id": "xaml_button",
       "label": "Button",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "button",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
@@ -9137,11 +9009,11 @@
       "label": "Path",
       "_origin": "ast",
       "community": 13,
-      "community_name": "TaskbarWindow",
+      "community_name": "Window",
       "file_type": "concept",
       "norm_label": "path",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L99"
+      "source_location": "L114"
     },
     {
       "id": "bottom",
@@ -9327,6 +9199,28 @@
       "community_name": "BandejaDelSistema",
       "file_type": "code",
       "norm_label": "uintptr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover",
+      "label": "BandejaPopover.cs",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "BandejaDelSistema",
+      "file_type": "code",
+      "norm_label": "bandejapopover.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaPopover.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover_cs_int",
+      "label": "int",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "BandejaDelSistema",
+      "file_type": "code",
+      "norm_label": "int",
       "source_file": "",
       "source_location": ""
     },
@@ -11143,17 +11037,6 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_cs_stackpanel",
-      "label": "StackPanel",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "stackpanel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistames_cs_task",
       "label": "Task",
       "_origin": "ast",
@@ -11176,132 +11059,11 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion",
-      "label": "Interaccion.cs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "interaccion.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_action",
-      "label": "Action",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "action",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_button",
-      "label": "Button",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "button",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_dllimport",
-      "label": "DllImport",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "dllimport",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_frameworkelement",
-      "label": "FrameworkElement",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "frameworkelement",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_func",
-      "label": "Func",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "func",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_mousebuttoneventargs",
-      "label": "MouseButtonEventArgs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "mousebuttoneventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_string",
-      "label": "string",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_window",
-      "label": "Window",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "window",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "sqlitecommand",
       "label": "SqliteCommand",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "sqlitecommand",
       "source_file": "",
@@ -11311,8 +11073,8 @@
       "id": "sqliteconnection",
       "label": "SqliteConnection",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "sqliteconnection",
       "source_file": "",
@@ -11322,8 +11084,8 @@
       "id": "src_pepewaposx10_datos_agendadbcontext",
       "label": "AgendaDbContext.cs",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "agendadbcontext.cs",
       "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
@@ -11333,8 +11095,8 @@
       "id": "src_pepewaposx10_datos_agendadbcontext_cs_string",
       "label": "string",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -11344,8 +11106,8 @@
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dateonly",
       "label": "DateOnly",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "dateonly",
       "source_file": "",
@@ -11355,8 +11117,8 @@
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dayofweek",
       "label": "DayOfWeek",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "dayofweek",
       "source_file": "",
@@ -11366,8 +11128,8 @@
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlylist",
       "label": "IReadOnlyList",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "ireadonlylist",
       "source_file": "",
@@ -11377,8 +11139,8 @@
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlyset",
       "label": "IReadOnlySet",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "ireadonlyset",
       "source_file": "",
@@ -11388,8 +11150,8 @@
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_task",
       "label": "Task",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "task",
       "source_file": "",
@@ -11399,8 +11161,8 @@
       "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_dateonly",
       "label": "DateOnly",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "dateonly",
       "source_file": "",
@@ -11410,8 +11172,8 @@
       "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_ireadonlylist",
       "label": "IReadOnlyList",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "ireadonlylist",
       "source_file": "",
@@ -11421,10 +11183,659 @@
       "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_task",
       "label": "Task",
       "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
+      "community": 30,
+      "community_name": ".AbrirConexion",
       "file_type": "code",
       "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_tareaguia",
+      "label": "TareaGuia.cs",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": ".AbrirConexion",
+      "file_type": "code",
+      "norm_label": "tareaguia.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_action",
+      "label": "Action",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "action",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_border",
+      "label": "Border",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "border",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_canvas",
+      "label": "Canvas",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "canvas",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_double",
+      "label": "double",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_grid",
+      "label": "Grid",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "grid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_scrollviewer",
+      "label": "ScrollViewer",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "scrollviewer",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "textblock",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ellipse",
+      "label": "Ellipse",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "ellipse",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "rectangle",
+      "label": "Rectangle",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "rectangle",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock",
+      "label": "ScheduledBlock.cs",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "scheduledblock.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_cs_stackpanel",
+      "label": "StackPanel",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "stackpanel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_double",
+      "label": "double",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_grid",
+      "label": "Grid",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "ScheduledBlock",
+      "file_type": "code",
+      "norm_label": "grid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion",
+      "label": "Interaccion.cs",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "interaccion.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/Interaccion.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_action",
+      "label": "Action",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "action",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_button",
+      "label": "Button",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "button",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_dllimport",
+      "label": "DllImport",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "dllimport",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_frameworkelement",
+      "label": "FrameworkElement",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "frameworkelement",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_func",
+      "label": "Func",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "func",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_mousebuttoneventargs",
+      "label": "MouseButtonEventArgs",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "mousebuttoneventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_string",
+      "label": "string",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_interaccion_cs_window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "DetectorDobleClick",
+      "file_type": "code",
+      "norm_label": "window",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "diacargado",
+      "label": "DiaCargado",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "diacargado",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_border",
+      "label": "Border",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "border",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_brush",
+      "label": "Brush",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "brush",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_canvas",
+      "label": "Canvas",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "canvas",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_uielement",
+      "label": "UIElement",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "uielement",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "thickness",
+      "label": "Thickness",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": ".Posicionar",
+      "file_type": "code",
+      "norm_label": "thickness",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "object",
+      "label": "object",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "object",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover",
+      "label": "ListaVentanasPopover.cs",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "listaventanaspopover.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_cs_stackpanel",
+      "label": "StackPanel",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "stackpanel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase",
+      "label": "PopoverBase.cs",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "popoverbase.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_bool",
+      "label": "bool",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_border",
+      "label": "Border",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "border",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_double",
+      "label": "double",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_frameworkelement",
+      "label": "FrameworkElement",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "frameworkelement",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_func",
+      "label": "Func",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "PopoverBase",
+      "file_type": "code",
+      "norm_label": "func",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml",
+      "label": "TaskbarWindow.xaml.cs",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "taskbarwindow.xaml.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_bool",
+      "label": "bool",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_dictionary",
+      "label": "Dictionary",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "dictionary",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_dispatchertimer",
+      "label": "DispatcherTimer",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "dispatchertimer",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_frameworkelement",
+      "label": "FrameworkElement",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "frameworkelement",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_string",
+      "label": "string",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_timespan",
+      "label": "TimeSpan",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "timespan",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_uielement",
+      "label": "UIElement",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TaskbarWindow",
+      "file_type": "code",
+      "norm_label": "uielement",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema",
+      "label": "AccionesDeSistema.cs",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "norm_label": "accionesdesistema.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_byte",
+      "label": "byte",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "norm_label": "byte",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_dllimport",
+      "label": "DllImport",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "norm_label": "dllimport",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_uint",
+      "label": "uint",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "norm_label": "uint",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_uintptr",
+      "label": "UIntPtr",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "AccionesDeSistema",
+      "file_type": "code",
+      "norm_label": "uintptr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "label": "RoutedEventArgs",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "norm_label": "routedeventargs",
       "source_file": "",
       "source_location": ""
     },
@@ -11460,17 +11871,6 @@
       "norm_label": "task",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_tareaguia",
-      "label": "TareaGuia.cs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "PanelGuia",
-      "file_type": "code",
-      "norm_label": "tareaguia.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
-      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_dominio_modelos_tareaguia_cs_dateonly",
@@ -12097,17 +12497,6 @@
       "type": "namespace"
     },
     {
-      "id": "object",
-      "label": "object",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "object",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_calendario_googlecalendarsource",
       "label": "GoogleCalendarSource.cs",
       "_origin": "ast",
@@ -12337,105 +12726,6 @@
       "norm_label": "pepewaposx10.shell.widgets/mainwindow.xaml.cs",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover",
-      "label": "BandejaPopover.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "bandejapopover.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaPopover.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_bandejapopover_cs_int",
-      "label": "int",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "int",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover",
-      "label": "ListaVentanasPopover.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "listaventanaspopover.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/ListaVentanasPopover.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_listaventanaspopover_cs_stackpanel",
-      "label": "StackPanel",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "stackpanel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase",
-      "label": "PopoverBase.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "popoverbase.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_bool",
-      "label": "bool",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "bool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "border",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_double",
-      "label": "double",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_cs_frameworkelement",
-      "label": "FrameworkElement",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "frameworkelement",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo",
@@ -13204,6 +13494,36 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_keybd_event",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_dllimport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "DllImport"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_setsuspendstate",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_dllimport",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "DllImport"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_pepewaposx10_shell_widgets_bandejadelsistema_clienttoscreen",
       "target": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_cs_dllimport",
       "relation": "references",
@@ -13887,7 +14207,7 @@
       "confidence_score": 1.0,
       "context": "binding_path",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L104",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -16195,6 +16515,66 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_abrirvistadetareas",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_keybd_event",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_apagar",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_ejecutar",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_cerrarsesion",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_ejecutar",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_reiniciar",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_ejecutar",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_suspender",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_setsuspendstate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio_pepewaposx10_shell_widgets_appsdeinicio_cargar",
       "target": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio_pepewaposx10_shell_widgets_appsdeinicio_esdesinstalador",
       "relation": "calls",
@@ -16807,18 +17187,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover_filadeenergia",
-      "target": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover_iniciar",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
-      "source_location": "L170",
-      "weight": 1.0
-    },
-    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_mostrarsobre",
       "target": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_almostrar",
       "relation": "calls",
@@ -17287,6 +17655,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonapagar_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_apagar",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonbandeja_click",
       "target": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_alternar",
       "relation": "calls",
@@ -17295,7 +17675,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L239",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botoncerrarsesion_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_cerrarsesion",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -17307,7 +17699,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonreiniciar_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_reiniciar",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonsuspender_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_suspender",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_popoverbase_pepewaposx10_shell_widgets_popoverbase_cerrarabierto",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
       "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_abrirvistadetareas",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -18087,7 +18527,7 @@
       "confidence_score": 1.0,
       "context": "event",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L82",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -18123,7 +18563,67 @@
       "confidence_score": 1.0,
       "context": "event",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L95",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonsuspender_click",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "event",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonreiniciar_click",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "event",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonapagar_click",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "event",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botoncerrarsesion_click",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "event",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "event",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -20034,6 +20534,21 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_byte",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "byte"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_pepewaposx10_shell_widgets_bandejadelsistema",
       "target": "src_pepewaposx10_shell_widgets_taskbar_bandejadelsistema_cs_byte",
       "relation": "references",
@@ -20661,6 +21176,21 @@
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
       "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_uint",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "uint"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -25348,6 +25878,21 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonapagar_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RoutedEventArgs"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonbandeja_click",
       "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
       "relation": "references",
@@ -25359,7 +25904,22 @@
         "ref_token": "RoutedEventArgs"
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L238",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botoncerrarsesion_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RoutedEventArgs"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -25374,7 +25934,7 @@
         "ref_token": "RoutedEventArgs"
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L222",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -25389,7 +25949,7 @@
         "ref_token": "RoutedEventArgs"
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L219",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -25405,6 +25965,51 @@
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
       "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonreiniciar_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RoutedEventArgs"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonsuspender_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RoutedEventArgs"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_cs_routedeventargs",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RoutedEventArgs"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -25915,6 +26520,21 @@
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
       "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_keybd_event",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_cs_uintptr",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UIntPtr"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -28758,7 +29378,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L76",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -28782,7 +29402,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L81",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -28818,7 +29438,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L94",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -28830,7 +29450,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L99",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -28842,7 +29462,7 @@
       "confidence_score": 1.0,
       "context": "type",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L72",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -30890,6 +31510,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema",
+      "target": "csharp_namespace:30e4fcac679357bf",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio",
       "target": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio_pepewaposx10_shell_widgets_appsdeinicio",
       "relation": "contains",
@@ -31111,6 +31753,28 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_botonmodojuego",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_iconomodojuego",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
       "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_bg",
       "relation": "contains",
       "_origin": "ast",
@@ -31150,7 +31814,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L72",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -31161,7 +31825,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L76",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -31172,29 +31836,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L81",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
-      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_botonmodojuego",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L94",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_window",
-      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_iconomodojuego",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml",
-      "source_location": "L99",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -33905,6 +34547,94 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_setsuspendstate",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_keybd_event",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_suspender",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_reiniciar",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_apagar",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_cerrarsesion",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_abrirvistadetareas",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_accionesdesistema_pepewaposx10_shell_widgets_accionesdesistema_ejecutar",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/AccionesDeSistema.cs",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio_pepewaposx10_shell_widgets_appsdeinicio",
       "target": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio_pepewaposx10_shell_widgets_appsdeinicio_obtener",
       "relation": "method",
@@ -34276,17 +35006,6 @@
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
       "source_location": "L176",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover",
-      "target": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_pepewaposx10_shell_widgets_menuiniciopopover_iniciar",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
-      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -34753,13 +35472,68 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonvistadetareas_click",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonsuspender_click",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonreiniciar_click",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonapagar_click",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
+      "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botoncerrarsesion_click",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
+      "source_location": "L230",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow",
       "target": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_botonmenuwindows_click",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L219",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -34770,7 +35544,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L222",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -34781,7 +35555,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs",
-      "source_location": "L238",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -36134,5 +36908,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "de0c1fc10c7deb814a83250fe454e1826dd70467"
+  "built_at_commit": "6826ddc6c855d2b8c2f705d17f7193b263baa712"
 }

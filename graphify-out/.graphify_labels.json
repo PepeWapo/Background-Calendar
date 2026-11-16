@@ -1,6 +1,6 @@
 {
   "0": "Window",
-  "1": "ScheduledBlock",
+  "1": "VistaDia",
   "2": "IconRailWindow",
   "3": "VistaMes",
   "4": "PanelGuia",
@@ -12,7 +12,7 @@
   "10": "Window",
   "11": "MiniCalendario",
   "12": "Correr Agenda Dinámica",
-  "13": "TaskbarWindow",
+  "13": "Window",
   "14": "BandejaDelSistema",
   "15": "ProgramasAbiertos",
   "16": "MenuInicioPopover",
@@ -28,5 +28,14 @@
   "26": "PepeWapOSx10.Shell.Widgets/AssemblyInfo.cs",
   "27": "CLAUDE.md",
   "28": ".TabVista_Click",
-  "29": "DockPanel"
+  "29": "DockPanel",
+  "30": ".AbrirConexion",
+  "31": "VistaSemana",
+  "32": "ScheduledBlock",
+  "33": "DetectorDobleClick",
+  "34": ".Posicionar",
+  "35": "PopoverBase",
+  "36": "TaskbarWindow",
+  "37": "AccionesDeSistema",
+  "38": "RoutedEventArgs"
 }
