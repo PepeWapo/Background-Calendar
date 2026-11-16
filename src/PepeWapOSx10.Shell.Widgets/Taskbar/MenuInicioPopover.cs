@@ -167,9 +167,9 @@ internal sealed class MenuInicioPopover : PopoverBase
     private UIElement FilaDeEnergia()
     {
         var fila = new UniformGrid { Rows = 1 };
-        fila.Children.Add(BotonDeEnergia("Suspender", () => Iniciar("rundll32.exe", "powrprof.dll,SetSuspendState 0,1,0")));
-        fila.Children.Add(BotonDeEnergia("Reiniciar", () => Iniciar("shutdown.exe", "/r /t 0")));
-        fila.Children.Add(BotonDeEnergia("Apagar", () => Iniciar("shutdown.exe", "/s /t 0")));
+        fila.Children.Add(BotonDeEnergia("Suspender", AccionesDeSistema.Suspender));
+        fila.Children.Add(BotonDeEnergia("Reiniciar", AccionesDeSistema.Reiniciar));
+        fila.Children.Add(BotonDeEnergia("Apagar", AccionesDeSistema.Apagar));
         return fila;
     }
 
@@ -187,17 +187,5 @@ internal sealed class MenuInicioPopover : PopoverBase
             accion();
         };
         return boton;
-    }
-
-    private static void Iniciar(string archivo, string argumentos)
-    {
-        try
-        {
-            Process.Start(new ProcessStartInfo(archivo, argumentos) { UseShellExecute = false, CreateNoWindow = true });
-        }
-        catch (System.ComponentModel.Win32Exception)
-        {
-            // sin permiso o sin el ejecutable: no hay nada razonable que hacer desde acá.
-        }
     }
 }

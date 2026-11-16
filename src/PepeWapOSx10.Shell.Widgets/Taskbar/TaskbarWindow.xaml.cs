@@ -215,6 +215,20 @@ public partial class TaskbarWindow : Window
         ModoJuegoCambiado?.Invoke(_modoJuego);
     }
 
+    private void BotonVistaDeTareas_Click(object sender, RoutedEventArgs e)
+    {
+        PopoverBase.CerrarAbierto();
+        AccionesDeSistema.AbrirVistaDeTareas();
+    }
+
+    private void BotonSuspender_Click(object sender, RoutedEventArgs e) => AccionesDeSistema.Suspender();
+
+    private void BotonReiniciar_Click(object sender, RoutedEventArgs e) => AccionesDeSistema.Reiniciar();
+
+    private void BotonApagar_Click(object sender, RoutedEventArgs e) => AccionesDeSistema.Apagar();
+
+    private void BotonCerrarSesion_Click(object sender, RoutedEventArgs e) => AccionesDeSistema.CerrarSesion();
+
     /// <summary>Abre el menú de inicio propio sobre el botón.</summary>
     private void BotonMenuWindows_Click(object sender, RoutedEventArgs e) =>
         PopoverBase.Alternar("inicio", BotonMenuWindows, () => new MenuInicioPopover());

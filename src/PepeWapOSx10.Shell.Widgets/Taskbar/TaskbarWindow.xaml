@@ -69,6 +69,21 @@
                 </Viewbox>
             </Button>
 
+            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Vista de tareas"
+                    Click="BotonVistaDeTareas_Click">
+                <Viewbox Width="20" Height="20">
+                    <Canvas Width="24" Height="24">
+                        <!-- Dos ventanas apiladas, como el ícono de Vista de tareas de Windows. -->
+                        <Path Data="M7 7.5A1.5 1.5 0 0 1 8.5 6h9A1.5 1.5 0 0 1 19 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 7 15.5z"
+                              Stroke="{StaticResource TextPrimary}" StrokeThickness="1.4"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+                        <Path Data="M4.5 9.5v8A1.5 1.5 0 0 0 6 19h9"
+                              Stroke="{StaticResource TextPrimary}" StrokeThickness="1.4"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+                    </Canvas>
+                </Viewbox>
+            </Button>
+
             <Rectangle x:Name="SeparadorDeApps" Width="1" Height="20" Margin="8,0" Fill="{StaticResource MenuSeparator}" Visibility="Collapsed"/>
 
             <!-- Programas en ejecución, enumerados en vivo (ver ProgramasAbiertos).
@@ -106,7 +121,8 @@
                 </Viewbox>
             </Button>
 
-            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Suspender">
+            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Suspender"
+                    Click="BotonSuspender_Click">
                 <Viewbox Width="17" Height="17">
                     <Canvas Width="24" Height="24">
                         <Path Data="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"
@@ -116,7 +132,8 @@
                 </Viewbox>
             </Button>
 
-            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Reiniciar">
+            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Reiniciar"
+                    Click="BotonReiniciar_Click">
                 <Viewbox Width="17" Height="17">
                     <Canvas Width="24" Height="24">
                         <Path Data="M4 12a8 8 0 1 1 2.6 5.9"
@@ -129,13 +146,29 @@
                 </Viewbox>
             </Button>
 
-            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Apagar">
+            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Apagar"
+                    Click="BotonApagar_Click">
                 <Viewbox Width="17" Height="17">
                     <Canvas Width="24" Height="24">
                         <Path Data="M12 3.5v8"
                               Stroke="{StaticResource TextMuted}" StrokeThickness="1.5"
                               StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
                         <Path Data="M7 6.2a8 8 0 1 0 10 0"
+                              Stroke="{StaticResource TextMuted}" StrokeThickness="1.5"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+                    </Canvas>
+                </Viewbox>
+            </Button>
+
+            <Button Style="{StaticResource TaskbarIconButtonStyle}" Margin="2,0" ToolTip="Cerrar sesión"
+                    Click="BotonCerrarSesion_Click">
+                <Viewbox Width="17" Height="17">
+                    <Canvas Width="24" Height="24">
+                        <!-- Puerta abierta con flecha de salida. -->
+                        <Path Data="M10 4.5H6.5A1.5 1.5 0 0 0 5 6v12a1.5 1.5 0 0 0 1.5 1.5H10"
+                              Stroke="{StaticResource TextMuted}" StrokeThickness="1.5"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+                        <Path Data="M10 12h9 M15.5 8.5L19 12l-3.5 3.5"
                               Stroke="{StaticResource TextMuted}" StrokeThickness="1.5"
                               StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
                     </Canvas>
