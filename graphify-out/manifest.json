@@ -252,15 +252,15 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/EscritorioShell.cs": {
-    "mtime": 1794857919.787,
-    "seen": 1794857926.0410304,
-    "ast_hash": "9ee798a272902dadf1037391bad6c494",
+    "mtime": 1795102131.8240561,
+    "seen": 1795102158.7054086,
+    "ast_hash": "8a0f3357f19b673eb6b954c9047e8efd",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Escritorio/EspacioEscritorio.cs": {
-    "mtime": 1794857919.787,
-    "seen": 1794857926.0410304,
-    "ast_hash": "aa3b87088907415c2807ba7594925f7c",
+    "mtime": 1795118728.5401344,
+    "seen": 1795130614.4653454,
+    "ast_hash": "2cfb51ef701d14b0d4d64869f69f9fc9",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/TaskbarWindow.xaml.cs": {
-    "mtime": 1794857919.8060012,
-    "seen": 1794857926.0410304,
-    "ast_hash": "70de4bca67ec932247c338f49b50b2f4",
+    "mtime": 1795102130.5434303,
+    "seen": 1795102158.7054086,
+    "ast_hash": "723ca02f9b12bc1cd2bf24b29194b5ba",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Tema.xaml": {
@@ -477,6 +477,18 @@
     "mtime": 1794857919.8030007,
     "seen": 1794857926.0410304,
     "ast_hash": "89f1e2d85304bc4e468e19e9969b9f42",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Escritorio/BarraDeWindows.cs": {
+    "mtime": 1795102115.227961,
+    "seen": 1795102158.7054086,
+    "ast_hash": "bfab8450031adc4c7255de67e1d4497e",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Escritorio/TeclaWindows.cs": {
+    "mtime": 1795102130.2161582,
+    "seen": 1795102158.7054086,
+    "ast_hash": "219baba8e7fe27e06a28ca9cb430baad",
     "semantic_hash": ""
   }
 }
