@@ -21,6 +21,8 @@ internal sealed class EscritorioShell : IDisposable
     private readonly TaskbarWindow _taskbar;
     private readonly AnclajeEscritorio _anclaje;
     private readonly EspejosDeWallpaper? _espejos;
+    private readonly BarraDeWindows _barraDeWindows;
+    private readonly TeclaWindows _teclaWindows;
 
     /// <summary>
     /// Abre el wallpaper, los rieles y la taskbar, y los ancla junto con el
@@ -57,6 +59,11 @@ internal sealed class EscritorioShell : IDisposable
         // El mismo video en las demás pantallas, sin reproducirlo otra vez.
         if (_wallpaper is not null)
             _espejos = new EspejosDeWallpaper(_wallpaper, _anclaje);
+
+        // Último: con la barra de Windows escondida, la taskbar propia es la
+        // única, y la tecla Windows abre su menú de inicio.
+        _barraDeWindows = new BarraDeWindows();
+        _teclaWindows = new TeclaWindows(_taskbar.AlternarMenuInicio);
     }
 
     /// <summary>
@@ -72,6 +79,8 @@ internal sealed class EscritorioShell : IDisposable
 
     public void Dispose()
     {
+        _teclaWindows.Dispose();
+        _barraDeWindows.Dispose();
         _espejos?.Dispose();
         _anclaje.Dispose();
         _taskbar.Close();

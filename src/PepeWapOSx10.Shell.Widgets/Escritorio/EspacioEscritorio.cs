@@ -36,7 +36,21 @@ internal static class EspacioEscritorio
     {
         void AlCambiar(object? _, EventArgs __) => ventana.Dispatcher.BeginInvoke(colocar);
 
+        // También cuando solo cambia el área de trabajo: pasa al esconder o
+        // mostrar la barra de Windows (ver BarraDeWindows). StaticPropertyChanged
+        // avisa recién después de que WPF invalidó su caché de WorkArea.
+        void AlCambiarElArea(object? _, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(SystemParameters.WorkArea))
+                ventana.Dispatcher.BeginInvoke(colocar);
+        }
+
         SystemEvents.DisplaySettingsChanged += AlCambiar;
-        ventana.Closed += (_, _) => SystemEvents.DisplaySettingsChanged -= AlCambiar;
+        SystemParameters.StaticPropertyChanged += AlCambiarElArea;
+        ventana.Closed += (_, _) =>
+        {
+            SystemEvents.DisplaySettingsChanged -= AlCambiar;
+            SystemParameters.StaticPropertyChanged -= AlCambiarElArea;
+        };
     }
 }

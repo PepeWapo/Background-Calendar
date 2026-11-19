@@ -230,7 +230,13 @@ public partial class TaskbarWindow : Window
     private void BotonCerrarSesion_Click(object sender, RoutedEventArgs e) => AccionesDeSistema.CerrarSesion();
 
     /// <summary>Abre el menú de inicio propio sobre el botón.</summary>
-    private void BotonMenuWindows_Click(object sender, RoutedEventArgs e) =>
+    private void BotonMenuWindows_Click(object sender, RoutedEventArgs e) => AlternarMenuInicio();
+
+    /// <summary>
+    /// Abre o cierra el menú de inicio. Lo usa el botón y también la tecla
+    /// Windows (<see cref="TeclaWindows"/>).
+    /// </summary>
+    internal void AlternarMenuInicio() =>
         PopoverBase.Alternar("inicio", BotonMenuWindows, () => new MenuInicioPopover());
 
     private void BotonExplorador_Click(object sender, RoutedEventArgs e)
