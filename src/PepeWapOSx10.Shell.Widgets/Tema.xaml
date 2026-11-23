@@ -168,6 +168,7 @@
     <!-- popovers de la taskbar (menú de inicio, bandeja, lista de ventanas) -->
     <Style x:Key="PopoverItemStyle" TargetType="Button">
         <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Padding" Value="8,6"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Focusable" Value="False"/>
@@ -175,7 +176,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border x:Name="Bg" CornerRadius="8" Background="Transparent" Padding="{TemplateBinding Padding}">
+                    <Border x:Name="Bg" CornerRadius="8" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>

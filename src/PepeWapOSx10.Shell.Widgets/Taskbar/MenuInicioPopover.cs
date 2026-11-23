@@ -17,6 +17,8 @@ internal sealed class MenuInicioPopover : PopoverBase
     private readonly StackPanel _lista = new();
     private readonly List<(Button Boton, AppDeInicio App)> _filas = [];
     private readonly TextBlock _estado = new();
+    private readonly ScrollViewer _scroll;
+    private int _seleccion = -1;
 
     public MenuInicioPopover() : this(new StackPanel { Width = 340 })
     {
@@ -26,7 +28,7 @@ internal sealed class MenuInicioPopover : PopoverBase
     {
         ConfigurarBuscador();
 
-        var scroll = new ScrollViewer
+        _scroll = new ScrollViewer
         {
             Height = 360,
             VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
@@ -34,7 +36,7 @@ internal sealed class MenuInicioPopover : PopoverBase
             Content = _lista,
             Margin = new Thickness(0, 8, 0, 0),
         };
-        scroll.Resources.Add(typeof(ScrollBar), Paleta.Estilo("BarraFinaStyle"));
+        _scroll.Resources.Add(typeof(ScrollBar), Paleta.Estilo("BarraFinaStyle"));
 
         _estado.Text = "Cargando aplicaciones…";
         _estado.Foreground = Paleta.TextoApagado;
@@ -43,9 +45,16 @@ internal sealed class MenuInicioPopover : PopoverBase
         _lista.Children.Add(_estado);
 
         raiz.Children.Add(Rodear(_buscador));
-        raiz.Children.Add(scroll);
+        raiz.Children.Add(_scroll);
         raiz.Children.Add(new Border { Height = 1, Margin = new Thickness(4, 8, 4, 6), Background = (Brush)Application.Current.Resources["MenuSeparator"] });
         raiz.Children.Add(FilaDeEnergia());
+
+        // La rueda recorre las opciones desde cualquier punto del menú.
+        raiz.PreviewMouseWheel += (_, e) =>
+        {
+            Mover(e.Delta > 0 ? -1 : 1);
+            e.Handled = true;
+        };
 
         CargarAplicaciones();
     }
@@ -111,15 +120,63 @@ internal sealed class MenuInicioPopover : PopoverBase
         _buscador.Padding = new Thickness(2, 7, 2, 7);
 
         _buscador.TextChanged += (_, _) => Filtrar();
-        _buscador.KeyDown += (_, e) =>
+        _buscador.PreviewKeyDown += (_, e) =>
         {
-            if (e.Key != Key.Enter)
-                return;
-
-            var primera = _filas.FirstOrDefault(f => f.Boton.Visibility == Visibility.Visible);
-            if (primera.App is not null)
-                Abrir(primera.App);
+            switch (e.Key)
+            {
+                case Key.Down:
+                    Mover(1);
+                    e.Handled = true;
+                    break;
+                case Key.Up:
+                    Mover(-1);
+                    e.Handled = true;
+                    break;
+                case Key.PageDown:
+                    Mover(8);
+                    e.Handled = true;
+                    break;
+                case Key.PageUp:
+                    Mover(-8);
+                    e.Handled = true;
+                    break;
+                case Key.Enter:
+                    var visibles = Visibles();
+                    if (visibles.Count > 0)
+                        Abrir(visibles[Math.Clamp(_seleccion, 0, visibles.Count - 1)].App);
+                    e.Handled = true;
+                    break;
+            }
         };
+    }
+
+    // ===================== navegación =====================
+
+    private List<(Button Boton, AppDeInicio App)> Visibles() =>
+        _filas.Where(f => f.Boton.Visibility == Visibility.Visible).ToList();
+
+    /// <summary>Mueve la selección <paramref name="paso"/> filas entre las visibles y la trae a la vista.</summary>
+    private void Mover(int paso)
+    {
+        var visibles = Visibles();
+        if (visibles.Count == 0)
+            return;
+
+        Seleccionar(Math.Clamp(_seleccion + paso, 0, visibles.Count - 1), visibles);
+    }
+
+    private void Seleccionar(int indice, List<(Button Boton, AppDeInicio App)> visibles)
+    {
+        foreach (var (boton, _) in _filas)
+            boton.Background = Brushes.Transparent;
+
+        _seleccion = indice;
+        if (indice < 0 || indice >= visibles.Count)
+            return;
+
+        var elegido = visibles[indice].Boton;
+        elegido.Background = (Brush)Application.Current.Resources["MenuHoverBackground"];
+        elegido.BringIntoView();
     }
 
     /// <summary>El campo de texto con el fondo y el marco de los inputs del proyecto.</summary>
@@ -160,6 +217,11 @@ internal sealed class MenuInicioPopover : PopoverBase
                 ? Visibility.Visible
                 : Visibility.Collapsed;
         }
+
+        // Tras filtrar, la selección vuelve a la primera coincidencia.
+        var visibles = Visibles();
+        Seleccionar(visibles.Count > 0 ? 0 : -1, visibles);
+        _scroll.ScrollToTop();
     }
 
     // ===================== energía =====================
