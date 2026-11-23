@@ -330,9 +330,9 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Tema.xaml": {
-    "mtime": 1794857919.8060012,
-    "seen": 1794857926.0410304,
-    "ast_hash": "d2c7500572598bf541151bb08b52c180",
+    "mtime": 1795458826.7968476,
+    "seen": 1795459403.3820245,
+    "ast_hash": "4dfbbec1ba1ef63fd536ea08f5a6cb78",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Ui/FormatoEspanol.cs": {
@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs": {
-    "mtime": 1794857919.8050003,
-    "seen": 1794857926.0410304,
-    "ast_hash": "754e4e9799b691e903f0504c3ee49f6e",
+    "mtime": 1795458826.7968476,
+    "seen": 1795459403.3820245,
+    "ast_hash": "a8957a91b30019967d1dde1eeea0e021",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs": {
