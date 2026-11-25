@@ -28,9 +28,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- ===================== PANEL CALENDARIO ===================== -->
-        <Border Grid.Column="0" Style="{StaticResource PanelStyle}" Height="331" VerticalAlignment="Bottom" Padding="20,24">
+        <Border Grid.Column="0" Style="{StaticResource PanelStyle}" Height="385" VerticalAlignment="Bottom" Padding="20,24">
             <DockPanel>
                 <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <TextBlock x:Name="RelojText" FontFamily="Segoe UI Light" FontSize="38" Foreground="{StaticResource TextPrimary}" HorizontalAlignment="Center" Margin="0,0,0,4"/>
                     <TextBlock x:Name="CalendarMonthText" FontFamily="Segoe UI Light" FontSize="19" Foreground="{StaticResource TextPrimary}" HorizontalAlignment="Center"/>
                     <TextBlock x:Name="CalendarYearText" FontSize="11.5" FontWeight="SemiBold" Foreground="{StaticResource TextMuted}" HorizontalAlignment="Center"/>
                 </StackPanel>

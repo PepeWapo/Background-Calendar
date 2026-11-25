@@ -36,9 +36,14 @@ public partial class MainWindow : Window
     private readonly DispatcherTimer _temporizadorRefresco;
     private bool _refrescando;
 
+    private readonly RelojDigital _reloj;
+
     public MainWindow()
     {
         InitializeComponent();
+
+        // No depende de la base ni del calendario: anda desde el primer frame.
+        _reloj = new RelojDigital(RelojText);
 
         _temporizadorRefresco = new DispatcherTimer { Interval = IntervaloDeRefresco };
         _temporizadorRefresco.Tick += TemporizadorRefresco_Tick;
@@ -134,6 +139,7 @@ public partial class MainWindow : Window
     private void Window_Closed(object sender, EventArgs e)
     {
         _temporizadorRefresco.Stop();
+        _reloj.Dispose();
         _escritorio?.Dispose();
     }
 
