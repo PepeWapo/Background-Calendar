@@ -264,15 +264,15 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml": {
-    "mtime": 1794857919.7880008,
-    "seen": 1794857926.0410304,
-    "ast_hash": "2e2f4cc9050a11fad5fcedb81dcef2b5",
+    "mtime": 1795648736.7535417,
+    "seen": 1795648973.5246608,
+    "ast_hash": "04b26a05b78ac09354e14dbf109e9b28",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs": {
-    "mtime": 1794857919.7990005,
-    "seen": 1794857926.0410304,
-    "ast_hash": "68cc6fafe132eca150f27752f1aedbe4",
+    "mtime": 1795648737.7081962,
+    "seen": 1795648973.5246608,
+    "ast_hash": "404c277d7bfea34ca4a5f5b299b85c41",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/PepeWapOSx10.Shell.Widgets.csproj": {
@@ -489,6 +489,12 @@
     "mtime": 1795102130.2161582,
     "seen": 1795102158.7054086,
     "ast_hash": "219baba8e7fe27e06a28ca9cb430baad",
+    "semantic_hash": ""
+  },
+  "src/PepeWapOSx10.Shell.Widgets/Agenda/RelojDigital.cs": {
+    "mtime": 1795649078.1871026,
+    "seen": 1795649086.7961051,
+    "ast_hash": "da89efb995750aff53cf6fba1d23c981",
     "semantic_hash": ""
   }
 }
