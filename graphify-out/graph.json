@@ -429,81 +429,62 @@
       "source_location": "L22"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto",
-      "label": "Esqueleto",
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice",
+      "label": "IAgendaService",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s125"
+          "s39"
         ]
       },
-      "norm_label": "esqueleto",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L25"
+      "norm_label": "iagendaservice",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
+      "source_location": "L15"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos",
-      "label": "AccesosDirectos",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_diacargado",
+      "label": "DiaCargado",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": "accesosdirectos",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_shfileinfo",
-      "label": "ShFileInfo",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "is_nested_type": true,
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s187"
+          "s100"
         ]
       },
-      "norm_label": "shfileinfo",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L155"
+      "norm_label": "diacargado",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L24"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailitem_pepewaposx10_shell_widgets_iconrailitem",
-      "label": "IconRailItem",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia",
+      "label": "VistaDia",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s31"
+          "s100"
         ]
       },
-      "norm_label": "iconrailitem",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailItem.cs",
-      "source_location": "L11"
+      "norm_label": "vistadia",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L12"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow",
@@ -523,44 +504,6 @@
       },
       "norm_label": "iconrailwindow",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_ladoescritorio",
-      "label": "LadoEscritorio",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": "ladoescritorio",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos",
-      "label": "RielesDeIconos",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": "rielesdeiconos",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
       "source_location": "L20"
     },
     {
@@ -686,7 +629,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Dominio.Modelos",
@@ -699,109 +642,13 @@
       "source_location": "L3"
     },
     {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_scheduledblock",
-      "label": "ScheduledBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "scheduledblock",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice",
-      "label": "IAgendaService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s39"
-        ]
-      },
-      "norm_label": "iagendaservice",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_diacargado",
-      "label": "DiaCargado",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "is_nested_type": true,
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "diacargado",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L24"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia",
-      "label": "VistaDia",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": "vistadia",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana",
-      "label": "VistaSemana",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": "vistasemana",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L15"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo",
       "label": "LineaDeTiempo",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -814,8 +661,8 @@
       "source_location": "L22"
     },
     {
-      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso",
-      "label": "SemanaIso",
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_pepewaposx10_dominio_modelos_scheduledblock",
+      "label": "ScheduledBlock",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -823,14 +670,14 @@
       "community_name": "VistaMes",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
         "scope_chain": [
           "s0"
         ]
       },
-      "norm_label": "semanaiso",
-      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
-      "source_location": "L14"
+      "norm_label": "scheduledblock",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
+      "source_location": "L10"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames",
@@ -947,6 +794,82 @@
       "source_location": "L11"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana",
+      "label": "VistaSemana",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": "vistasemana",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext",
+      "label": "AgendaDbContext",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": "agendadbcontext",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository",
+      "label": "SqliteFlexibleTaskRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s105"
+        ]
+      },
+      "norm_label": "sqliteflexibletaskrepository",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository",
+      "label": "SqliteTareaGuiaRepository",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": "sqlitetareaguiarepository",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L8"
+    },
+    {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository_pepewaposx10_dominio_interfaces_itareaguiarepository",
       "label": "ITareaGuiaRepository",
       "_callable": true,
@@ -964,6 +887,25 @@
       "norm_label": "itareaguiarepository",
       "source_file": "src/PepeWapOSx10.Dominio/Interfaces/ITareaGuiaRepository.cs",
       "source_location": "L5"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_repeticion",
+      "label": "Repeticion",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio.Modelos",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "repeticion",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
+      "source_location": "L4"
     },
     {
       "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_tareaguia",
@@ -1002,6 +944,121 @@
       "norm_label": "panelguia",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/PanelGuia.cs",
       "source_location": "L24"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos",
+      "label": "AccesosDirectos",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": "accesosdirectos",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_shfileinfo",
+      "label": "ShFileInfo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": "shfileinfo",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L155"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailitem_pepewaposx10_shell_widgets_iconrailitem",
+      "label": "IconRailItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s31"
+        ]
+      },
+      "norm_label": "iconrailitem",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailItem.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_ladoescritorio",
+      "label": "LadoEscritorio",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": "ladoescritorio",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos",
+      "label": "RielesDeIconos",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": "rielesdeiconos",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso",
+      "label": "SemanaIso",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": ".Inicio",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "semanaiso",
+      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
+      "source_location": "L14"
     },
     {
       "id": "src_pepewaposx10_calendario_googlecalendarsource_pepewaposx10_calendario_googlecalendarsource",
@@ -1137,8 +1194,8 @@
       "source_location": "L10"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext",
-      "label": "AgendaDbContext",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto",
+      "label": "Esqueleto",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -1146,71 +1203,14 @@
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": "agendadbcontext",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository",
-      "label": "SqliteFlexibleTaskRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s105"
-        ]
-      },
-      "norm_label": "sqliteflexibletaskrepository",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository",
-      "label": "SqliteTareaGuiaRepository",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": "sqlitetareaguiarepository",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_tareaguia_pepewaposx10_dominio_modelos_repeticion",
-      "label": "Repeticion",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio.Modelos",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": "repeticion",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
-      "source_location": "L4"
+      "norm_label": "esqueleto",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L25"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_escritorio_espacioescritorio_pepewaposx10_shell_widgets_espacioescritorio",
@@ -3679,256 +3679,148 @@
       "source_location": "L42"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_bloque",
-      "label": ".Bloque()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice_obtenerdiaasync",
+      "label": ".ObtenerDiaAsync()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s125"
+          "s39"
         ]
       },
-      "norm_label": ".bloque()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L138"
+      "norm_label": ".obtenerdiaasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
+      "source_location": "L21"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujaragenda",
-      "label": ".DibujarAgenda()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice_obtenerdiasasync",
+      "label": ".ObtenerDiasAsync()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s125"
+          "s39"
         ]
       },
-      "norm_label": ".dibujaragenda()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L98"
+      "norm_label": ".obtenerdiasasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
+      "source_location": "L27"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujarcalendario",
-      "label": ".DibujarCalendario()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_alrodarlarueda",
+      "label": ".AlRodarLaRueda()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s125"
+          "s100"
         ]
       },
-      "norm_label": ".dibujarcalendario()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L68"
+      "norm_label": ".alrodarlarueda()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L116"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujarguia",
-      "label": ".DibujarGuia()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_cargardiaadyacenteasync",
+      "label": ".CargarDiaAdyacenteAsync()",
       "_callable": true,
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s125"
+          "s100"
         ]
       },
-      "norm_label": ".dibujarguia()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L125"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_mostrar",
-      "label": ".Mostrar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Esqueleto",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s125"
-        ]
-      },
-      "norm_label": ".mostrar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_pulsar",
-      "label": ".Pulsar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Esqueleto",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s125"
-        ]
-      },
-      "norm_label": ".pulsar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L61"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_cargar",
-      "label": ".Cargar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": ".cargar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_destroyicon",
-      "label": ".DestroyIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": ".destroyicon()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L152"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_encarpeta",
-      "label": ".EnCarpeta()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": ".encarpeta()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L124"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_enviarapapelera",
-      "label": ".EnviarAPapelera()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": ".enviarapapelera()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L111"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_extraericono",
-      "label": ".ExtraerIcono()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s187"
-        ]
-      },
-      "norm_label": ".extraericono()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "norm_label": ".cargardiaadyacenteasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
       "source_location": "L128"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_listar",
-      "label": ".Listar()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_mostrarasync",
+      "label": ".MostrarAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s187"
+          "s100"
         ]
       },
-      "norm_label": ".listar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L82"
+      "norm_label": ".mostrarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L62"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_migrardesdeelescritorio",
-      "label": ".MigrarDesdeElEscritorio()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_offsetinicialde",
+      "label": ".OffsetInicialDe()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s187"
+          "s100"
         ]
       },
-      "norm_label": ".migrardesdeelescritorio()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L44"
+      "norm_label": ".offsetinicialde()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L180"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_shgetfileinfo",
-      "label": ".SHGetFileInfo()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_refrescarasync",
+      "label": ".RefrescarAsync()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s187"
+          "s100"
         ]
       },
-      "norm_label": ".shgetfileinfo()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L149"
+      "norm_label": ".refrescarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L85"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_render",
+      "label": ".Render()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s100"
+        ]
+      },
+      "norm_label": ".render()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L213"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_colocar",
@@ -3947,42 +3839,6 @@
       "norm_label": ".colocar()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
       "source_location": "L54"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_ejecutar",
-      "label": ".Ejecutar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s113"
-        ]
-      },
-      "norm_label": ".ejecutar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L116"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_iconodelmenu",
-      "label": ".IconoDelMenu()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s113"
-        ]
-      },
-      "norm_label": ".iconodelmenu()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L177"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_iconos_dragover",
@@ -4091,204 +3947,6 @@
       "norm_label": ".indicedestino()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
       "source_location": "L196"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuabrirubicacion_click",
-      "label": ".MenuAbrirUbicacion_Click()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s113"
-        ]
-      },
-      "norm_label": ".menuabrirubicacion_click()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L141"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuejecutar_click",
-      "label": ".MenuEjecutar_Click()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s113"
-        ]
-      },
-      "norm_label": ".menuejecutar_click()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L131"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuquitar_click",
-      "label": ".MenuQuitar_Click()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s113"
-        ]
-      },
-      "norm_label": ".menuquitar_click()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
-      "source_location": "L156"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_ordenderieles_pepewaposx10_shell_widgets_ordenderieles_guardar",
-      "label": ".Guardar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s45"
-        ]
-      },
-      "norm_label": ".guardar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/OrdenDeRieles.cs",
-      "source_location": "L42"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_cargar",
-      "label": ".Cargar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".cargar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_de",
-      "label": ".De()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".de()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_guardar",
-      "label": ".Guardar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".guardar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L86"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_migrarycargar",
-      "label": ".MigrarYCargar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".migrarycargar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_mover",
-      "label": ".Mover()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".mover()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_nombres",
-      "label": ".Nombres()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".nombres()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L88"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_quitar",
-      "label": ".Quitar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s59"
-        ]
-      },
-      "norm_label": ".quitar()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L77"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_taskbarwindow_xaml_pepewaposx10_shell_widgets_taskbarwindow_actualizarprogramas",
@@ -4525,6 +4183,24 @@
       "source_location": "L62"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_temporizadorrefresco_tick",
+      "label": ".TemporizadorRefresco_Tick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "RelojDigital",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s157"
+        ]
+      },
+      "norm_label": ".temporizadorrefresco_tick()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
+      "source_location": "L118"
+    },
+    {
       "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_window_closed",
       "label": ".Window_Closed()",
       "_callable": true,
@@ -4543,156 +4219,12 @@
       "source_location": "L139"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice_obtenerdiaasync",
-      "label": ".ObtenerDiaAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s39"
-        ]
-      },
-      "norm_label": ".obtenerdiaasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_pepewaposx10_shell_widgets_iagendaservice_obtenerdiasasync",
-      "label": ".ObtenerDiasAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s39"
-        ]
-      },
-      "norm_label": ".obtenerdiasasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_alrodarlarueda",
-      "label": ".AlRodarLaRueda()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".alrodarlarueda()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L116"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_cargardiaadyacenteasync",
-      "label": ".CargarDiaAdyacenteAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".cargardiaadyacenteasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L128"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_mostrarasync",
-      "label": ".MostrarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".mostrarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L62"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_offsetinicialde",
-      "label": ".OffsetInicialDe()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".offsetinicialde()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L180"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_refrescarasync",
-      "label": ".RefrescarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".refrescarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L85"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_render",
-      "label": ".Render()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s100"
-        ]
-      },
-      "norm_label": ".render()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L213"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia_renderbanda",
       "label": ".RenderBanda()",
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4710,7 +4242,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4723,192 +4255,12 @@
       "source_location": "L263"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_chip",
-      "label": ".Chip()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s240"
-        ]
-      },
-      "norm_label": ".chip()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs",
-      "source_location": "L276"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_celdadedia",
-      "label": ".CeldaDeDia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".celdadedia()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L135"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_desplazarasync",
-      "label": ".DesplazarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".desplazarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L89"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_irahoyasync",
-      "label": ".IrAHoyAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".irahoyasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_mostrarasync",
-      "label": ".MostrarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".mostrarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L55"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_refrescarasync",
-      "label": ".RefrescarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".refrescarasync()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L72"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_render",
-      "label": ".Render()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".render()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_renderencabezado",
-      "label": ".RenderEncabezado()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".renderencabezado()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L105"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_rendergrilla",
-      "label": ".RenderGrilla()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s181"
-        ]
-      },
-      "norm_label": ".rendergrilla()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
-      "source_location": "L188"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_temporizadorrefresco_tick",
-      "label": ".TemporizadorRefresco_Tick()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s157"
-        ]
-      },
-      "norm_label": ".temporizadorrefresco_tick()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
-      "source_location": "L118"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_colorde",
       "label": ".ColorDe()",
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4926,7 +4278,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4944,7 +4296,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4962,7 +4314,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4980,7 +4332,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -4998,7 +4350,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5016,7 +4368,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5034,7 +4386,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5052,7 +4404,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5070,7 +4422,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5088,7 +4440,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5106,7 +4458,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5119,30 +4471,12 @@
       "source_location": "L73"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_minutosapixeles",
-      "label": ".MinutosAPixeles()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Shell.Widgets",
-        "scope_chain": [
-          "s153"
-        ]
-      },
-      "norm_label": ".minutosapixeles()",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
-      "source_location": "L41"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_pastilla",
       "label": ".Pastilla()",
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5160,7 +4494,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5178,7 +4512,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5196,7 +4530,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "metadata": {
         "namespace": "PepeWapOSx10.Shell.Widgets",
@@ -5207,42 +4541,6 @@
       "norm_label": ".rectangulo()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
       "source_location": "L76"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso_indicededia",
-      "label": ".IndiceDeDia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".indicededia()",
-      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso_inicio",
-      "label": ".Inicio()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Dominio",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "norm_label": ".inicio()",
-      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
-      "source_location": "L17"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_celdadedia",
@@ -5279,6 +4577,24 @@
       "norm_label": ".celdadesemana()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs",
       "source_location": "L189"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_chip",
+      "label": ".Chip()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "VistaMes",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s240"
+        ]
+      },
+      "norm_label": ".chip()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaMes.cs",
+      "source_location": "L276"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames_columnasdesemana",
@@ -6073,6 +5389,510 @@
       "source_location": "L224"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_celdadedia",
+      "label": ".CeldaDeDia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".celdadedia()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L135"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_desplazarasync",
+      "label": ".DesplazarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".desplazarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L89"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_irahoyasync",
+      "label": ".IrAHoyAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".irahoyasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_mostrarasync",
+      "label": ".MostrarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".mostrarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L55"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_refrescarasync",
+      "label": ".RefrescarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".refrescarasync()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L72"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_render",
+      "label": ".Render()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".render()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L93"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_renderencabezado",
+      "label": ".RenderEncabezado()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".renderencabezado()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L105"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana_rendergrilla",
+      "label": ".RenderGrilla()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s181"
+        ]
+      },
+      "norm_label": ".rendergrilla()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaSemana.cs",
+      "source_location": "L188"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_pepewaposx10_shell_widgets_lineadetiempo_minutosapixeles",
+      "label": ".MinutosAPixeles()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s153"
+        ]
+      },
+      "norm_label": ".minutosapixeles()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Ui/LineaDeTiempo.cs",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_abrirconexion",
+      "label": ".AbrirConexion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".abrirconexion()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L56"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_inicializar",
+      "label": ".Inicializar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".inicializar()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L63"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_migrarrepeticiondetareasguia",
+      "label": ".MigrarRepeticionDeTareasGuia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".migrarrepeticiondetareasguia()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L110"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_rutapordefecto",
+      "label": ".RutaPorDefecto()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".rutapordefecto()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_sembrartareasguia",
+      "label": ".SembrarTareasGuia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".sembrartareasguia()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L141"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_tienecolumna",
+      "label": ".TieneColumna()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s32"
+        ]
+      },
+      "norm_label": ".tienecolumna()",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L124"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_indiceadia",
+      "label": ".IndiceADia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s105"
+        ]
+      },
+      "norm_label": ".indiceadia()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
+      "source_location": "L70"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_marcaragendadaasync",
+      "label": ".MarcarAgendadaAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s105"
+        ]
+      },
+      "norm_label": ".marcaragendadaasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_obtenertodasasync",
+      "label": ".ObtenerTodasAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s105"
+        ]
+      },
+      "norm_label": ".obtenertodasasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_obteneryaagendadasasync",
+      "label": ".ObtenerYaAgendadasAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s105"
+        ]
+      },
+      "norm_label": ".obteneryaagendadasasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_actualizarasync",
+      "label": ".ActualizarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".actualizarasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L101"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_agregardatos",
+      "label": ".AgregarDatos()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".agregardatos()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L129"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_crearasync",
+      "label": ".CrearAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".crearasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L85"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_desmarcarasync",
+      "label": ".DesmarcarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".desmarcarasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L74"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_eliminarasync",
+      "label": ".EliminarAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".eliminarasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L118"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_leerrepeticion",
+      "label": ".LeerRepeticion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".leerrepeticion()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_marcarhechaasync",
+      "label": ".MarcarHechaAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".marcarhechaasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L61"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_obtenertodasasync",
+      "label": ".ObtenerTodasAsync()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".obtenertodasasync()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_siguehecha",
+      "label": ".SigueHecha()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Datos",
+        "scope_chain": [
+          "s138"
+        ]
+      },
+      "norm_label": ".siguehecha()",
+      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "source_location": "L45"
+    },
+    {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository_pepewaposx10_dominio_interfaces_itareaguiarepository_actualizarasync",
       "label": ".ActualizarAsync()",
       "_callable": true,
@@ -6431,6 +6251,420 @@
       "norm_label": ".textos()",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/PanelGuia.cs",
       "source_location": "L151"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_cargar",
+      "label": ".Cargar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".cargar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_destroyicon",
+      "label": ".DestroyIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".destroyicon()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L152"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_extraericono",
+      "label": ".ExtraerIcono()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".extraericono()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L128"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_shgetfileinfo",
+      "label": ".SHGetFileInfo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".shgetfileinfo()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L149"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_enviarapapelera",
+      "label": ".EnviarAPapelera()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".enviarapapelera()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L111"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_ejecutar",
+      "label": ".Ejecutar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s113"
+        ]
+      },
+      "norm_label": ".ejecutar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
+      "source_location": "L116"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_iconodelmenu",
+      "label": ".IconoDelMenu()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s113"
+        ]
+      },
+      "norm_label": ".iconodelmenu()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
+      "source_location": "L177"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuabrirubicacion_click",
+      "label": ".MenuAbrirUbicacion_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s113"
+        ]
+      },
+      "norm_label": ".menuabrirubicacion_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
+      "source_location": "L141"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuejecutar_click",
+      "label": ".MenuEjecutar_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s113"
+        ]
+      },
+      "norm_label": ".menuejecutar_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
+      "source_location": "L131"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_pepewaposx10_shell_widgets_iconrailwindow_menuquitar_click",
+      "label": ".MenuQuitar_Click()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s113"
+        ]
+      },
+      "norm_label": ".menuquitar_click()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml.cs",
+      "source_location": "L156"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_cargar",
+      "label": ".Cargar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".cargar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_de",
+      "label": ".De()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".de()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_guardar",
+      "label": ".Guardar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".guardar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L86"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_mover",
+      "label": ".Mover()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".mover()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_nombres",
+      "label": ".Nombres()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".nombres()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L88"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_quitar",
+      "label": ".Quitar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".quitar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L77"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_encarpeta",
+      "label": ".EnCarpeta()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".encarpeta()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L124"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_listar",
+      "label": ".Listar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".listar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L82"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_pepewaposx10_shell_widgets_accesosdirectos_migrardesdeelescritorio",
+      "label": ".MigrarDesdeElEscritorio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s187"
+        ]
+      },
+      "norm_label": ".migrardesdeelescritorio()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_ordenderieles_pepewaposx10_shell_widgets_ordenderieles_guardar",
+      "label": ".Guardar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s45"
+        ]
+      },
+      "norm_label": ".guardar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/OrdenDeRieles.cs",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_pepewaposx10_shell_widgets_rielesdeiconos_migrarycargar",
+      "label": ".MigrarYCargar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Shell.Widgets",
+        "scope_chain": [
+          "s59"
+        ]
+      },
+      "norm_label": ".migrarycargar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso_indicededia",
+      "label": ".IndiceDeDia()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": ".Inicio",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".indicededia()",
+      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_semanaiso_pepewaposx10_dominio_semanaiso_inicio",
+      "label": ".Inicio()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": ".Inicio",
+      "file_type": "code",
+      "metadata": {
+        "namespace": "PepeWapOSx10.Dominio",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": ".inicio()",
+      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
+      "source_location": "L17"
     },
     {
       "id": "src_pepewaposx10_calendario_googlecalendarsource_pepewaposx10_calendario_googlecalendarsource_cargaricsurldesdeconfig",
@@ -6793,346 +7027,112 @@
       "source_location": "L67"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_abrirconexion",
-      "label": ".AbrirConexion()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_bloque",
+      "label": ".Bloque()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".abrirconexion()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L56"
+      "norm_label": ".bloque()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L138"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_inicializar",
-      "label": ".Inicializar()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujaragenda",
+      "label": ".DibujarAgenda()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".inicializar()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L63"
+      "norm_label": ".dibujaragenda()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L98"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_migrarrepeticiondetareasguia",
-      "label": ".MigrarRepeticionDeTareasGuia()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujarcalendario",
+      "label": ".DibujarCalendario()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".migrarrepeticiondetareasguia()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L110"
+      "norm_label": ".dibujarcalendario()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L68"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_rutapordefecto",
-      "label": ".RutaPorDefecto()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_dibujarguia",
+      "label": ".DibujarGuia()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".rutapordefecto()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L31"
+      "norm_label": ".dibujarguia()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L125"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_sembrartareasguia",
-      "label": ".SembrarTareasGuia()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_mostrar",
+      "label": ".Mostrar()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".sembrartareasguia()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L141"
+      "norm_label": ".mostrar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
+      "source_location": "L32"
     },
     {
-      "id": "src_pepewaposx10_datos_agendadbcontext_pepewaposx10_datos_agendadbcontext_tienecolumna",
-      "label": ".TieneColumna()",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_pepewaposx10_shell_widgets_esqueleto_pulsar",
+      "label": ".Pulsar()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
       "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
+        "namespace": "PepeWapOSx10.Shell.Widgets",
         "scope_chain": [
-          "s32"
+          "s125"
         ]
       },
-      "norm_label": ".tienecolumna()",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L124"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_indiceadia",
-      "label": ".IndiceADia()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s105"
-        ]
-      },
-      "norm_label": ".indiceadia()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
-      "source_location": "L70"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_marcaragendadaasync",
-      "label": ".MarcarAgendadaAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s105"
-        ]
-      },
-      "norm_label": ".marcaragendadaasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
-      "source_location": "L58"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_obtenertodasasync",
-      "label": ".ObtenerTodasAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s105"
-        ]
-      },
-      "norm_label": ".obtenertodasasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_pepewaposx10_datos_sqliteflexibletaskrepository_obteneryaagendadasasync",
-      "label": ".ObtenerYaAgendadasAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s105"
-        ]
-      },
-      "norm_label": ".obteneryaagendadasasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteFlexibleTaskRepository.cs",
-      "source_location": "L44"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_actualizarasync",
-      "label": ".ActualizarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".actualizarasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L101"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_agregardatos",
-      "label": ".AgregarDatos()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".agregardatos()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L129"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_crearasync",
-      "label": ".CrearAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".crearasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L85"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_desmarcarasync",
-      "label": ".DesmarcarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".desmarcarasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L74"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_eliminarasync",
-      "label": ".EliminarAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".eliminarasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L118"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_leerrepeticion",
-      "label": ".LeerRepeticion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".leerrepeticion()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L58"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_marcarhechaasync",
-      "label": ".MarcarHechaAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".marcarhechaasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
+      "norm_label": ".pulsar()",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
       "source_location": "L61"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_obtenertodasasync",
-      "label": ".ObtenerTodasAsync()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".obtenertodasasync()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_pepewaposx10_datos_sqlitetareaguiarepository_siguehecha",
-      "label": ".SigueHecha()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "metadata": {
-        "namespace": "PepeWapOSx10.Datos",
-        "scope_chain": [
-          "s138"
-        ]
-      },
-      "norm_label": ".siguehecha()",
-      "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
-      "source_location": "L45"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_escritorio_espacioescritorio_pepewaposx10_shell_widgets_espacioescritorio_seguiralapantallaprincipal",
@@ -8287,7 +8287,7 @@
       "source_location": "L16"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_bool",
+      "id": "bool",
       "label": "bool",
       "_origin": "ast",
       "community": 0,
@@ -8298,7 +8298,7 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_dateonly",
+      "id": "dateonly",
       "label": "DateOnly",
       "_origin": "ast",
       "community": 0,
@@ -8307,6 +8307,72 @@
       "norm_label": "dateonly",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "escritorioshell",
+      "label": "EscritorioShell",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "escritorioshell",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "minicalendario",
+      "label": "MiniCalendario",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "minicalendario",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "mousebuttoneventargs",
+      "label": "MouseButtonEventArgs",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "mousebuttoneventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "panelguia",
+      "label": "PanelGuia",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "panelguia",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "routedeventargs",
+      "label": "RoutedEventArgs",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "routedeventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml",
+      "label": "PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.shell.widgets/mainwindow.xaml.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_dispatchertimer",
@@ -8320,39 +8386,6 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_mousebuttoneventargs",
-      "label": "MouseButtonEventArgs",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "norm_label": "mousebuttoneventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
-      "label": "RoutedEventArgs",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "norm_label": "routedeventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "MainWindow",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_timespan",
       "label": "TimeSpan",
       "_origin": "ast",
@@ -8360,6 +8393,17 @@
       "community_name": "MainWindow",
       "file_type": "code",
       "norm_label": "timespan",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "task",
       "source_file": "",
       "source_location": ""
     },
@@ -8386,6 +8430,39 @@
       "source_location": ""
     },
     {
+      "id": "vistadia",
+      "label": "VistaDia",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "vistadia",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "vistames",
+      "label": "VistaMes",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "vistames",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "vistasemana",
+      "label": "VistaSemana",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "MainWindow",
+      "file_type": "code",
+      "norm_label": "vistasemana",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "cultureinfo",
       "label": "CultureInfo",
       "_origin": "ast",
@@ -8395,6 +8472,17 @@
       "norm_label": "cultureinfo",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_minicalendario",
+      "label": "MiniCalendario.cs",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MiniCalendario",
+      "file_type": "code",
+      "norm_label": "minicalendario.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/MiniCalendario.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_agenda_minicalendario_cs_action",
@@ -8826,6 +8914,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_agendacanvas",
+      "label": "AgendaCanvas",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "agendacanvas",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
+      "source_location": "L101"
+    },
+    {
       "id": "src_pepewaposx10_shell_widgets_mainwindow_agendanavrow",
       "label": "AgendaNavRow",
       "_origin": "ast",
@@ -8991,6 +9090,17 @@
       "source_location": "L34"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_semanacanvas",
+      "label": "SemanaCanvas",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "semanacanvas",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
+      "source_location": "L109"
+    },
+    {
       "id": "src_pepewaposx10_shell_widgets_mainwindow_semanaheadgrid",
       "label": "SemanaHeadGrid",
       "_origin": "ast",
@@ -9013,15 +9123,15 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
-      "label": "TextBlock",
+      "id": "xaml_canvas",
+      "label": "Canvas",
       "_origin": "ast",
       "community": 11,
       "community_name": "Window",
       "file_type": "concept",
-      "norm_label": "textblock",
+      "norm_label": "canvas",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
-      "source_location": "L34"
+      "source_location": "L101"
     },
     {
       "id": "xaml_grid",
@@ -9033,6 +9143,17 @@
       "norm_label": "grid",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
       "source_location": "L38"
+    },
+    {
+      "id": "xaml_textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "Window",
+      "file_type": "concept",
+      "norm_label": "textblock",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
+      "source_location": "L34"
     },
     {
       "id": "claude_skills_run_skill",
@@ -9177,6 +9298,17 @@
       "norm_label": "lowlevelkeyboardproc",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_escritorio_barradewindows",
+      "label": "BarraDeWindows.cs",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "BarraDeWindows",
+      "file_type": "code",
+      "norm_label": "barradewindows.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Escritorio/BarraDeWindows.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_escritorio_barradewindows_cs_bool",
@@ -9828,17 +9960,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_app_xaml",
-      "label": "PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "MenuInicioPopover",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.shell.widgets/app.xaml.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_taskbar_appsdeinicio",
       "label": "AppsDeInicio.cs",
       "_origin": "ast",
@@ -9914,17 +10035,6 @@
       "norm_label": "timespan",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover",
-      "label": "MenuInicioPopover.cs",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "MenuInicioPopover",
-      "file_type": "code",
-      "norm_label": "menuiniciopopover.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
-      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover_cs_action",
@@ -10484,101 +10594,189 @@
       "source_location": "L69"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto",
-      "label": "Esqueleto.cs",
+      "id": "mousewheeleventargs",
+      "label": "MouseWheelEventArgs",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "esqueleto.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "Esqueleto",
-      "file_type": "code",
-      "norm_label": "border",
+      "norm_label": "mousewheeleventargs",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_canvas",
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice",
+      "label": "IAgendaService.cs",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "iagendaservice.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia",
+      "label": "VistaDia.cs",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "vistadia.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_action",
+      "label": "Action",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "action",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_bool",
+      "label": "bool",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_canvas",
       "label": "Canvas",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "canvas",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_double",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_double",
       "label": "double",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
       "norm_label": "double",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_grid",
-      "label": "Grid",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_int",
+      "label": "int",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "grid",
+      "norm_label": "int",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_panel",
-      "label": "Panel",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_ireadonlylist",
+      "label": "IReadOnlyList",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "panel",
+      "norm_label": "ireadonlylist",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_timespan",
-      "label": "TimeSpan",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_list",
+      "label": "List",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "timespan",
+      "norm_label": "list",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_uielement",
-      "label": "UIElement",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_scrollviewer",
+      "label": "ScrollViewer",
       "_origin": "ast",
       "community": 19,
-      "community_name": "Esqueleto",
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "uielement",
+      "norm_label": "scrollviewer",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "bitmapsource",
-      "label": "BitmapSource",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_task",
+      "label": "Task",
       "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
+      "community": 19,
+      "community_name": "VistaDia",
       "file_type": "code",
-      "norm_label": "bitmapsource",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 19,
+      "community_name": "VistaDia",
+      "file_type": "code",
+      "norm_label": "textblock",
       "source_file": "",
       "source_location": ""
     },
@@ -10594,17 +10792,6 @@
       "source_location": ""
     },
     {
-      "id": "hashset",
-      "label": "HashSet",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "hashset",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "mouseeventargs",
       "label": "MouseEventArgs",
       "_origin": "ast",
@@ -10612,17 +10799,6 @@
       "community_name": "IconRailWindow",
       "file_type": "code",
       "norm_label": "mouseeventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "observablecollection",
-      "label": "ObservableCollection",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "observablecollection",
       "source_file": "",
       "source_location": ""
     },
@@ -10638,127 +10814,6 @@
       "source_location": ""
     },
     {
-      "id": "shfileinfo",
-      "label": "ShFileInfo",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "shfileinfo",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "specialfolder",
-      "label": "SpecialFolder",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "specialfolder",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos",
-      "label": "AccesosDirectos.cs",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "accesosdirectos.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_dllimport",
-      "label": "DllImport",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "dllimport",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_ienumerable",
-      "label": "IEnumerable",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "ienumerable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_int",
-      "label": "int",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "int",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_intptr",
-      "label": "IntPtr",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "intptr",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_string",
-      "label": "string",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_uint",
-      "label": "uint",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "uint",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailitem_cs_imagesource",
-      "label": "ImageSource",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "imagesource",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow",
-      "label": "IconRailWindow.xaml",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "iconrailwindow.xaml",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L1"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_iconoscontrol",
       "label": "IconosControl",
       "_origin": "ast",
@@ -10768,28 +10823,6 @@
       "norm_label": "iconoscontrol",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
       "source_location": "L89"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_slot",
-      "label": "Slot",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "slot",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_window",
-      "label": "Window",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "window",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml",
@@ -10834,83 +10867,6 @@
       "norm_label": "mousebuttoneventargs",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_cs_routedeventargs",
-      "label": "RoutedEventArgs",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "routedeventargs",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_ordenderieles_cs_ienumerable",
-      "label": "IEnumerable",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "ienumerable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos",
-      "label": "RielesDeIconos.cs",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "rielesdeiconos.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_cs_ienumerable",
-      "label": "IEnumerable",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "code",
-      "norm_label": "ienumerable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "binding_icono",
-      "label": "Icono",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "concept",
-      "norm_label": "icono",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L107"
-    },
-    {
-      "id": "binding_label",
-      "label": "Label",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "concept",
-      "norm_label": "label",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_xaml_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "IconRailWindow",
-      "file_type": "concept",
-      "norm_label": "border",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
-      "source_location": "L29"
     },
     {
       "id": "xaml_listbox",
@@ -11299,17 +11255,6 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_relojdigital_cs_textblock",
-      "label": "TextBlock",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "RelojDigital",
-      "file_type": "code",
-      "norm_label": "textblock",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_agenda_relojdigital_cs_timespan",
       "label": "TimeSpan",
       "_origin": "ast",
@@ -11332,11 +11277,22 @@
       "source_location": ""
     },
     {
+      "id": "textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 28,
+      "community_name": "RelojDigital",
+      "file_type": "code",
+      "norm_label": "textblock",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "diacargado",
       "label": "DiaCargado",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "diacargado",
       "source_file": "",
@@ -11347,20 +11303,9 @@
       "label": "Ellipse",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "ellipse",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "mousewheeleventargs",
-      "label": "MouseWheelEventArgs",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "mousewheeleventargs",
       "source_file": "",
       "source_location": ""
     },
@@ -11369,7 +11314,7 @@
       "label": "Rectangle",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "rectangle",
       "source_file": "",
@@ -11380,326 +11325,18 @@
       "label": "ScheduledBlock.cs",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "scheduledblock.cs",
       "source_file": "src/PepeWapOSx10.Dominio/Modelos/ScheduledBlock.cs",
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_cs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice",
-      "label": "IAgendaService.cs",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "iagendaservice.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/IAgendaService.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_iagendaservice_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia",
-      "label": "VistaDia.cs",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "vistadia.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/VistaDia.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_action",
-      "label": "Action",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "action",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_bool",
-      "label": "bool",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "bool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_canvas",
-      "label": "Canvas",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "canvas",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_double",
-      "label": "double",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_int",
-      "label": "int",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "int",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_list",
-      "label": "List",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "list",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_scrollviewer",
-      "label": "ScrollViewer",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "scrollviewer",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistadia_cs_textblock",
-      "label": "TextBlock",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "textblock",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_cs_stackpanel",
-      "label": "StackPanel",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "stackpanel",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_action",
-      "label": "Action",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "action",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_border",
-      "label": "Border",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "border",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_canvas",
-      "label": "Canvas",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "canvas",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_double",
-      "label": "double",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_grid",
-      "label": "Grid",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "grid",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_scrollviewer",
-      "label": "ScrollViewer",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "scrollviewer",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_textblock",
-      "label": "TextBlock",
-      "_origin": "ast",
-      "community": 29,
-      "community_name": "ScheduledBlock",
-      "file_type": "code",
-      "norm_label": "textblock",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_ui_lineadetiempo_cs_border",
       "label": "Border",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "border",
       "source_file": "",
@@ -11710,7 +11347,7 @@
       "label": "Brush",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "brush",
       "source_file": "",
@@ -11721,7 +11358,7 @@
       "label": "Canvas",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "canvas",
       "source_file": "",
@@ -11732,7 +11369,7 @@
       "label": "DateTime",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "datetime",
       "source_file": "",
@@ -11743,7 +11380,7 @@
       "label": "double",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "double",
       "source_file": "",
@@ -11754,7 +11391,7 @@
       "label": "Grid",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "grid",
       "source_file": "",
@@ -11765,7 +11402,7 @@
       "label": "UIElement",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "uielement",
       "source_file": "",
@@ -11776,31 +11413,20 @@
       "label": "Thickness",
       "_origin": "ast",
       "community": 29,
-      "community_name": "ScheduledBlock",
+      "community_name": "LineaDeTiempo",
       "file_type": "code",
       "norm_label": "thickness",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_dominio_semanaiso",
-      "label": "SemanaIso.cs",
+      "id": "src_pepewaposx10_dominio_modelos_scheduledblock_cs_datetime",
+      "label": "DateTime",
       "_origin": "ast",
       "community": 3,
       "community_name": "VistaMes",
       "file_type": "code",
-      "norm_label": "semanaiso.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_semanaiso_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "VistaMes",
-      "file_type": "code",
-      "norm_label": "dateonly",
+      "norm_label": "datetime",
       "source_file": "",
       "source_location": ""
     },
@@ -11900,6 +11526,17 @@
       "community_name": "VistaMes",
       "file_type": "code",
       "norm_label": "list",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistames_cs_stackpanel",
+      "label": "StackPanel",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "VistaMes",
+      "file_type": "code",
+      "norm_label": "stackpanel",
       "source_file": "",
       "source_location": ""
     },
@@ -12377,7 +12014,7 @@
       "source_location": "L75"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_togglebutton",
+      "id": "xaml_togglebutton",
       "label": "ToggleButton",
       "_origin": "ast",
       "community": 35,
@@ -12421,7 +12058,7 @@
       "source_location": "L136"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_stackpanel",
+      "id": "xaml_stackpanel",
       "label": "StackPanel",
       "_origin": "ast",
       "community": 36,
@@ -12542,37 +12179,246 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_agendacanvas",
-      "label": "AgendaCanvas",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_action",
+      "label": "Action",
       "_origin": "ast",
       "community": 39,
-      "community_name": "AgendaCanvas",
+      "community_name": "VistaSemana",
       "file_type": "code",
-      "norm_label": "agendacanvas",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
-      "source_location": "L101"
+      "norm_label": "action",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_semanacanvas",
-      "label": "SemanaCanvas",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_border",
+      "label": "Border",
       "_origin": "ast",
       "community": 39,
-      "community_name": "AgendaCanvas",
+      "community_name": "VistaSemana",
       "file_type": "code",
-      "norm_label": "semanacanvas",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
-      "source_location": "L109"
+      "norm_label": "border",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "xaml_canvas",
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_canvas",
       "label": "Canvas",
       "_origin": "ast",
       "community": 39,
-      "community_name": "AgendaCanvas",
-      "file_type": "concept",
+      "community_name": "VistaSemana",
+      "file_type": "code",
       "norm_label": "canvas",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
-      "source_location": "L101"
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_double",
+      "label": "double",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_grid",
+      "label": "Grid",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "grid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_scrollviewer",
+      "label": "ScrollViewer",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "scrollviewer",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_vistasemana_cs_textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "VistaSemana",
+      "file_type": "code",
+      "norm_label": "textblock",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "sqlitecommand",
+      "label": "SqliteCommand",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "sqlitecommand",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "sqliteconnection",
+      "label": "SqliteConnection",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "sqliteconnection",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext",
+      "label": "AgendaDbContext.cs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "agendadbcontext.cs",
+      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_datos_agendadbcontext_cs_string",
+      "label": "string",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dayofweek",
+      "label": "DayOfWeek",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "dayofweek",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlyset",
+      "label": "IReadOnlySet",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "ireadonlyset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_ireadonlylist",
+      "label": "IReadOnlyList",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "ireadonlylist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository_cs_dateonly",
@@ -12606,6 +12452,17 @@
       "norm_label": "task",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_tareaguia",
+      "label": "TareaGuia.cs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "PanelGuia",
+      "file_type": "code",
+      "norm_label": "tareaguia.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_dominio_modelos_tareaguia_cs_dateonly",
@@ -12773,7 +12630,7 @@
       "source_location": "L108"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_scrollviewer",
+      "id": "xaml_scrollviewer",
       "label": "ScrollViewer",
       "_origin": "ast",
       "community": 40,
@@ -12782,6 +12639,325 @@
       "norm_label": "scrollviewer",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
       "source_location": "L100"
+    },
+    {
+      "id": "bitmapsource",
+      "label": "BitmapSource",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "bitmapsource",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "shfileinfo",
+      "label": "ShFileInfo",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "shfileinfo",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "specialfolder",
+      "label": "SpecialFolder",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "specialfolder",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos",
+      "label": "AccesosDirectos.cs",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "accesosdirectos.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/AccesosDirectos.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_dllimport",
+      "label": "DllImport",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "dllimport",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_int",
+      "label": "int",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "int",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_intptr",
+      "label": "IntPtr",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "intptr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_string",
+      "label": "string",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_uint",
+      "label": "uint",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "AccesosDirectos",
+      "file_type": "code",
+      "norm_label": "uint",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow",
+      "label": "IconRailWindow.xaml",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "iconrailwindow.xaml",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_slot",
+      "label": "Slot",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "slot",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_window",
+      "label": "Window",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "window",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_cs_routedeventargs",
+      "label": "RoutedEventArgs",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "code",
+      "norm_label": "routedeventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "binding_icono",
+      "label": "Icono",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "concept",
+      "norm_label": "icono",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L107"
+    },
+    {
+      "id": "binding_label",
+      "label": "Label",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "concept",
+      "norm_label": "label",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailwindow_xaml_xaml_border",
+      "label": "Border",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "Window",
+      "file_type": "concept",
+      "norm_label": "border",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailWindow.xaml",
+      "source_location": "L29"
+    },
+    {
+      "id": "observablecollection",
+      "label": "ObservableCollection",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "norm_label": "observablecollection",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_iconrailitem_cs_imagesource",
+      "label": "ImageSource",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "norm_label": "imagesource",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos",
+      "label": "RielesDeIconos.cs",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "norm_label": "rielesdeiconos.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/RielesDeIconos.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_rielesdeiconos_cs_ienumerable",
+      "label": "IEnumerable",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "IconRailItem",
+      "file_type": "code",
+      "norm_label": "ienumerable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "hashset",
+      "label": "HashSet",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "norm_label": "hashset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_accesosdirectos_cs_ienumerable",
+      "label": "IEnumerable",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "norm_label": "ienumerable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_rieles_ordenderieles_cs_ienumerable",
+      "label": "IEnumerable",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": ".MigrarYCargar",
+      "file_type": "code",
+      "norm_label": "ienumerable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_semanaiso",
+      "label": "SemanaIso.cs",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": ".Inicio",
+      "file_type": "code",
+      "norm_label": "semanaiso.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/SemanaIso.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_dominio_semanaiso_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": ".Inicio",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_relojdigital_cs_textblock",
+      "label": "TextBlock",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "TextBlock",
+      "file_type": "code",
+      "norm_label": "textblock",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_bool",
+      "label": "bool",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "bool",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_dateonly",
+      "label": "DateOnly",
+      "_origin": "ast",
+      "community": 48,
+      "community_name": "DateOnly",
+      "file_type": "code",
+      "norm_label": "dateonly",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_mousebuttoneventargs",
+      "label": "MouseButtonEventArgs",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "MouseButtonEventArgs",
+      "file_type": "code",
+      "norm_label": "mousebuttoneventargs",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "end",
@@ -12905,17 +13081,6 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_dominio_interfaces_iflexibletaskrepository",
-      "label": "IFlexibleTaskRepository.cs",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": ".Empaquetar",
-      "file_type": "code",
-      "norm_label": "iflexibletaskrepository.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Interfaces/IFlexibleTaskRepository.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "src_pepewaposx10_dominio_interfaces_iflexibletaskrepository_cs_dateonly",
       "label": "DateOnly",
       "_origin": "ast",
@@ -12958,6 +13123,17 @@
       "norm_label": "task",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_dominio_modelos_fixedevent",
+      "label": "FixedEvent.cs",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": ".Empaquetar",
+      "file_type": "code",
+      "norm_label": "fixedevent.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FixedEvent.cs",
+      "source_location": "L1"
     },
     {
       "id": "src_pepewaposx10_dominio_modelos_fixedevent_cs_datetime",
@@ -13169,6 +13345,28 @@
       "source_location": ""
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "label": "RoutedEventArgs",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "RoutedEventArgs",
+      "file_type": "code",
+      "norm_label": "routedeventargs",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
+      "label": "Task",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Task",
+      "file_type": "code",
+      "norm_label": "task",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "csharp_namespace:0cb09f946ad35890",
       "label": "PepeWapOSx10.Dominio",
       "_origin": "ast",
@@ -13196,8 +13394,8 @@
         "namespace": "PepeWapOSx10.Shell.Widgets"
       },
       "norm_label": "pepewaposx10.shell.widgets",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/AgendaService.cs",
-      "source_location": "L7",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/RelojDigital.cs",
+      "source_location": "L6",
       "type": "namespace"
     },
     {
@@ -13265,28 +13463,6 @@
       "type": "namespace"
     },
     {
-      "id": "sqlitecommand",
-      "label": "SqliteCommand",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "sqlitecommand",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "sqliteconnection",
-      "label": "SqliteConnection",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "sqliteconnection",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_calendario_googlecalendarsource",
       "label": "GoogleCalendarSource.cs",
       "_origin": "ast",
@@ -13296,28 +13472,6 @@
       "norm_label": "googlecalendarsource.cs",
       "source_file": "src/PepeWapOSx10.Calendario/GoogleCalendarSource.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_datos_agendadbcontext",
-      "label": "AgendaDbContext.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "agendadbcontext.cs",
-      "source_file": "src/PepeWapOSx10.Datos/AgendaDbContext.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_datos_agendadbcontext_cs_string",
-      "label": "string",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository",
@@ -13331,61 +13485,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_dayofweek",
-      "label": "DayOfWeek",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "dayofweek",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_ireadonlyset",
-      "label": "IReadOnlySet",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "ireadonlyset",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqliteflexibletaskrepository_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_pepewaposx10_datos_sqlitetareaguiarepository",
       "label": "SqliteTareaGuiaRepository.cs",
       "_origin": "ast",
@@ -13395,39 +13494,6 @@
       "norm_label": "sqlitetareaguiarepository.cs",
       "source_file": "src/PepeWapOSx10.Datos/SqliteTareaGuiaRepository.cs",
       "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_dateonly",
-      "label": "DateOnly",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "dateonly",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_ireadonlylist",
-      "label": "IReadOnlyList",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "ireadonlylist",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_pepewaposx10_datos_sqlitetareaguiarepository_cs_task",
-      "label": "Task",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "task",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_pepewaposx10_dominio_interfaces_icalendarsource",
@@ -13441,6 +13507,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_pepewaposx10_dominio_interfaces_iflexibletaskrepository",
+      "label": "IFlexibleTaskRepository.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "iflexibletaskrepository.cs",
+      "source_file": "src/PepeWapOSx10.Dominio/Interfaces/IFlexibleTaskRepository.cs",
+      "source_location": "L1"
+    },
+    {
       "id": "src_pepewaposx10_dominio_interfaces_itareaguiarepository",
       "label": "ITareaGuiaRepository.cs",
       "_origin": "ast",
@@ -13449,28 +13526,6 @@
       "file_type": "code",
       "norm_label": "itareaguiarepository.cs",
       "source_file": "src/PepeWapOSx10.Dominio/Interfaces/ITareaGuiaRepository.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_fixedevent",
-      "label": "FixedEvent.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "fixedevent.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/FixedEvent.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_dominio_modelos_tareaguia",
-      "label": "TareaGuia.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "tareaguia.cs",
-      "source_file": "src/PepeWapOSx10.Dominio/Modelos/TareaGuia.cs",
       "source_location": "L1"
     },
     {
@@ -13496,15 +13551,92 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_agenda_minicalendario",
-      "label": "MiniCalendario.cs",
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto",
+      "label": "Esqueleto.cs",
       "_origin": "ast",
       "community": 6,
       "community_name": "PepeWapOSx10.Shell.Widgets",
       "file_type": "code",
-      "norm_label": "minicalendario.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/MiniCalendario.cs",
+      "norm_label": "esqueleto.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Agenda/Esqueleto.cs",
       "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_border",
+      "label": "Border",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "border",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_canvas",
+      "label": "Canvas",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "canvas",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_double",
+      "label": "double",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_grid",
+      "label": "Grid",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "grid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_panel",
+      "label": "Panel",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "panel",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_timespan",
+      "label": "TimeSpan",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "timespan",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_agenda_esqueleto_cs_uielement",
+      "label": "UIElement",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "uielement",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_pepewaposx10_shell_widgets_agenda_panelguia",
@@ -13540,6 +13672,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_pepewaposx10_shell_widgets_app_xaml",
+      "label": "PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "pepewaposx10.shell.widgets/app.xaml.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/App.xaml.cs",
+      "source_location": "L1"
+    },
+    {
       "id": "src_pepewaposx10_shell_widgets_escritorio_anclajeescritorio",
       "label": "AnclajeEscritorio.cs",
       "_origin": "ast",
@@ -13548,17 +13691,6 @@
       "file_type": "code",
       "norm_label": "anclajeescritorio.cs",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Escritorio/AnclajeEscritorio.cs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pepewaposx10_shell_widgets_escritorio_barradewindows",
-      "label": "BarraDeWindows.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "barradewindows.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/Escritorio/BarraDeWindows.cs",
       "source_location": "L1"
     },
     {
@@ -13606,17 +13738,6 @@
       "source_location": ""
     },
     {
-      "id": "src_pepewaposx10_shell_widgets_mainwindow_xaml",
-      "label": "PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "PepeWapOSx10.Shell.Widgets",
-      "file_type": "code",
-      "norm_label": "pepewaposx10.shell.widgets/mainwindow.xaml.cs",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
-      "source_location": "L1"
-    },
-    {
       "id": "src_pepewaposx10_shell_widgets_rieles_iconrailitem",
       "label": "IconRailItem.cs",
       "_origin": "ast",
@@ -13625,6 +13746,17 @@
       "file_type": "code",
       "norm_label": "iconrailitem.cs",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/Rieles/IconRailItem.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pepewaposx10_shell_widgets_taskbar_menuiniciopopover",
+      "label": "MenuInicioPopover.cs",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "PepeWapOSx10.Shell.Widgets",
+      "file_type": "code",
+      "norm_label": "menuiniciopopover.cs",
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs",
       "source_location": "L1"
     },
     {
@@ -20767,7 +20899,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_escritorio_escritorioshell_pepewaposx10_shell_widgets_escritorioshell",
+      "target": "escritorioshell",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21397,7 +21529,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_agenda_minicalendario_pepewaposx10_shell_widgets_minicalendario",
+      "target": "minicalendario",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21442,7 +21574,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_agenda_panelguia_pepewaposx10_shell_widgets_panelguia",
+      "target": "panelguia",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21772,7 +21904,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_agenda_relojdigital_pepewaposx10_shell_widgets_relojdigital",
-      "target": "src_pepewaposx10_shell_widgets_agenda_relojdigital_cs_textblock",
+      "target": "textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22042,7 +22174,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_agenda_vistadia_pepewaposx10_shell_widgets_vistadia",
+      "target": "vistadia",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22057,7 +22189,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_agenda_vistames_pepewaposx10_shell_widgets_vistames",
+      "target": "vistames",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22072,7 +22204,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_agenda_vistasemana_pepewaposx10_shell_widgets_vistasemana",
+      "target": "vistasemana",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22192,7 +22324,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_bool",
+      "target": "bool",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -24687,23 +24819,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml",
-      "target": "csharp_namespace:6c2393d049222b59",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "PepeWapOSx10.Datos",
-        "scope_kind": "file"
-      },
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
-      "source_location": "L5",
-      "weight": 1.0
-    },
-    {
       "source": "src_pepewaposx10_smoketest_program",
       "target": "csharp_namespace:6c2393d049222b59",
       "relation": "imports",
@@ -25946,7 +26061,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_cambiarasync",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_dateonly",
+      "target": "dateonly",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27656,7 +27771,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_onpreviewmouseleftbuttonup",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_mousebuttoneventargs",
+      "target": "mousebuttoneventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27926,7 +28041,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_guiaagregar_click",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27941,7 +28056,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_navhoy_click",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27956,7 +28071,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_navnext_click",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27971,7 +28086,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_navprev_click",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -27986,7 +28101,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_tabvista_click",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -28001,7 +28116,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_window_loaded",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_routedeventargs",
+      "target": "routedeventargs",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -30956,7 +31071,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_armarpanelesasync",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
+      "target": "task",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -30971,7 +31086,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_cambiarasync",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
+      "target": "task",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -30986,7 +31101,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_desplazarasync",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
+      "target": "task",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31001,7 +31116,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow_irahoyasync",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_cs_task",
+      "target": "task",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31340,7 +31455,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_agendaheadergenerico",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_stackpanel",
+      "target": "xaml_stackpanel",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31364,7 +31479,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_agendasubtitletext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31388,7 +31503,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_calendarmonthtext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31400,7 +31515,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_calendaryeartext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31412,7 +31527,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diafootertext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31424,7 +31539,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diaheaderaniotext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31436,7 +31551,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diaheaderdiatext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31448,7 +31563,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diaheadermestext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31460,7 +31575,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diaheaderstack",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_stackpanel",
+      "target": "xaml_stackpanel",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31484,7 +31599,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_diascroll",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_scrollviewer",
+      "target": "xaml_scrollviewer",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31496,7 +31611,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_guiapanel",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_stackpanel",
+      "target": "xaml_stackpanel",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31508,7 +31623,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_guiasummarytext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31556,7 +31671,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_navhinttext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31568,7 +31683,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_navlabeltext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31580,7 +31695,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_relojtext",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_textblock",
+      "target": "xaml_textblock",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31628,7 +31743,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_semanascroll",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_scrollviewer",
+      "target": "xaml_scrollviewer",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31640,7 +31755,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_tabdia",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_togglebutton",
+      "target": "xaml_togglebutton",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31652,7 +31767,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_tabmes",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_togglebutton",
+      "target": "xaml_togglebutton",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31664,7 +31779,7 @@
     },
     {
       "source": "src_pepewaposx10_shell_widgets_mainwindow_tabsemana",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_xaml_togglebutton",
+      "target": "xaml_togglebutton",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31843,6 +31958,21 @@
       "weight": 1.0
     },
     {
+      "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
+      "target": "src_pepewaposx10_shell_widgets_mainwindow_window",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "x_class",
+      "metadata": {
+        "ref_token": "Window"
+      },
+      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
       "source": "src_pepewaposx10_app_app_application",
       "target": "src_pepewaposx10_app_app_xaml_pepewaposx10_app_app",
       "relation": "references",
@@ -31887,18 +32017,6 @@
       "confidence_score": 1.0,
       "context": "x_class",
       "source_file": "src/PepeWapOSx10.Shell.Widgets/EditarTareaGuiaWindow.xaml",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pepewaposx10_shell_widgets_mainwindow_window",
-      "target": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "x_class",
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -32174,20 +32292,6 @@
       },
       "source_file": "src/PepeWapOSx10.Shell.Widgets/EditarTareaGuiaWindow.xaml.cs",
       "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pepewaposx10_shell_widgets_mainwindow_xaml_pepewaposx10_shell_widgets_mainwindow",
-      "target": "window",
-      "relation": "inherits",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "metadata": {
-        "ref_token": "Window"
-      },
-      "source_file": "src/PepeWapOSx10.Shell.Widgets/MainWindow.xaml.cs",
-      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -39733,5 +39837,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9b972e16ac57774e7af94be4d0075b3a035a055c"
+  "built_at_commit": "c9dfaa7aa570e7b3c8a03531cf655cbb1f95aedb"
 }
