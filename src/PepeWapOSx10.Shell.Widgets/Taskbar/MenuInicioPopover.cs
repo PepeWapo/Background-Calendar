@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -63,7 +62,17 @@ internal sealed class MenuInicioPopover : PopoverBase
 
     private async void CargarAplicaciones()
     {
-        var apps = await AppsDeInicio.Obtener();
+        IReadOnlyList<AppDeInicio> apps;
+        try
+        {
+            apps = await AppsDeInicio.Obtener();
+        }
+        catch (Exception ex)
+        {
+            // Es async void: sin esto, un fallo del shell tira abajo la app.
+            _estado.Text = $"No se pudieron leer las aplicaciones: {ex.Message}";
+            return;
+        }
 
         _lista.Children.Clear();
         foreach (var app in apps)
@@ -99,7 +108,7 @@ internal sealed class MenuInicioPopover : PopoverBase
         Cerrar();
         try
         {
-            Process.Start(new ProcessStartInfo(app.Ruta) { UseShellExecute = true });
+            AppsDeInicio.Abrir(app);
         }
         catch (System.ComponentModel.Win32Exception)
         {
