@@ -432,9 +432,9 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/AppsDeInicio.cs": {
-    "mtime": 1794857919.8030007,
-    "seen": 1794857926.0410304,
-    "ast_hash": "0bcf3b6d52013de89c052923d37959fe",
+    "mtime": 1795651264.820797,
+    "seen": 1795651498.9282343,
+    "ast_hash": "5e413edb6d8513e6d2f96939ee8aa74f",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/BandejaDelSistema.cs": {
@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/MenuInicioPopover.cs": {
-    "mtime": 1795458826.7968476,
-    "seen": 1795459403.3820245,
-    "ast_hash": "a8957a91b30019967d1dde1eeea0e021",
+    "mtime": 1795651266.068232,
+    "seen": 1795651498.9282343,
+    "ast_hash": "5627b823701d30329baf2925678fc6e3",
     "semantic_hash": ""
   },
   "src/PepeWapOSx10.Shell.Widgets/Taskbar/PopoverBase.cs": {
